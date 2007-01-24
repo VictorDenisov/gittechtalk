@@ -1,0 +1,540 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Introduction to Wmii+Ruby
+%% Bart Trojanowski (C) 2007
+%%
+%deffont "standard" xfont "helvetica-medium-r", tfont "standard.ttf"
+%deffont "slant" xfont "helvetica-medium-i", tfont "standard.ttf"
+%deffont "thick" xfont "helvetica-bold-r", tfont "thick.ttf"
+%deffont "typewriter" xfont "courier-medium-r", tfont "typewriter.ttf"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Default settings per each line numbers.
+%%
+%default 1 area 90 90, leftfill, size 2, fore "gray20", back "white", font "standard", hgap 0
+%default 2 size 7, vgap 10, prefix " ", ccolor "black"
+%default 3 size 2, bar "gray70", vgap 10
+%default 4 size 5, fore "gray20", vgap 30, prefix " ", font "standard"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Default settings that are applied to TAB-indented lines.
+%%
+%tab 1 size 5, vgap 40, prefix "  ", icon box "green" 50
+%tab 2 size 4, vgap 40, prefix "      ", icon arc "yellow" 50
+%tab 3 size 3, vgap 40, prefix "            ", icon delta3 "white" 40
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+%nodefault
+%size 6.5, font "standard", back "white", ccolor "black"
+
+
+
+
+
+%center, fore "Blue", font "standard", hgap 60, size 6.5
+Introduction to git
+%bar "skyblue" 6 15 70
+%font "standard", hgap 0
+
+
+
+%size 5, fore "darkblue"
+Bart Trojanowski
+%size 4.5
+<bart@jukie.net>
+http://www.jukie.net/~bart/
+
+
+%size 3, fore "black", hgap 20
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Overview
+
+	Concepts
+
+	History
+
+	Usage
+
+	Wrap up
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Concepts
+
+	Source Control Management
+		track changes to files
+		repository / database of changes
+		working directory / current state
+
+%pause
+	Centralized SCM
+		server: single database
+		client: working directory & state
+
+%pause
+	Decentralized SCM
+		anyone can be a server
+		repository coupled with working directory
+		complete history
+		disconnected operation
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Source Control Management
+
+	Keeping state
+%pause
+		diffs / deltas / patches
+		commits / revisions
+		ancestry
+%pause
+		tags / labels
+		branches
+		heads
+
+%pause
+	Operations on repository
+%pause
+		checkout
+		add & delete & rename
+		commit
+		diff
+		log
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Centralized
+
+	
+
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Decentralized SCM
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+#   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#   %page
+#   
+#   What is wmii
+#   
+#   	Features
+#   		dynamic window manager
+#   		various window management modes (
+#   %cont, font "slant", fore "blue"
+#   floating
+#   %cont, font "standard", fore "black"
+#   , 
+#   %cont, font "slant", fore "blue"
+#   panel
+#   %cont, font "standard", fore "black"
+#   , etc)
+#   		window tagging
+#   
+#   %pause
+#   	Also...
+#   		menu bar with status widgets
+#   		plug-in support
+#   		plan9 filesystem for configuration
+#   		fully scriptable
+#   		small codebase, small footprint, low overhead
+#   
+#   %% codebase 10k lines
+#   %% footprint 15M + 30M ruby
+#   %% overhead 20-30 pixels vertically, 2 pixels horizontally
+#   
+#   %right
+#   >
+#   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#   %page
+#   
+#   What is not in wmii
+#   
+#   	
+#   %cont, fore "red"
+#   no 
+#   %cont, fore "black"
+#   workspace paradigm
+#   	
+#   %cont, fore "red"
+#   no 
+#   %cont, fore "black"
+#   icons
+#   	
+#   %cont, fore "red"
+#   no 
+#   %cont, fore "black"
+#   traditional desktop
+#   	
+#   %cont, fore "red"
+#   no 
+#   %cont, fore "black"
+#   conventional program menus
+#   	
+#   %cont, fore "red"
+#   no 
+#   %cont, fore "black"
+#   rodent required
+#   %pause, fore "red"
+#   	no 
+#   %cont, fore "black"
+#   wobbly windows
+#   
+#   %right
+#   >
+#   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#   %page
+#   
+#   Window tagging
+#   
+#   	a window has one or multiple tags
+#   	a tag is any word (for example 
+#   %cont, font "slant", fore "blue"
+#   work 
+#   %cont, font "standard", fore "black"
+#   or 
+#   %cont, font "slant", fore "blue"
+#   web
+#   %cont, font "standard", fore "black"
+#   )
+#   	only windows in active tag are shown (
+#   %cont, font "slant", fore "blue"
+#   a view
+#   %cont, font "standard", fore "black"
+#   )
+#   
+#   %pause
+#   	windows can have multiple geometries, one per tag
+#   
+#   %pause
+#   	tags can be changed at any time
+#   	tags can be automatically assigned
+#   
+#   %right
+#   >
+#   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#   %page
+#   
+#   Window management modes
+#   
+#   	Classic windows (
+#   %cont, font "slant", fore "blue"
+#   floating
+#   %cont, font "standard", fore "black"
+#   )
+#   	Fully maximized windows
+#   	Paneled windows (like vim/emacs/konq splits)
+#   	Stacked windows
+#   
+#   %newimage -xscrzoom 100 "management-modes.eps"
+#   
+#   %right
+#   >
+#   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#   %page
+#   
+#   Using wmii - basics
+#   
+#   	Staring programs
+#   %size 4
+#   %pause
+#   %font "typewriter", fore "black"
+#       MOD-Enter       - 
+#   %cont, font "standard", fore "black"
+#   start a new xterm
+#   %pause
+#   %font "slant", fore "blue"
+#       "X is only useful for opening up multiple xterms at once"
+#   
+#   %pause
+#   %font "typewriter", fore "black"
+#       MOD-p           - 
+#   %cont, font "standard", fore "black"
+#   run a program
+#   %font "typewriter", fore "black"
+#       MOD-a           - 
+#   %cont, font "standard", fore "black"
+#   run a 
+#   %cont, font "slant", fore "blue"
+#   wmiirc 
+#   %cont, font "standard", fore "black"
+#   action
+#   
+#   %pause,center
+#   %newimage "window-mockup.png"
+#   %left
+#   
+#   %pause
+#   	Switching between programs
+#   %pause
+#   %size 4
+#   %font "typewriter", fore "black"
+#       MOD-j           - 
+#   %cont, font "standard", fore "black"
+#   switch focus to window above
+#   %font "typewriter", fore "black"
+#       MOD-k           - 
+#   %cont, font "standard", fore "black"
+#   switch focus to window below
+#   
+#   %right
+#   >
+#   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#   %page
+#   
+#   Using wmii - movement
+#   
+#   %font "typewriter", size 25
+#     K
+#   H  L
+#    J
+#   %size 4, right
+#   >
+#   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#   %page
+#   
+#   Using wmii - columns
+#   
+#   %size 4
+#   %font "typewriter", fore "black"
+#       MOD-Shift-h     - 
+#   %cont, font "standard", fore "black"
+#   move window to column on the left
+#   %font "typewriter", fore "black"
+#       MOD-Shift-l     - 
+#   %cont, font "standard", fore "black"
+#   move window to column on the right
+#   
+#   %font "typewriter", fore "black"
+#       MOD-h           - 
+#   %cont, font "standard", fore "black"
+#   switch focus to column on the left
+#   %font "typewriter", fore "black"
+#       MOD-l           - 
+#   %cont, font "standard", fore "black"
+#   switch focus to column on the right
+#   
+#   %pause
+#   %newimage -xscrzoom 100 "columns.eps"
+#   
+#   %right
+#   >
+#   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#   %page
+#   
+#   Using wmii - layouts
+#   
+#   %pause
+#   	Managed layout
+#   %pause
+#   %size 4
+#   %font "typewriter", fore "black"
+#       MOD-d           - 
+#   %cont, font "standard", fore "black"
+#   default layout (
+#   %cont, font "slant", fore "blue"
+#   panels 
+#   %cont, font "standard", fore "black"
+#   or 
+#   %cont, font "slant", fore "blue"
+#   splits
+#   %cont, font "standard", fore "black"
+#   )
+#   
+#   %font "typewriter", fore "black"
+#       MOD-s           - 
+#   %cont, font "standard", fore "black"
+#   stacking layout
+#   
+#   %font "typewriter", fore "black"
+#       MOD-m           - 
+#   %cont, font "standard", fore "black"
+#   maximized layout
+#   
+#   %pause
+#   	Floating layout
+#   %pause
+#   %size 4
+#   %font "typewriter", fore "black"
+#       MOD-Space       - 
+#   %cont, font "standard", fore "black"
+#   toggle floating layer
+#   
+#   %font "typewriter", fore "black"
+#       MOD-Shift-Space - 
+#   %cont, font "standard", fore "black"
+#   toggle window between floating & managed layers
+#   
+#   %right
+#   >
+#   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#   %page
+#   
+#   Using wmii - tags
+#   
+#   %size 4
+#   %font "typewriter", fore "black"
+#       MOD-Number       - 
+#   %cont, font "standard", fore "black"
+#   switch to tag index
+#   
+#   %font "typewriter", fore "black"
+#       MOD-Shift-Number - 
+#   %cont, font "standard", fore "black"
+#   set window tag to that of index
+#   
+#   %font "typewriter", fore "black"
+#       MOD-Shift-r      - 
+#   %cont, font "standard", fore "black"
+#   retag current window
+#   
+#   %newimage "tags.png"
+#   
+#   %right
+#   >
+#   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#   %page
+#   
+#   Using wmii - extras
+#   
+#   %size 4
+#   %font "typewriter", fore "black"
+#       MOD-Shift-c   - 
+#   %cont, font "standard", fore "black"
+#   kill the program of the focused window
+#   
+#   %font "typewriter", fore "black"
+#       MOD-,         - 
+#   %cont, font "standard", fore "black"
+#   go to the view on the left
+#   %font "typewriter", fore "black"
+#       MOD-.         - 
+#   %cont, font "standard", fore "black"
+#   go to the view on the right
+#   
+#   %font "typewriter", fore "black"
+#       MOD-r         - 
+#   %cont, font "standard", fore "black"
+#   cycle between the current and last view (
+#   %cont, font "slant", fore "blue"
+#   tag
+#   %cont, font "standard", fore "black"
+#   )
+#   %font "typewriter", fore "black"
+#       MOD-Minus     - 
+#   %cont, font "standard", fore "black"
+#   walk through view history backwards
+#   %font "typewriter", fore "black"
+#       MOD-Plus      - 
+#   %cont, font "standard", fore "black"
+#   walk through view history forwards
+#   
+#   %font "typewriter", fore "black"
+#       MOD2-Space    - 
+#   %cont, font "standard", fore "black"
+#   disable wmii event processing
+#   
+#   %pause
+#   %font "typewriter", fore "black"
+#       MOD-Control-y - 
+#   %cont, font "standard", fore "black"
+#   run a program for a specified tag
+#   
+#   %right
+#   >
+#   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#   %page
+#   
+#   wmii event processing
+#   
+#   	wmiirc
+#   
+#   %pause
+#   	default: shell
+#   		written in bash
+#   		limited functionality
+#   		easy to extend
+#   %pause, fore "red"
+#   		relatively slow
+#   %fore "black"
+#   %pause
+#   	improved: libixp
+#   		designed to overcome some costs of above
+#   %pause
+#   	ultimate: wmii+ruby
+#   		noticeably faster
+#   		community supported
+#   		expendable with plugins
+#   
+#   %right
+#   >
+#   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#   %page
+#   
+#   wmii install
+#   
+#   	Install takes 5 minutes
+#   %font "typewriter", fore "black", size 4
+#   apt-get install darcs wmii libhttp-access2-ruby1.8
+#   darcs get http://eigenclass.org/repos/ruby-wmii/head wmii+ruby
+#   cd wmii+ruby
+#   ruby install.rb
+#   %font "standard", fore "black"
+#   
+#   	Configuration
+#   %font "typewriter", fore "black", size 4
+#           vim ~/.wmii-3/wmiirc-config.rb
+#   %font "standard", fore "black"
+#   
+#   %right
+#   >
+#   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#   %page
+#   
+#   resources
+#   
+#   	wmii official site
+#   %font "typewriter", fore "black", size 4
+#       http://wmii.suckless.org/    
+#   %font "standard", fore "black"
+#       
+#   	wmii+ruby official site
+#   %font "typewriter", fore "black", size 4
+#       http://eigenclass.org/hiki.rb?wmii+ruby
+#   %font "standard", fore "black"
+#   
+#   	my blog
+#   %font "typewriter", fore "black", size 4
+#       http://www.jukie.net/~bart/blog/tag/wmii
+#   %font "standard", fore "black"
+#   
+#   %right
+#   >
+#   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#   %page
+#   
+#   questions
+#   
+#   %center, size 70, fore "blue"
+#   ? 
