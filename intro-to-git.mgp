@@ -88,30 +88,81 @@ Concepts
 
 Source Control Management
 
-	Keeping state
+	Keeping history
+		objects / blobs / diffs / deltas / patches
 %pause
-		diffs / deltas / patches
-		commits / revisions
-		ancestry
+		commits / changesets / revisions
+%pause
+		ancestry / history
 %pause
 		tags / labels
-		branches
-		heads
+%pause
+		branches / heads
 
 %pause
-	Operations on repository
-%pause
+	Common operations
 		checkout
+%pause
 		add & delete & rename
+%pause
 		commit
+%pause
 		diff
+%pause
 		log
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Centralized
+Centralized SCM
+
+	Checkout
+		create working directory
+		get state from server
+		populate working directory
+	
+	Commit
+		package up all changes
+		send changes to server
+
+	Diff
+		get objects or diffs from server
+		display
+
+	Log
+		get history from server
+		display
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Decentralized
+
+	Checkout
+		get state from repository
+		update working directory
+
+	Commit
+		package up all the changes
+		update repository
+	
+	Diff
+		display objects or diffs from repository
+
+	Log
+		display history from repository
+
+	Clone
+		create repository
+		create working directory
+		get history from server
+		populate repository and working set
+
+	Pull
+		
+
 
 	
 
