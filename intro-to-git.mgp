@@ -207,7 +207,7 @@ repository
 server 
 %fore "black"
 		populate working directory
-	Pull
+	Pull / Fetch
 		get changes from 
 %cont, fore "red"
 server 
