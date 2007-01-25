@@ -86,9 +86,9 @@ Concepts
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Source Control Management
+SCM components
 
-	Keeping history
+	Repository contents
 		objects / blobs / diffs / deltas / patches
 %pause
 		commits / changesets / revisions
@@ -100,15 +100,24 @@ Source Control Management
 		branches / heads
 
 %pause
-	Common operations
+	Working directory
+		files
+		list of files to add/delete
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+SCM operations
+
+	Modify
 		checkout
-%pause
 		add, delete, and rename
-%pause
 		commit
+
 %pause
+	Information
 		diff
-%pause
 		log
 %right
 >
@@ -147,34 +156,46 @@ server
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Decentralized
+Centralized SCM
 
-%area 40 90 5 18, leftfill, fore "gray20", back "white", font "standard"
+<< image goes here >>
+
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Decentralized SCM
+
+%area 40 90 5 18, leftfill
 	Checkout
-		get state from 
+		get 
 %cont, fore "blue"
-repository
-%fore "black"
+repository 
+%cont, fore "black"
+state
 		update working directory
 	Commit
-		package up all the changes
+		package changes
 		update 
 %cont, fore "blue"
 repository
 %fore "black"
 	Diff
-		display diffs from 
+		display 
 %cont, fore "blue"
-repository
-%fore "black"
+repository 
+%cont, fore "black"
+diffs
 	Log
-		display history from 
+		display 
 %cont, fore "blue"
-repository
-%fore "black"
+repository 
+%cont, fore "black"
+history
 
 %pause
-%area 40 90 50 18, leftfill, fore "gray20", back "white", font "standard"
+%area 40 90 50 18, leftfill
 	Clone
 		create 
 %cont, fore "blue"
@@ -191,7 +212,7 @@ server
 %cont, fore "red"
 server 
 %fore "black"
-		update
+		update 
 %cont, fore "blue"
 repository
 %fore "black"
@@ -200,7 +221,7 @@ repository
 %cont, fore "red"
 server 
 %fore "black"
-		update
+		update 
 %cont, fore "blue"
 repository
 %fore "black"
@@ -214,6 +235,15 @@ repository
 %page
 
 Decentralized SCM
+
+<< image goes here >>
+
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+GIT
 
 	
 
