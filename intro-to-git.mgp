@@ -11,7 +11,7 @@
 %%
 %% Default settings per each line numbers.
 %%
-%default 1 area 90 90, leftfill, size 2, fore "gray20", back "white", font "standard", hgap 0
+%default 1 area 90 90 5 5, leftfill, size 2, fore "gray20", back "white", font "standard", hgap 0
 %default 2 size 7, vgap 10, prefix " ", ccolor "black"
 %default 3 size 2, bar "gray70", vgap 10
 %default 4 size 5, fore "gray20", vgap 30, prefix " ", font "standard"
@@ -103,7 +103,7 @@ Source Control Management
 	Common operations
 		checkout
 %pause
-		add & delete & rename
+		add, delete, and rename
 %pause
 		commit
 %pause
@@ -119,19 +119,28 @@ Centralized SCM
 
 	Checkout
 		create working directory
-		get state from server
+		get state from 
+%cont, fore "red"
+server
+%fore "black"
 		populate working directory
-	
 	Commit
 		package up all changes
-		send changes to server
-
+		send changes to 
+%cont, fore "red"
+server
+%fore "black"
 	Diff
-		get objects or diffs from server
+		get objects or diffs from 
+%cont, fore "red"
+server
+%fore "black"
 		display
-
 	Log
-		get history from server
+		get history from 
+%cont, fore "red"
+server
+%fore "black"
 		display
 %right
 >
@@ -140,31 +149,64 @@ Centralized SCM
 
 Decentralized
 
+%area 40 90 5 18, leftfill, fore "gray20", back "white", font "standard"
 	Checkout
-		get state from repository
+		get state from 
+%cont, fore "blue"
+repository
+%fore "black"
 		update working directory
-
 	Commit
 		package up all the changes
-		update repository
-	
+		update 
+%cont, fore "blue"
+repository
+%fore "black"
 	Diff
-		display objects or diffs from repository
-
+		display diffs from 
+%cont, fore "blue"
+repository
+%fore "black"
 	Log
-		display history from repository
+		display history from 
+%cont, fore "blue"
+repository
+%fore "black"
 
+%pause
+%area 40 90 50 18, leftfill, fore "gray20", back "white", font "standard"
 	Clone
-		create repository
+		create 
+%cont, fore "blue"
+repository
+%fore "black"
 		create working directory
-		get history from server
-		populate repository and working set
-
+		get history from 
+%cont, fore "red"
+server 
+%fore "black"
+		populate working directory
 	Pull
-		
+		get changes from 
+%cont, fore "red"
+server 
+%fore "black"
+		update
+%cont, fore "blue"
+repository
+%fore "black"
+	Push
+		send changes to 
+%cont, fore "red"
+server 
+%fore "black"
+		update
+%cont, fore "blue"
+repository
+%fore "black"
 
 
-	
+
 
 %right
 >
