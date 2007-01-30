@@ -89,10 +89,36 @@ Concepts
 SCM components
 
 	Repository contents
+%mark
+%newimage -xscrzoom 100 "repo-obj.eps"
+%again
 		objects / blobs / diffs / deltas / patches
-%pause
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+SCM components
+
+	Repository contents
+%mark
+%newimage -xscrzoom 100 "repo-commit.eps"
+%again
+		objects / blobs / diffs / deltas / patches
 		commits / changesets / revisions
-%pause
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+SCM components
+
+	Repository contents
+%mark
+%newimage -xscrzoom 100 "repo-ancestry.eps"
+%again
+		objects / blobs / diffs / deltas / patches
+		commits / changesets / revisions
 		ancestry / history
 %pause
 		tags / labels
@@ -103,6 +129,9 @@ SCM components
 	Working directory
 		files
 		list of files to add/delete
+
+
+
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

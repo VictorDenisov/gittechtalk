@@ -5,8 +5,10 @@ PDF=$(PS:.ps=.pdf)
 SVG=$(wildcard *.svg)
 EPS=$(SVG:.svg=.eps)
 
-run: ${MGP} ${EPS}
+run: ${MGP} eps
 	mgp -x vflib -g 1000x700 ${MGP}
+
+eps: ${EPS}
 
 ps: ${PS}
 
