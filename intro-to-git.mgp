@@ -3,9 +3,11 @@
 %% Introduction to Wmii+Ruby
 %% Bart Trojanowski (C) 2007
 %%
+#%tfdir "/usr/share/fonts/truetype/"
 %deffont "standard" xfont "helvetica-medium-r", tfont "standard.ttf"
 %deffont "slant" xfont "helvetica-medium-i", tfont "standard.ttf"
 %deffont "thick" xfont "helvetica-bold-r", tfont "thick.ttf"
+#%deffont "typewriter" xfont "courier-medium-r", tfont "typewriter.ttf"
 %deffont "typewriter" xfont "courier-medium-r", tfont "typewriter.ttf"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
@@ -146,6 +148,7 @@ SCM operations
 
 %pause
 	Information
+		status
 		diff
 		log
 %right
@@ -255,9 +258,6 @@ server
 repository
 %fore "black"
 
-
-
-
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -272,15 +272,529 @@ Decentralized SCM
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-GIT
+Birth of GIT
 
-	
+	2002
+		Linus uses BitKeeper for tracking Linux
+	April 6, 2005
+		BitMover drops free license
+		Linux writes his own SCM, GIT
+	April 18, 2005
+		GIT can merge
+	June 16, 2005
+		GIT is officially used to track Linux
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
 
-	
+Using GIT
+
+%area 40 90 5 18, leftfill
+	Basics
+		Creating a repository
+		Creating commits
+		Looking at the history
+
+%pause
+	Tagging & Branching
+		Creating
+		Merging
+		Rebase
+
+%pause
+	Patches
+		Generating
+		Accepting
+
+%area 40 90 50 18, leftfill
+%pause
+	Distributed
+		Cloning
+		Fetch / Pull
+		Push
+		Daemon
+		Remotes
+
+%pause
+	Tools
+		Working with other SCMs
+		Housekeeping
+		Visualization
+
+%pause
+	Tricks
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Basics : Creating a repository
+
+	just run
+%font "typewriter", fore "grey60"
+ $ mkdir my-project
+ $ cd my-project
+%font "typewriter", fore "blue"
+ $ git init
+%font "typewriter", fore "grey60"
+ Initialized empty Git repository in .git
+%font "standard", fore "black"
+
+	Initial .git directory:
+%font "typewriter", fore "grey60"
+ $ du -sh .git
+ 60K     .git
+%font "standard", fore "black"
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Basics : Creating commits
+
+	adding files
+%font "typewriter", fore "grey60"
+  $ echo this is a test > test.1
+  $ echo this is also a test > test.2
+%font "typewriter", fore "blue"
+  $ git add test.1 test.2
+  $ git commit -a -m "adding some files"
+%size 3, fore "grey60"
+     Created initial commit 4bba26ed61c918687d9b34e9fcbef12a6d5bf01a
+      2 files changed, 2 insertions(+), 0 deletions(-)
+      create mode 100644 test.1
+      create mode 100644 test.2
+%size 5
+
+%font "standard", fore "black"
+	add everything, recursive
+%font "typewriter", fore "blue"
+    $ git add .
+%font "standard", fore "black"
+
+	commit just one file, interactive
+%font "typewriter", fore "blue"
+    $ git commit file.1
+%font "standard", fore "black"
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Basics : Creating commits
+
+	removing files
+%font "typewriter", fore "grey60"
+  $ git rm test.2
+%font "typewriter", fore "blue"
+  $ git commit -a -m"removing a file"
+%size 3, fore "grey60"
+     Created commit b4e0bebe216fd53b540134a659254e192cbce57c
+      1 files changed, 0 insertions(+), 1 deletions(-)
+      delete mode 100644 test.2
+%size 5
+%font "standard", fore "black"
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Basics : Current state
+
+	Show uncommitted file changes
+%font "typewriter", fore "grey60"
+  $ echo more text >> test.1
+%font "typewriter", fore "blue"
+  $ git status
+%font "typewriter", fore "grey60"
+  # On branch master
+  # Changed but not updated:
+  #       modified:   test.1
+%font "standard", fore "black"
+
+%pause
+	show the differences
+%font "typewriter", fore "blue"
+  $ git diff 
+%font "typewriter", fore "grey60"
+  --- a/test.1
+  +++ b/test.1
+  @@ -1 +1,2 @@
+   this is a test
+  +more text
+
+%font "standard", fore "black"
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Basics : Cleanup
+
+	drop all changes
+%font "typewriter", fore "blue"
+  $ git reset --hard 
+%font "standard", fore "black"
+
+	revert changes to a file
+%font "typewriter", fore "blue"
+  $ git checkout file
+%font "standard", fore "black"
+
+%font "standard", fore "black"
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Basics : Looking at the history
+
+	review commit messages
+%font "typewriter", fore "blue", size 5
+  $ git log
+%font "standard", fore "black"
+%pause
+		with ranges
+%font "typewriter", fore "blue", size 5
+  $ git log -10
+  $ git log --since="2 weeks ago"
+  $ git log tag..tag2
+  $ git log tag..
+  $ git log ^common branch1 branch2
+%font "standard", fore "black"
+%pause
+		limit to commits that alter a path
+%font "typewriter", fore "blue", size 5
+  $ git log -- file
+%font "standard", fore "black"
+%pause
+		varying levels of information
+%font "typewriter", fore "blue", size 5
+  $ git log --pretty=oneline
+  $ git log --pretty=email
+%font "standard", fore "black"
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Basics : Looking at the history (2)
+
+	review changes in commits
+%font "typewriter", fore "blue"
+  $ git whatchanged
+%font "standard", fore "black"
+		like git-log, but also lists files that changed
+
+	limit as with log
+%font "typewriter", fore "blue", size 5
+  $ git whatchanged --since="May 10"
+  $ git whatchanged tag..tag2 -- file
+%font "standard", fore "black"
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Basics : Looking at the history (3)
+
+	see what changes one commit made (diff)
+%font "typewriter", fore "blue", size 5
+  $ git show <commit>
+%font "standard", fore "black"
+		like git-log, but also lists diff's
+
+	look at diffs for all/some commits
+%font "typewriter", fore "blue", size 5
+  $ git log -p
+  $ git log -p tag..tag1
+%font "standard", fore "black"
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Commit IDs
+
+	reference by
+		SHA1 sum
+%font "typewriter", fore "blue", size 3
+       git show b4e0bebe216fd53b540134a659254e192cbce57c
+%font "standard", fore "black"
+		short SHA1 sum
+%font "typewriter", fore "blue", size 3
+       git show b4e0bebe
+%font "standard", fore "black"
+		a tag or branch name
+%font "typewriter", fore "blue", size 3
+       git show something
+%font "standard", fore "black"
+		current commit
+%font "typewriter", fore "blue", size 3
+       git show HEAD
+%font "standard", fore "black"
+
+%pause
+		relative to a commit
+%font "typewriter", fore "blue", size 3
+       git show HEAD^
+       git show HEAD^^^^^^^^^^
+       git show HEAD~10
+%font "standard", fore "black"
+		ranges and exclusions
+%font "typewriter", fore "blue", size 3
+       git log HEAD~10..HEAD
+       git log ^HEAD~10 HEAD
+       git log ^something tag branch
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Tagging
+
+	label a commit symbolically
+	short hand for a commit SHA1 sum
+
+	tag a commit
+%font "typewriter", fore "blue", size 5
+  $ git tag some-name
+  $ git tag -f some-name b4e0bebe...
+%font "standard", fore "black"
+	list existing tags
+%font "typewriter", fore "blue", size 5
+  $ git tag -l
+  some-name
+%font "standard", fore "black"
+	remove a tag
+%font "typewriter", fore "blue", size 5
+  $ git tag -d some-name
+%font "standard", fore "black"
+
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Branching
+
+	always on a branch
+	branch is a pointer to a commit
+	two types of branches
+%pause,	size 5
+		local branches
+%font "typewriter", fore "grey40"
+     master
+%pause
+     whatever-you-want
+%font "standard", fore "black"
+%pause,	size 5
+		remote branches
+%font "typewriter", fore "grey40"
+     origin/master
+%pause
+     some-host/their-branch
+%font "standard", fore "black"
+
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Branching : creating
+
+	show branches
+%font "typewriter", fore "blue"
+  $ git branch
+    another
+  * master
+
+  $ git branch -r
+    origin/master
+    origin/foo
+%font "standard", fore "black"
+
+%pause
+	creating a branch
+%font "typewriter", fore "blue"
+  $ git branch this
+  $ git branch another b4e0bebe...
+  $ git branch it-worked HEAD~4
+%font "standard", fore "black"
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Branching : switching
+
+	switch to an existing branch
+%font "typewriter", fore "blue"
+  $ git checkout some-branch
+%font "standard", fore "black"
+
+%pause
+	switch to a new branch 
+%font "typewriter", fore "blue"
+  $ git branch new-branch origin/master
+  $ git checkout new-branch
+%font "standard", fore "black"
+       ... or ...
+%font "typewriter", fore "blue"
+  $ git checkout -b new-branch origin/master
+%font "standard", fore "black"
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Branching : merging
+
+	merge another branch
+%font "typewriter", fore "blue"
+  $ git merge some-branch
+%font "standard", fore "black"
+
+%pause
+	expecting bugs?
+%font "typewriter", fore "blue"
+  $ git merge --no-commit some-branch
+%font "typewriter", fore "grey60"
+  $ fix
+  $ test
+%font "typewriter", fore "blue"
+  $ git commit -a
+%font "standard", fore "black"
+
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Branching : rebase
+
+	made some old-work on another branch
+%font "typewriter", fore "grey60", size 3
+             A---B---C    <- old-work
+            /
+       D---E---F---G      <- master
+%font "standard", fore "black", size 5
+	could merge
+%font "typewriter", fore "blue"
+  $ git checkout -b new-work master
+  $ git merge old-work
+%font "typewriter", fore "grey60", size 3
+             A---B---C      <- old-work
+            /         \\
+       D---E           H    <- new-work
+            \\         / 
+             F-------G      <- master
+%font "standard", fore "black", size 5
+	or rebase
+%font "typewriter", fore "blue"
+  $ git checkout old-work
+  $ git rebase master
+%font "typewriter", fore "grey60", size 3
+                     A---B---C   <- old-work
+                    /
+       D---E---F---G             <- master
+%font "standard", fore "black", size 5
+
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Patches : Generating
+
+	x
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Patches : Accepting
+
+	x
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Distributed : Cloning
+
+	x
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Distributed : Fetch / Pull
+
+	x
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Distributed : Push
+
+	x
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Distributed : Daemon
+
+	x
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Distributed : Remotes
+
+	x
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Tools : Working with other SCMs
+
+	x
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Tools : Housekeeping 
+
+	x
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Tools : Visualization
+
+	x
+%right
+>
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+TODO:
+
+	git-lost-found
+	git completion
+
+%right
+>
 
 
 
