@@ -5,6 +5,8 @@ PDF=$(PS:.ps=.pdf)
 SVG=$(wildcard *.svg)
 EPS=$(SVG:.svg=.eps)
 
+
+.PHONY: run eps ps pdf clean
 run: ${MGP} eps
 	mgp -x vflib -g 1000x700 ${MGP}
 
@@ -22,3 +24,7 @@ ${PDF}: ${PS}
 
 ${EPS}: %.eps: %.svg
 	inkscape -z -E $@ $<
+
+clean:
+	-rm -f ${PS} ${PDF} ${ESP}
+	-rm -f *~
