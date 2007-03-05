@@ -833,7 +833,27 @@ Patches : Accepting
 
 Distributed : Cloning
 
-	x
+	cloning local repository
+%font "typewriter", fore "blue",size 4
+    $ git clone /var/git/our-repo.git my-work
+    $ git clone ~bob/export.git working-with-bob
+    $ git clone -l -s my-work my-work-2
+%font "standard", fore "black"
+
+%pause
+	cloning remote repository
+%font "typewriter", fore "blue",size 4
+    $ git clone git://git-server/git-repo my-work
+    $ git clone ssh-server/~bart/something my-work
+    $ git clone http://web-server/git-repo my-work
+%font "standard", fore "black"
+
+%pause
+	with reference
+%font "typewriter", fore "blue",size 4
+    $ git clone --reference existing-full-clone \\
+          git://git-server/git-repo quick-test
+%font "standard", fore "black"
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
