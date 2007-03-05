@@ -329,6 +329,39 @@ Using GIT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
+Basics : Commands
+
+	format
+%font "typewriter", fore "blue"
+ $ git <options> <command> <cmd-options>
+%font "standard", fore "black"
+
+	list of commands
+%font "typewriter", fore "blue", size 5
+ $ git help
+%font "standard", fore "black"
+
+%pause
+	usage info
+%font "typewriter", fore "blue", size 5
+ $ git init -h
+%font "typewriter", fore "grey60"
+ usage: git-init [--template=...] [--shared]
+%font "standard", fore "black"
+
+%pause
+	detailed help
+%font "typewriter", fore "grey60"
+ $ man git-init
+%font "typewriter", fore "blue", size 5
+ $ git help init
+ $ git init --help
+%font "standard", fore "black"
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
 Basics : Creating a repository
 
 	just run
@@ -680,6 +713,7 @@ Branching : rebase
             /
        D---E---F---G      <- master
 %font "standard", fore "black", size 5
+%pause
 	could merge
 %font "typewriter", fore "blue"
   $ git checkout -b new-work master
@@ -691,6 +725,7 @@ Branching : rebase
             \\         / 
              F-------G      <- master
 %font "standard", fore "black", size 5
+%pause
 	or rebase
 %font "typewriter", fore "blue"
   $ git checkout old-work
@@ -700,7 +735,44 @@ Branching : rebase
                     /
        D---E---F---G             <- master
 %font "standard", fore "black", size 5
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
 
+Patches
+
+	standard diff
+%font "typewriter", fore "grey60", size 4
+    $ diff -u a b
+%font "typewriter", fore "purple", size 4
+    --- a   2007-03-04 22:40:11.473402253 -0500
+    +++ b   2007-03-04 22:40:25.365464311 -0500
+%font "typewriter", fore "brown", size 4
+    @@ -1 +1 @@
+%font "typewriter", fore "red", size 4
+    -old text
+%font "typewriter", fore "green", size 4
+    +new text
+
+%pause
+%font "standard", fore "black"
+	git diff
+%font "typewriter", fore "blue", size 4
+    $ git diff HEAD~1
+%font "typewriter", fore "darkblue", size 4
+    diff --git a/file b/file
+    index acc4bcb..eee417f 100644
+%font "typewriter", fore "purple", size 4
+    --- a/file
+    +++ b/file
+%font "typewriter", fore "brown", size 4
+    @@ -1 +1 @@
+%font "typewriter", fore "red", size 4
+    -old text
+%font "typewriter", fore "green", size 4
+    +new text
+%font "standard", fore "black"
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -708,7 +780,30 @@ Branching : rebase
 
 Patches : Generating
 
-	x
+	just diffs
+%font "typewriter", fore "blue",size 4
+    $ git diff -1         > last.patch
+    $ git diff tag~1..tag > before-tag.patch
+    $ git diff ^good      > since-good.patch
+%font "standard", fore "black"
+
+%pause
+	git patches
+		file per commit
+%font "typewriter", fore "blue"
+    $ git format-patch -2
+%font "typewriter", fore "grey60", size 4
+    00001-this-is-my-first-patch.txt
+    00002-this-is-my-most-recent-patch.txt
+%font "standard", fore "black"
+		an mbox file
+%font "typewriter", fore "blue"
+    $ git format-patch a..b --stdout -k > patches
+%font "standard", fore "black"
+		send email
+%font "typewriter", fore "blue"
+    $ git send-email --to bart@jukie.net patches
+%font "standard", fore "black"
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -716,7 +811,21 @@ Patches : Generating
 
 Patches : Accepting
 
-	x
+	apply patch
+%font "typewriter", fore "blue",size 4
+    $ git apply changes-from-bob.patch
+    $ git add new-files...
+    $ git rm old-files...
+    $ git commit -a -m"fixes soemthing" \\
+                 --author="Bob <bob@gmail.com>"
+%font "standard", fore "black"
+
+%pause
+	apply and commit a git patch
+%font "typewriter", fore "blue",size 4
+    $ git am -3 -s -k 00001-this-is-my-first-patch.txt
+
+%font "standard", fore "black"
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
