@@ -950,13 +950,34 @@ Tools : Working with other SCMs
     $ git-cvsserver        
 %font "standard", fore "black"
 
-	also
+	can also import
 		arch
 		darcs
 		p4
 		hg
 		bk
            ... others
+
+	tailor
+		Swiss army knife
+
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Tools : Build farms
+
+	create a snapshot of a revision
+%font "typewriter", fore "blue",size 4
+    $ git archive --format=tar \\
+           --remote=git://server/repo.git \\
+           --prefix=build-dir \\
+	   tag-to-build | tar xf -
+%font "typewriter", fore "grey60"
+    $ cd build-dir
+    $ make release
+%font "standard", fore "black"
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
