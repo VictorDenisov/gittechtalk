@@ -1,13 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
-%% Introduction to Wmii+Ruby
+%% Introduction to Git
 %% Bart Trojanowski (C) 2007
 %%
 #%tfdir "/usr/share/fonts/truetype/"
 %deffont "standard" xfont "helvetica-medium-r", tfont "standard.ttf"
 %deffont "slant" xfont "helvetica-medium-i", tfont "standard.ttf"
 %deffont "thick" xfont "helvetica-bold-r", tfont "thick.ttf"
-#%deffont "typewriter" xfont "courier-medium-r", tfont "typewriter.ttf"
 %deffont "typewriter" xfont "courier-medium-r", tfont "typewriter.ttf"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
@@ -32,10 +31,10 @@
 
 
 
-
 %center, fore "Blue", font "standard", hgap 60, size 6.5
-Introduction to git
+Introduction to GIT
 %bar "skyblue" 6 15 70
+The distributed SCM
 %font "standard", hgap 0
 
 
@@ -637,10 +636,13 @@ Branching : creating
 	show branches
 %font "typewriter", fore "blue"
   $ git branch
+%font "typewriter", fore "grey60"
     another
   * master
 
+%font "typewriter", fore "blue"
   $ git branch -r
+%font "typewriter", fore "grey60"
     origin/master
     origin/foo
 %font "standard", fore "black"
@@ -916,7 +918,7 @@ Distributed : Remotes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Tools : finding regressions
+Tools : Finding regressions
 
 	found a regression
 		HEAD is bad
@@ -934,6 +936,37 @@ Tools : finding regressions
 		finds commit to test next
 		tell it 'good' or 'bad'
 		repeat
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Tools : Configuration
+
+	global configuration is in ~/.gitconfig
+%font "typewriter", fore "blue",size 4
+    $ git config --global --list
+%font "typewriter", fore "grey60"
+    user.name=Bart Trojanowski
+    user.email=bart@jukie.net
+
+    color.branch=auto
+    color.diff=auto
+    color.pager=true
+    color.status=auto
+%font "standard", fore "black"
+
+	repository configuration is in .git/config
+%font "typewriter", fore "blue",size 4
+    $ git config remote.origin.url
+%font "typewriter", fore "grey60"
+    git://git2.kernel.org/pub/scm/git/git.git
+%font "standard", fore "black"
+
+	changing settings
+%font "typewriter", fore "blue",size 4
+    $ git config --global color.status true
+%font "standard", fore "black"
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -961,23 +994,6 @@ Tools : Working with other SCMs
 	tailor
 		Swiss army knife
 
-%right
->
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%page
-
-Tools : Build farms
-
-	create a snapshot of a revision
-%font "typewriter", fore "blue",size 4
-    $ git archive --format=tar \\
-           --remote=git://server/repo.git \\
-           --prefix=build-dir \\
-	   tag-to-build | tar xf -
-%font "typewriter", fore "grey60"
-    $ cd build-dir
-    $ make release
-%font "standard", fore "black"
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1011,6 +1027,23 @@ Tools : Visualization
     $ gitk
     $ qgit
     $ gitview
+%font "standard", fore "black"
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Tools : Build farms
+
+	create a snapshot of a revision
+%font "typewriter", fore "blue",size 4
+    $ git archive --format=tar \\
+           --remote=git://server/repo.git \\
+           --prefix=build-dir \\
+	   tag-to-build | tar xf -
+%font "typewriter", fore "grey60"
+    $ cd build-dir
+    $ make release
 %font "standard", fore "black"
 %right
 >
