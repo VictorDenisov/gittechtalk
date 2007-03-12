@@ -358,6 +358,17 @@ Basics : Commands
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
+Basics : GIT 1.5.0
+
+	Main differences
+
+<< TODO >>
+
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
 Basics : Creating a repository
 
 	just run
@@ -539,6 +550,21 @@ Basics : Looking at the history (3)
   $ git log -p
   $ git log -p tag..tag1
 %font "standard", fore "black"
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Basics : Looking at the history (4)
+
+	searching for a change
+%font "typewriter", fore "blue", size 5
+  $ git log --grep="find this" \\
+	    --author="bob@domain.com" \\
+	    --committer="steve@domain.com" \\
+            --pretty=oneline
+%font "standard", fore "black"
+
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
