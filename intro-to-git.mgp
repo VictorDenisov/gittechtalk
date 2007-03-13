@@ -329,11 +329,16 @@ Birth of GIT
 
 	2002
 		Linus uses BitKeeper for tracking Linux
+		BK gets better
+		Linux development scales better
+%pause
 	April 6, 2005
 		BitMover drops free license
-		Linux writes his own SCM, GIT
+		Linus writes his own SCM, GIT
+%pause
 	April 18, 2005
 		GIT can merge
+%pause
 	June 16, 2005
 		GIT is officially used to track Linux
 %right
@@ -390,13 +395,13 @@ Basics : Commands
 %font "standard", fore "black"
 
 	list of commands
-%font "typewriter", fore "blue", size 5
+%font "typewriter", fore "blue"
  $ git help
 %font "standard", fore "black"
 
 %pause
 	usage info
-%font "typewriter", fore "blue", size 5
+%font "typewriter", fore "blue"
  $ git init -h
 %font "typewriter", fore "grey60"
  usage: git-init [--template=...] [--shared]
@@ -406,7 +411,7 @@ Basics : Commands
 	detailed help
 %font "typewriter", fore "grey60"
  $ man git-init
-%font "typewriter", fore "blue", size 5
+%font "typewriter", fore "blue"
  $ git help init
  $ git init --help
 %font "standard", fore "black"
@@ -428,7 +433,6 @@ Basics : GIT 1.5.0
 
 Basics : Creating a repository
 
-	just run
 %font "typewriter", fore "grey60"
  $ mkdir my-project
  $ cd my-project
@@ -438,7 +442,7 @@ Basics : Creating a repository
  Initialized empty Git repository in .git
 %font "standard", fore "black"
 
-	Initial .git directory:
+	Initial .git directory
 %font "typewriter", fore "grey60"
  $ du -sh .git
  60K     .git
@@ -520,7 +524,6 @@ Basics : Current state
   @@ -1 +1,2 @@
    this is a test
   +more text
-
 %font "standard", fore "black"
 %right
 >
@@ -548,7 +551,7 @@ Basics : Cleanup
 Basics : Looking at the history
 
 	review commit messages
-%font "typewriter", fore "blue", size 5
+%font "typewriter", fore "blue"
   $ git log
 %font "standard", fore "black"
 %pause
@@ -556,8 +559,8 @@ Basics : Looking at the history
 %font "typewriter", fore "blue", size 5
   $ git log -10
   $ git log --since="2 weeks ago"
-  $ git log tag..tag2
   $ git log tag..
+  $ git log tag1..tag2
   $ git log ^common branch1 branch2
 %font "standard", fore "black"
 %pause
@@ -585,9 +588,9 @@ Basics : Looking at the history (2)
 		like git-log, but also lists files that changed
 
 	limit as with log
-%font "typewriter", fore "blue", size 5
+%font "typewriter", fore "blue"
   $ git whatchanged --since="May 10"
-  $ git whatchanged tag..tag2 -- file
+  $ git whatchanged tag1..tag2 -- file
 %font "standard", fore "black"
 %right
 >
@@ -615,13 +618,19 @@ Basics : Looking at the history (3)
 Basics : Looking at the history (4)
 
 	searching for a change
-%font "typewriter", fore "blue", size 5
-  $ git log --grep="find this" \\
-	    --author="bob@domain.com" \\
-	    --committer="steve@domain.com" \\
-            --pretty=oneline
+%font "typewriter", fore "blue"
+  $ git log \\
+        --since="June 5, 2005" \\
+        --grep="find this" \\
+        --author="bob@domain.com" \\
+        --pretty=oneline \\
+        some-branch -- crypto/*.c
 %font "standard", fore "black"
 
+	what can I search for?
+%font "typewriter", fore "blue"
+  $ man git-rev-list
+%font "standard", fore "black"
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -659,31 +668,33 @@ Commit IDs
        git log HEAD~10..HEAD
        git log ^HEAD~10 HEAD
        git log ^something tag branch
-
-
+%font "standard", fore "black", size 5
+%right
+>
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
 Tagging
 
-	label a commit symbolically
-	short hand for a commit SHA1 sum
+	symbolic name for a commit
+	shorter then SHA1
 
 	tag a commit
 %font "typewriter", fore "blue", size 5
   $ git tag some-name
-  $ git tag -f some-name b4e0bebe...
+  $ git tag -f some-name
+  $ git tag another-name b4e0bebe...
 %font "standard", fore "black"
 	list existing tags
 %font "typewriter", fore "blue", size 5
   $ git tag -l
   some-name
+  another-name
 %font "standard", fore "black"
 	remove a tag
 %font "typewriter", fore "blue", size 5
   $ git tag -d some-name
 %font "standard", fore "black"
-
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -716,26 +727,26 @@ Branching
 
 Branching : creating
 
-	show branches
+	creating a branch
+%font "typewriter", fore "blue"
+  $ git branch this
+  $ git branch another b4e0bebe...
+  $ git branch four-back HEAD~4
+%font "standard", fore "black"
+
+	show local
 %font "typewriter", fore "blue"
   $ git branch
 %font "typewriter", fore "grey60"
     another
   * master
-
+%font "standard", fore "black"
+	show remote
 %font "typewriter", fore "blue"
   $ git branch -r
 %font "typewriter", fore "grey60"
     origin/master
     origin/foo
-%font "standard", fore "black"
-
-%pause
-	creating a branch
-%font "typewriter", fore "blue"
-  $ git branch this
-  $ git branch another b4e0bebe...
-  $ git branch it-worked HEAD~4
 %font "standard", fore "black"
 %right
 >
@@ -747,17 +758,19 @@ Branching : switching
 	switch to an existing branch
 %font "typewriter", fore "blue"
   $ git checkout some-branch
+%pause
+  $ git checkout -f some-branch
 %font "standard", fore "black"
 
 %pause
 	switch to a new branch 
 %font "typewriter", fore "blue"
-  $ git branch new-branch origin/master
+  $ git branch new-branch master
   $ git checkout new-branch
 %font "standard", fore "black"
        ... or ...
 %font "typewriter", fore "blue"
-  $ git checkout -b new-branch origin/master
+  $ git checkout -b new-branch master
 %font "standard", fore "black"
 %right
 >
@@ -789,9 +802,9 @@ Branching : merging
 
 Branching : rebase
 
-	made some old-work on another branch
+	have some work on a branch
 %font "typewriter", fore "grey60", size 3
-             A---B---C    <- old-work
+             A---B---C    <- some-work
             /
        D---E---F---G      <- master
 %font "standard", fore "black", size 5
@@ -799,9 +812,9 @@ Branching : rebase
 	could merge
 %font "typewriter", fore "blue"
   $ git checkout -b new-work master
-  $ git merge old-work
+  $ git merge some-work
 %font "typewriter", fore "grey60", size 3
-             A---B---C      <- old-work
+             A---B---C      <- some-work
             /         \\
        D---E           H    <- new-work
             \\         / 
@@ -810,10 +823,10 @@ Branching : rebase
 %pause
 	or rebase
 %font "typewriter", fore "blue"
-  $ git checkout old-work
+  $ git checkout some-work
   $ git rebase master
 %font "typewriter", fore "grey60", size 3
-                     A---B---C   <- old-work
+                     A---B---C   <- some-work
                     /
        D---E---F---G             <- master
 %font "standard", fore "black", size 5
@@ -863,7 +876,7 @@ Patches
 Patches : Generating
 
 	just diffs
-%font "typewriter", fore "blue",size 4
+%font "typewriter", fore "blue", size 4
     $ git diff -1         > last.patch
     $ git diff tag~1..tag > before-tag.patch
     $ git diff ^good      > since-good.patch
@@ -872,18 +885,18 @@ Patches : Generating
 %pause
 	git patches
 		file per commit
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
     $ git format-patch -2
-%font "typewriter", fore "grey60", size 4
+%font "typewriter", fore "grey60"
     00001-this-is-my-first-patch.txt
     00002-this-is-my-most-recent-patch.txt
 %font "standard", fore "black"
 		an mbox file
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
     $ git format-patch a..b --stdout -k > patches
 %font "standard", fore "black"
 		send email
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
     $ git send-email --to bart@jukie.net patches
 %font "standard", fore "black"
 %right
@@ -894,20 +907,32 @@ Patches : Generating
 Patches : Accepting
 
 	apply patch
-%font "typewriter", fore "blue",size 4
-    $ git apply changes-from-bob.patch
-    $ git add new-files...
-    $ git rm old-files...
-    $ git commit -a -m"fixes soemthing" \\
-                 --author="Bob <bob@gmail.com>"
+%font "typewriter", fore "blue",size 5
+  $ git apply changes-from-bob.patch
+  $ git add new-files...
+  $ git rm old-files...
+  $ git commit -a \\
+         -m"fixes soemthing" \\
+         --author="Bob <bob@gmail.com>"
 %font "standard", fore "black"
 
 %pause
 	apply and commit a git patch
-%font "typewriter", fore "blue",size 4
-    $ git am -3 -s -k 00001-this-is-my-first-patch.txt
+%font "typewriter", fore "blue",size 5
+  $ git am -3 -s -k 00001-first-patch.txt
 
 %font "standard", fore "black"
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Distributed
+
+<< TODO >>
+
+<< diagram of working and remote repos >>
+
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -925,9 +950,9 @@ Distributed : Cloning
 %pause
 	cloning remote repository
 %font "typewriter", fore "blue",size 4
-    $ git clone git://git-server/git-repo my-work
-    $ git clone ssh-server/~bart/something my-work
+    $ git clone ssh-server:~bart/something my-work
     $ git clone http://web-server/git-repo my-work
+    $ git clone git://git-server/git-repo my-work
 %font "standard", fore "black"
 
 %pause
@@ -944,13 +969,13 @@ Distributed : Cloning
 Distributed : Fetch / Pull
 
 	get updates from server
-%font "typewriter", fore "blue",size 4
-    $ git fetch origin
-    $ git merge origin/master
+%font "typewriter", fore "blue"
+  $ git fetch origin
+  $ git merge origin/master
 %font "standard", fore "black"
   ... or ...
-%font "typewriter", fore "blue",size 4
-    $ git pull origin
+%font "typewriter", fore "blue"
+  $ git pull origin
 %font "standard", fore "black"
 %right
 >
@@ -960,8 +985,8 @@ Distributed : Fetch / Pull
 Distributed : Push
 
 	publish updates to server
-%font "typewriter", fore "blue",size 4
-    $ git push origin
+%font "typewriter", fore "blue"
+  $ git push publish
 %font "standard", fore "black"
 %right
 >
@@ -971,9 +996,14 @@ Distributed : Push
 Distributed : Daemon
 
 	run server
-%font "typewriter", fore "blue",size 4
-    $ git daemon /src/software.git
+%font "typewriter", fore "blue"
+  $ git daemon /src/software.git
 %font "standard", fore "black"
+
+	from inetd
+		see:  
+%cont, font "typewriter", fore "blue"
+man git-daemon
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -982,19 +1012,24 @@ Distributed : Daemon
 Distributed : Remotes
 
 	list remotes
-%font "typewriter", fore "blue",size 4
-    $ git remote
-    origin
+%font "typewriter", fore "blue"
+  $ git remote
+%font "typewriter", fore "grey60"
+  origin
 %font "standard", fore "black"
 
 	new remotes
-%font "typewriter", fore "blue",size 4
-    $ git remote add bob git://server/bob-devel.git/
+%font "typewriter", fore "blue"
+  $ git remote add bob git://server/bob.git/
 %font "standard", fore "black"
 
 	update tracked branches
-%font "typewriter", fore "blue",size 4
-    $ git remote update
+%font "typewriter", fore "blue"
+  $ git remote update
+  $ git branch -r
+%font "typewriter", fore "grey60"
+  bob/one
+  bob/two
 %font "standard", fore "black"
 %right
 >
@@ -1006,14 +1041,14 @@ Tools : Finding regressions
 	found a regression
 		HEAD is bad
 		known last good point
+		want to find first bad commit
 
 	binary search
-
 %pause
 %font "typewriter", fore "blue",size 4
-    $ git-bisect start
-    $ git-bisect bad
-    $ git-bisect good my-last-release
+    $ git bisect start
+    $ git bisect bad
+    $ git bisect good my-last-release
 %font "standard", fore "black"
 
 		finds commit to test next
@@ -1058,12 +1093,11 @@ Tools : Configuration
 Tools : Working with other SCMs
 
 %font "typewriter", fore "blue",size 4
-    $ git-svn
-    $ git-svnimport
+    git-svn
+    git-svnimport
 
-    $ git-cvsexportcommit
-    $ git-cvsimport
-    $ git-cvsserver        
+    git-cvsimport
+    git-cvsserver        
 %font "standard", fore "black"
 
 	can also import
@@ -1075,8 +1109,7 @@ Tools : Working with other SCMs
            ... others
 
 	tailor
-		Swiss army knife
-
+		Swiss Army knife
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1084,14 +1117,20 @@ Tools : Working with other SCMs
 
 Tools : Housekeeping 
 
-	cleanup
-%font "typewriter", fore "blue",size 4
+	forgetting changes
+%font "typewriter", fore "blue"
+    $ git clean -d -x
+    $ git reset --hard HEAD
+%font "standard", fore "black"
+
+	repository cleanup
+%font "typewriter", fore "blue"
     $ git prune -d
     $ git fsck
 %font "standard", fore "black"
 
 	lost commits
-%font "typewriter", fore "blue",size 4
+%font "typewriter", fore "blue"
     $ git lost-found
 %font "standard", fore "black"
 %right
@@ -1101,12 +1140,14 @@ Tools : Housekeeping
 
 Tools : Visualization
 
-%font "typewriter", fore "blue",size 4
+	commit tools
+%font "typewriter", fore "blue"
     $ git-gui
     $ gct
 %font "standard", fore "black"
 
-%font "typewriter", fore "blue",size 4
+	revision tools
+%font "typewriter", fore "blue"
     $ gitk
     $ qgit
     $ gitview
@@ -1119,14 +1160,14 @@ Tools : Visualization
 Tools : Build farms
 
 	create a snapshot of a revision
-%font "typewriter", fore "blue",size 4
-    $ git archive --format=tar \\
-           --remote=git://server/repo.git \\
-           --prefix=build-dir \\
-	   tag-to-build | tar xf -
+%font "typewriter", fore "blue"
+  $ git archive --format=tar \\
+        --remote=git://server/repo.git \\
+        --prefix=build-dir \\
+        tag-to-build | tar xf -
 %font "typewriter", fore "grey60"
-    $ cd build-dir
-    $ make release
+  $ cd build-dir
+  $ make release
 %font "standard", fore "black"
 %right
 >
@@ -1135,14 +1176,14 @@ Tools : Build farms
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Tools : 
+Tools : misc
 
 	git completion
 
 %right
 >
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
 
-
-
-
+QUESTIONS
 
