@@ -94,6 +94,14 @@ SCM components
 %newimage -xscrzoom 100 "repo-obj.eps"
 %again
 		objects / blobs / diffs / deltas / patches
+
+
+
+
+
+
+
+
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -107,6 +115,13 @@ SCM components
 %again
 		objects / blobs / diffs / deltas / patches
 		commits / changesets / revisions
+
+
+
+
+
+
+
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -121,9 +136,47 @@ SCM components
 		objects / blobs / diffs / deltas / patches
 		commits / changesets / revisions
 		ancestry / history
-%pause
+
+
+
+
+
+
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+SCM components
+
+	Repository contents
+%mark
+%newimage -xscrzoom 100 "repo-tags.eps"
+%again
+		objects / blobs / diffs / deltas / patches
+		commits / changesets / revisions
+		ancestry / history
 		tags / labels
-%pause
+
+
+
+
+
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+SCM components
+
+	Repository contents
+%mark
+%newimage -xscrzoom 100 "repo-branches.eps"
+%again
+		objects / blobs / diffs / deltas / patches
+		commits / changesets / revisions
+		ancestry / history
+		tags / labels
 		branches / heads
 
 %pause
