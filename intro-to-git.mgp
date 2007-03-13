@@ -200,6 +200,11 @@ SCM operations
 		status
 		diff
 		log
+
+%pause
+	Tagging
+
+	Branching
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -239,8 +244,7 @@ server
 
 Centralized SCM
 
-<< image goes here >>
-
+%newimage -xscrzoom 100 "centralized.eps"
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -314,7 +318,7 @@ repository
 
 Decentralized SCM
 
-<< image goes here >>
+%newimage -xscrzoom 100 "decentralized.eps"
 
 %right
 >
