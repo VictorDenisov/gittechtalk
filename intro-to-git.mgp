@@ -346,15 +346,18 @@ Birth of GIT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
+GIT gets better
 
 
-%fore "blue"
+
+
+
+%fore "blue", center
    And then realize that nothing is perfect.
-   Git is just *closer* to perfect than any other SCM out there.
-%font "slant", fore "black"
-                                  -Linus
-%right
->
+   Git is just *closer* to perfect than any
+   other SCM out there.
+%font "slant", fore "black", right
+-Linus          
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
