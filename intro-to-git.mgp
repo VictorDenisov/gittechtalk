@@ -353,9 +353,9 @@ GIT gets better
 
 
 %fore "blue", center
-   And then realize that nothing is perfect.
-   Git is just *closer* to perfect than any
-   other SCM out there.
+And then realize that nothing is perfect.
+Git is just *closer* to perfect than any
+other SCM out there.
 %font "slant", fore "black", right
 -Linus          
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -794,11 +794,14 @@ Branching : switching
 
 Branching : merging
 
-%fore "blue"
-   End result: merges suck. Unless you're smart, and use git.
-%font "slant", fore "black"
-                                  -Linus
-%right
+
+
+
+
+%fore "blue", center
+End result: merges suck. Unless you're smart, and use git.
+%font "slant", fore "black", right
+-Linus          
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
