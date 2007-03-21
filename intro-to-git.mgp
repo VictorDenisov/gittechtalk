@@ -346,6 +346,18 @@ Birth of GIT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
+
+
+%fore "blue"
+   And then realize that nothing is perfect.
+   Git is just *closer* to perfect than any other SCM out there.
+%font "slant", fore "black"
+                                  -Linus
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
 Using GIT
 
 %area 40 90 5 18, leftfill
@@ -772,6 +784,17 @@ Branching : switching
 %font "typewriter", fore "blue"
   $ git checkout -b new-branch master
 %font "standard", fore "black"
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Branching : merging
+
+%fore "blue"
+   End result: merges suck. Unless you're smart, and use git.
+%font "slant", fore "black"
+                                  -Linus
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
