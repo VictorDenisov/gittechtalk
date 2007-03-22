@@ -437,10 +437,73 @@ Basics : Commands
 
 Basics : GIT 1.5.0
 
-	Main differences
+	easier merging
+		use 
+%cont, font "typewriter", fore "blue"
+git-merge 
+%cont, font "standard", fore "black"
+command
 
-<< TODO >>
+	better remote management
+		remote vs local branch separation
+		common usage patterns are automated
+		new 
+%cont, font "typewriter", fore "blue"
+git-remote 
+%cont, font "standard", fore "black"
+command
 
+	lots of minor changes
+		heavy use of 
+%cont, font "typewriter", fore "blue"
+.git/config 
+%cont, font "standard", fore "black"
+for configuration
+		improvements to 
+%cont, font "typewriter", fore "blue"
+git-add 
+%cont, font "standard", fore "black"
+and 
+%cont, font "typewriter", fore "blue"
+git-rm 
+%cont, font "standard", fore "black"
+commands
+		better documentation
+		...
+
+
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Basics : Configuration
+
+	global configuration is in ~/.gitconfig
+%font "typewriter", fore "blue",size 4
+    $ git config --global --list
+%font "typewriter", fore "grey60"
+    user.name=Bart Trojanowski
+    user.email=bart@jukie.net
+    color.branch=auto
+    color.diff=auto
+    color.pager=true
+    color.status=auto
+%font "standard", fore "black"
+
+	repository configuration is in repo/.git/config
+%font "typewriter", fore "blue",size 4
+    $ git config --list
+%font "typewriter", fore "grey60"
+    section.variable=value
+    ...
+%font "standard", fore "black"
+
+	changing settings
+%font "typewriter", fore "blue",size 4
+    $ git config --global user.name "Bart Trojanowski"
+    $ git config --global user.email bart@jukie.net
+%font "standard", fore "black"
 %right
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -588,6 +651,7 @@ Basics : Looking at the history
 %font "typewriter", fore "blue", size 5
   $ git log --pretty=oneline
   $ git log --pretty=email
+  $ git log --stat --summary
 %font "standard", fore "black"
 %right
 >
@@ -799,10 +863,10 @@ Branching : merging
 
 
 %fore "blue", center
-End result: merges suck. Unless you're smart, and use git.
+Merges suck.
+Unless you're smart, and use git.
 %font "slant", fore "black", right
 -Linus          
->
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
@@ -1088,37 +1152,6 @@ Tools : Finding regressions
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Tools : Configuration
-
-	global configuration is in ~/.gitconfig
-%font "typewriter", fore "blue",size 4
-    $ git config --global --list
-%font "typewriter", fore "grey60"
-    user.name=Bart Trojanowski
-    user.email=bart@jukie.net
-
-    color.branch=auto
-    color.diff=auto
-    color.pager=true
-    color.status=auto
-%font "standard", fore "black"
-
-	repository configuration is in .git/config
-%font "typewriter", fore "blue",size 4
-    $ git config remote.origin.url
-%font "typewriter", fore "grey60"
-    git://git2.kernel.org/pub/scm/git/git.git
-%font "standard", fore "black"
-
-	changing settings
-%font "typewriter", fore "blue",size 4
-    $ git config --global color.status true
-%font "standard", fore "black"
-%right
->
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%page
-
 Tools : Working with other SCMs
 
 %font "typewriter", fore "blue",size 4
@@ -1207,7 +1240,31 @@ Tools : Build farms
 
 Tools : misc
 
-	git completion
+	cogito
+
+	git bash completion
+
+	quilt like functionality
+		STGIT
+		guilt
+
+	gitweb
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+References
+
+	Getting started
+		http://git.or.cz/
+
+	Download
+		http://www.kernel.org/pub/software/scm/git/
+
+	GIT 1.5.0 release notes
+		http://lwn.net/Articles/222086/
+
 
 %right
 >
