@@ -928,6 +928,37 @@ Branching : rebase
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
+Branching : changing history with rebase
+
+	made some commits
+%font "typewriter", fore "grey60", size 3
+             A--B--C--D--E(master)
+%font "standard", fore "black", size 5
+%pause
+
+	realized you made a mistake in commit 'B'
+	go back
+%font "typewriter", fore "blue"
+  $ git checkout HEAD~3
+  $ git commit --amend
+%font "typewriter", fore "grey60", size 3
+             .B'(HEAD)
+	    /
+           A--B--C--D--E(master)
+%font "standard", fore "black", size 5
+%pause
+
+	bring back the other commits
+%font "typewriter", fore "blue"
+  $ git rebase HEAD master
+%font "typewriter", fore "grey60", size 3
+             A--B'--C--D--E(master)
+%font "standard", fore "black", size 5
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
 Patches
 
 	standard diff
