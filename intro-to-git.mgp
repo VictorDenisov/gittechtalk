@@ -379,6 +379,30 @@ share changes with trusted peers
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
+Is Decentralized good?
+
+
+
+
+%pause, size 20, center
+YES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Is Decentralized good?
+
+	non-intrusive micro-commits
+
+	detached operation
+
+	no single point of failure
+
+	backups are trivial
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
 Birth of GIT
 
 	2002
