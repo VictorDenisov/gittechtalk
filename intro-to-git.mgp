@@ -325,6 +325,60 @@ Decentralized SCM
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
+Decentralized SCM operations
+
+%newimage -xscrzoom 100 "cloning-1-upstream.eps"
+public repository
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Decentralized SCM operations
+
+%newimage -xscrzoom 100 "cloning-2-local.eps"
+make a local clone
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Decentralized SCM operations
+
+%newimage -xscrzoom 100 "cloning-3-topic.eps"
+create topic branches
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Decentralized SCM operations
+
+%newimage -xscrzoom 100 "cloning-4-push.eps"
+push changes between any repositories
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Decentralized SCM operations
+
+%newimage -xscrzoom 100 "cloning-5-publish.eps"
+publish changes to public server
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Decentralized SCM operations
+
+%newimage -xscrzoom 100 "cloning-6-trusted.eps"
+share changes with trusted peers
+%right
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
 Birth of GIT
 
 	2002
@@ -382,7 +436,7 @@ Using GIT
 
 %area 40 90 50 18, leftfill
 %pause
-	Distributed
+	Decentralized
 		Cloning
 		Fetch / Pull
 		Push
@@ -1051,18 +1105,7 @@ Patches : Accepting
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Distributed
-
-<< TODO >>
-
-<< diagram of working and remote repos >>
-
-%right
->
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%page
-
-Distributed : Cloning
+Decentralized : Cloning
 
 	cloning local repository
 %font "typewriter", fore "blue",size 4
@@ -1090,7 +1133,7 @@ Distributed : Cloning
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Distributed : Fetch / Pull
+Decentralized : Fetch / Pull
 
 	get updates from server
 %font "typewriter", fore "blue"
@@ -1106,7 +1149,7 @@ Distributed : Fetch / Pull
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Distributed : Push
+Decentralized : Push
 
 	publish updates to server
 %font "typewriter", fore "blue"
@@ -1117,7 +1160,7 @@ Distributed : Push
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Distributed : Daemon
+Decentralized : Daemon
 
 	run server
 %font "typewriter", fore "blue"
@@ -1133,7 +1176,7 @@ man git-daemon
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-Distributed : Remotes
+Decentralized : Remotes
 
 	list remotes
 %font "typewriter", fore "blue"

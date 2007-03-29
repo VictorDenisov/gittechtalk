@@ -7,9 +7,12 @@ EPS=$(SVG:.svg=.eps)
 
 
 .PHONY: run eps ps pdf clean
-run: ${MGP} eps
-	#mgp -x vflib -g 1000x700 ${MGP}
+full: ${MGP} eps
 	mgp ${MGP}
+
+win: ${MGP} eps
+	#mgp -x vflib -g 1000x700 ${MGP}
+	mgp -g 1000x700 ${MGP}
 
 eps: ${EPS}
 
