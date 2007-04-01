@@ -496,13 +496,13 @@ Basics : Commands
 	usage info
 %font "typewriter", fore "blue"
  $ git init -h
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
  usage: git-init [--template=...] [--shared]
 %font "standard", fore "black"
 
 %pause
 	detailed help
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
  $ man git-init
 %font "typewriter", fore "blue"
  $ git help init
@@ -560,7 +560,7 @@ Basics : Configuration
 	global configuration is in ~/.gitconfig
 %font "typewriter", fore "blue",size 4
     $ git config --global --list
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
     user.name=Bart Trojanowski
     user.email=bart@jukie.net
     color.branch=auto
@@ -572,7 +572,7 @@ Basics : Configuration
 	repository configuration is in repo/.git/config
 %font "typewriter", fore "blue",size 4
     $ git config --list
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
     section.variable=value
     ...
 %font "standard", fore "black"
@@ -589,17 +589,17 @@ Basics : Configuration
 
 Basics : Creating a repository
 
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
  $ mkdir my-project
  $ cd my-project
 %font "typewriter", fore "blue"
  $ git init
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
  Initialized empty Git repository in .git
 %font "standard", fore "black"
 
 	Initial .git directory
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
  $ du -sh .git
  60K     .git
 %font "standard", fore "black"
@@ -611,13 +611,13 @@ Basics : Creating a repository
 Basics : Creating commits
 
 	adding files
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
   $ echo this is a test > test.1
   $ echo this is also a test > test.2
 %font "typewriter", fore "blue"
   $ git add test.1 test.2
   $ git commit -a -m "adding some files"
-%size 3, fore "grey60"
+%size 3, fore "grey20"
      Created initial commit 4bba26ed61c918687d9b34e9fcbef12a6d5bf01a
       2 files changed, 2 insertions(+), 0 deletions(-)
       create mode 100644 test.1
@@ -642,11 +642,11 @@ Basics : Creating commits
 Basics : Creating commits
 
 	removing files
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
   $ git rm test.2
 %font "typewriter", fore "blue"
   $ git commit -a -m"removing a file"
-%size 3, fore "grey60"
+%size 3, fore "grey20"
      Created commit b4e0bebe216fd53b540134a659254e192cbce57c
       1 files changed, 0 insertions(+), 1 deletions(-)
       delete mode 100644 test.2
@@ -660,11 +660,11 @@ Basics : Creating commits
 Basics : Current state
 
 	Show uncommitted file changes
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
   $ echo more text >> test.1
 %font "typewriter", fore "blue"
   $ git status
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
   # On branch master
   # Changed but not updated:
   #       modified:   test.1
@@ -674,7 +674,7 @@ Basics : Current state
 	show the differences
 %font "typewriter", fore "blue"
   $ git diff 
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
   --- a/test.1
   +++ b/test.1
   @@ -1 +1,2 @@
@@ -894,14 +894,14 @@ Branching : creating
 	show local
 %font "typewriter", fore "blue"
   $ git branch
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
     another
   * master
 %font "standard", fore "black"
 	show remote
 %font "typewriter", fore "blue"
   $ git branch -r
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
     origin/master
     origin/foo
 %font "standard", fore "black"
@@ -959,7 +959,7 @@ Branching : merging
 	expecting bugs?
 %font "typewriter", fore "blue"
   $ git merge --no-commit some-branch
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
   $ fix
   $ test
 %font "typewriter", fore "blue"
@@ -974,7 +974,7 @@ Branching : merging
 Branching : rebase
 
 	have some work on a branch
-%font "typewriter", fore "grey60", size 3
+%font "typewriter", fore "grey20", size 3
              A---B---C    <- some-work
             /
        D---E---F---G      <- master
@@ -984,7 +984,7 @@ Branching : rebase
 %font "typewriter", fore "blue"
   $ git checkout -b new-work master
   $ git merge some-work
-%font "typewriter", fore "grey60", size 3
+%font "typewriter", fore "grey20", size 3
              A---B---C      <- some-work
             /         \\
        D---E           H    <- new-work
@@ -996,7 +996,7 @@ Branching : rebase
 %font "typewriter", fore "blue"
   $ git checkout some-work
   $ git rebase master
-%font "typewriter", fore "grey60", size 3
+%font "typewriter", fore "grey20", size 3
                      A---B---C   <- some-work
                     /
        D---E---F---G             <- master
@@ -1009,7 +1009,7 @@ Branching : rebase
 Branching : changing history with rebase
 
 	made some commits
-%font "typewriter", fore "grey60", size 3
+%font "typewriter", fore "grey20", size 3
              A--B--C--D--E(master)
 %font "standard", fore "black", size 5
 %pause
@@ -1019,7 +1019,7 @@ Branching : changing history with rebase
 %font "typewriter", fore "blue"
   $ git checkout HEAD~3
   $ git commit --amend
-%font "typewriter", fore "grey60", size 3
+%font "typewriter", fore "grey20", size 3
              .B'(HEAD)
 	    /
            A--B--C--D--E(master)
@@ -1029,7 +1029,7 @@ Branching : changing history with rebase
 	bring back the other commits
 %font "typewriter", fore "blue"
   $ git rebase HEAD master
-%font "typewriter", fore "grey60", size 3
+%font "typewriter", fore "grey20", size 3
              A--B'--C--D--E(master)
 %font "standard", fore "black", size 5
 %right
@@ -1040,7 +1040,7 @@ Branching : changing history with rebase
 Patches
 
 	standard diff
-%font "typewriter", fore "grey60", size 4
+%font "typewriter", fore "grey20", size 4
     $ diff -u a b
 %font "typewriter", fore "purple", size 4
     --- a   2007-03-04 22:40:11.473402253 -0500
@@ -1089,7 +1089,7 @@ Patches : Generating
 		file per commit
 %font "typewriter", fore "blue", size 4
     $ git format-patch -2
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
     00001-this-is-my-first-patch.txt
     00002-this-is-my-most-recent-patch.txt
 %font "standard", fore "black"
@@ -1205,7 +1205,7 @@ Decentralized : Remotes
 	list remotes
 %font "typewriter", fore "blue"
   $ git remote
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
   origin
 %font "standard", fore "black"
 
@@ -1218,7 +1218,7 @@ Decentralized : Remotes
 %font "typewriter", fore "blue"
   $ git remote update
   $ git branch -r
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
   bob/one
   bob/two
 %font "standard", fore "black"
@@ -1325,7 +1325,7 @@ Tools : Build farms
         --remote=git://server/repo.git \\
         --prefix=build-dir \\
         tag-to-build | tar xf -
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey20"
   $ cd build-dir
   $ make release
 %font "standard", fore "black"
