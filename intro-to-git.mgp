@@ -997,7 +997,7 @@ Branching : changing history with rebase
   $ git commit --amend
 %font "typewriter", fore "grey60", size 3
              .B'(HEAD)
-	    /
+            /
            A--B--C--D--E(master)
 %font "standard", fore "black", size 5
 %pause
