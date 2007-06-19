@@ -59,7 +59,7 @@ Overview
 	Usage
 
 	Wrap up
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -82,7 +82,7 @@ Concepts
 		repository coupled with working directory
 		complete history
 		disconnected operation
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -102,7 +102,7 @@ SCM components
 
 
 
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -122,7 +122,7 @@ SCM components
 
 
 
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -142,7 +142,7 @@ SCM components
 
 
 
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -162,7 +162,7 @@ SCM components
 
 
 
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -183,7 +183,7 @@ SCM components
 	Working directory
 		files
 		list of files to add/delete
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -205,7 +205,7 @@ SCM operations
 	Tagging
 
 	Branching
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -237,7 +237,7 @@ server
 server
 %fore "black"
 		display
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -245,7 +245,7 @@ server
 Centralized SCM
 
 %newimage -xscrzoom 100 "centralized.eps"
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -311,7 +311,7 @@ server
 repository
 %fore "black"
 
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -320,7 +320,7 @@ Decentralized SCM
 
 %newimage -xscrzoom 100 "decentralized.eps"
 
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -329,7 +329,7 @@ Decentralized SCM operations
 
 %newimage -xscrzoom 100 "cloning-1-upstream.eps"
 public repository
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -338,7 +338,7 @@ Decentralized SCM operations
 
 %newimage -xscrzoom 100 "cloning-2-local.eps"
 make a local clone
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -347,7 +347,7 @@ Decentralized SCM operations
 
 %newimage -xscrzoom 100 "cloning-3-topic.eps"
 create topic branches
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -356,7 +356,7 @@ Decentralized SCM operations
 
 %newimage -xscrzoom 100 "cloning-4-push.eps"
 push changes between any repositories
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -365,7 +365,7 @@ Decentralized SCM operations
 
 %newimage -xscrzoom 100 "cloning-5-publish.eps"
 publish changes to public server
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -374,7 +374,7 @@ Decentralized SCM operations
 
 %newimage -xscrzoom 100 "cloning-6-trusted.eps"
 share changes with trusted peers
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -393,12 +393,15 @@ Is Decentralized good?
 
 	non-intrusive micro-commits
 
+%pause
 	detached operation
 
+%pause
 	no single point of failure
 
+%pause
 	backups are trivial
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -419,7 +422,7 @@ Birth of GIT
 %pause
 	June 16, 2005
 		GIT is officially used to track Linux
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -475,7 +478,7 @@ Using GIT
 
 %pause
 	Tricks
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -483,32 +486,32 @@ Using GIT
 Basics : Commands
 
 	format
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
  $ git <options> <command> <cmd-options>
 %font "standard", fore "black"
 
 	list of commands
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
  $ git help
-%font "standard", fore "black"
+%font "standard", fore "black", size 4
 
 %pause
 	usage info
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
  $ git init -h
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey60", size 4
  usage: git-init [--template=...] [--shared]
-%font "standard", fore "black"
+%font "standard", fore "black", size 4
 
 %pause
 	detailed help
-%font "typewriter", fore "grey60"
- $ man git-init
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
  $ git help init
  $ git init --help
-%font "standard", fore "black"
-%right
+%font "typewriter", fore "grey60", size 4
+ $ man git-init
+%font "standard", fore "black", size 5
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -550,7 +553,7 @@ commands
 		...
 
 
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -567,7 +570,7 @@ Basics : Configuration
     color.diff=auto
     color.pager=true
     color.status=auto
-%font "standard", fore "black"
+%font "standard", fore "black", size 2
 
 	repository configuration is in repo/.git/config
 %font "typewriter", fore "blue",size 4
@@ -575,21 +578,21 @@ Basics : Configuration
 %font "typewriter", fore "grey60"
     section.variable=value
     ...
-%font "standard", fore "black"
+%font "standard", fore "black", size 2
 
 	changing settings
 %font "typewriter", fore "blue",size 4
     $ git config --global user.name "Bart Trojanowski"
     $ git config --global user.email bart@jukie.net
 %font "standard", fore "black"
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
 Basics : Creating a repository
 
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey60", size 4
  $ mkdir my-project
  $ cd my-project
 %font "typewriter", fore "blue"
@@ -599,11 +602,11 @@ Basics : Creating a repository
 %font "standard", fore "black"
 
 	Initial .git directory
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey60", size 4
  $ du -sh .git
  60K     .git
-%font "standard", fore "black"
-%right
+%font "standard", fore "black", size 5
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -611,10 +614,10 @@ Basics : Creating a repository
 Basics : Creating commits
 
 	adding files
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey60", size 4
   $ echo this is a test > test.1
   $ echo this is also a test > test.2
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git add test.1 test.2
   $ git commit -a -m "adding some files"
 %size 3, fore "grey60"
@@ -626,15 +629,15 @@ Basics : Creating commits
 
 %font "standard", fore "black"
 	add everything, recursive
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
     $ git add .
 %font "standard", fore "black"
 
 	commit just one file, interactive
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
     $ git commit file.1
 %font "standard", fore "black"
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -642,7 +645,7 @@ Basics : Creating commits
 Basics : Creating commits
 
 	removing files
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey60", size 4
   $ git rm test.2
 %font "typewriter", fore "blue"
   $ git commit -a -m"removing a file"
@@ -652,7 +655,35 @@ Basics : Creating commits
       delete mode 100644 test.2
 %size 5
 %font "standard", fore "black"
-%right
+%right, size 5
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Basics : Altering commits
+
+	altering last commit
+		make some changes...
+%font "typewriter", fore "grey60", size 4
+  $ edit file
+%font "typewriter", fore "blue"
+  $ git commit -a
+%font "standard", fore "black"
+
+		realize you made a mistake
+		fix the code...
+%font "typewriter", fore "grey60"
+  $ edit file
+%font "standard", fore "black"
+
+		recreate the commit...
+%font "typewriter", fore "blue"
+  $ git commit --amend
+%font "standard", fore "black"
+
+		avoid if commit was already pushed
+		can modify commit message
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -660,7 +691,7 @@ Basics : Creating commits
 Basics : Current state
 
 	Show uncommitted file changes
-%font "typewriter", fore "grey60"
+%font "typewriter", fore "grey60", size 4
   $ echo more text >> test.1
 %font "typewriter", fore "blue"
   $ git status
@@ -672,7 +703,7 @@ Basics : Current state
 
 %pause
 	show the differences
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git diff 
 %font "typewriter", fore "grey60"
   --- a/test.1
@@ -681,25 +712,73 @@ Basics : Current state
    this is a test
   +more text
 %font "standard", fore "black"
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
 Basics : Cleanup
 
-	drop all changes
-%font "typewriter", fore "blue"
-  $ git reset --hard 
-%font "standard", fore "black"
-
 	revert changes to a file
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git checkout file
 %font "standard", fore "black"
 
+	forget newly added files
+%font "typewriter", fore "blue", size 4
+  $ git reset
 %font "standard", fore "black"
-%right
+
+	drop all changes
+%font "typewriter", fore "blue", size 4
+  $ git reset --hard 
+%font "standard", fore "black"
+
+	undo last commit, keeping changes
+%font "typewriter", fore "blue", size 4
+  $ git reset --soft HEAD^
+%font "standard", fore "black"
+
+%font "standard", fore "black"
+%right, size 5
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Basics : More cleanup
+
+	delete all untracked files (dangerous)
+%font "typewriter", fore "blue", size 4
+  $ git clean -d -x
+%font "standard", fore "black"
+
+	delete last three commits (dangerous)
+%font "typewriter", fore "blue", size 4
+  $ git reset --hard HEAD~3
+%font "standard", fore "black"
+
+%font "standard", fore "black"
+%right, size 5
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Basics : That never happened
+
+	new commit undoing changes of another commit
+%font "typewriter", fore "blue", size 4
+  $ git revert HEAD~10
+%font "standard", fore "black"
+
+		this is short form for...
+%font "typewriter", fore "blue", size 4
+  $ git diff HEAD~10..HEAD~9 | patch -R -p1
+  $ git commit -a -m"reverted commit"
+%font "standard", fore "black"
+
+
+%font "standard", fore "black"
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -707,31 +786,33 @@ Basics : Cleanup
 Basics : Looking at the history
 
 	review commit messages
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git log
 %font "standard", fore "black"
 %pause
 		with ranges
-%font "typewriter", fore "blue", size 5
+%font "typewriter", fore "blue", size 4
   $ git log -10
   $ git log --since="2 weeks ago"
   $ git log tag..
   $ git log tag1..tag2
-  $ git log ^common branch1 branch2
+  $ git log branch1 branch2 ^common
 %font "standard", fore "black"
 %pause
 		limit to commits that alter a path
-%font "typewriter", fore "blue", size 5
+%font "typewriter", fore "blue", size 4
   $ git log -- file
 %font "standard", fore "black"
 %pause
 		varying levels of information
-%font "typewriter", fore "blue", size 5
+%font "typewriter", fore "blue", size 4
+  $ git log --no-merges
   $ git log --pretty=oneline
   $ git log --pretty=email
   $ git log --stat --summary
 %font "standard", fore "black"
-%right
+
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -739,17 +820,18 @@ Basics : Looking at the history
 Basics : Looking at the history (2)
 
 	review changes in commits
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git whatchanged
 %font "standard", fore "black"
 		like git-log, but also lists files that changed
 
 	limit as with log
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git whatchanged --since="May 10"
   $ git whatchanged tag1..tag2 -- file
 %font "standard", fore "black"
-%right
+
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -757,25 +839,49 @@ Basics : Looking at the history (2)
 Basics : Looking at the history (3)
 
 	see what changes one commit made (diff)
-%font "typewriter", fore "blue", size 5
+%font "typewriter", fore "blue", size 4
   $ git show <commit>
 %font "standard", fore "black"
 		like git-log, but also lists diff's
 
 	look at diffs for all/some commits
-%font "typewriter", fore "blue", size 5
+%font "typewriter", fore "blue", size 4
   $ git log -p
   $ git log -p tag..tag1
 %font "standard", fore "black"
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
 Basics : Looking at the history (4)
 
+	who made changes to a file?
+%font "typewriter", fore "blue", size 4
+  $ git blame filename
+%font "standard", fore "black"
+
+	list commits which made a particular change
+%font "typewriter", fore "blue", size 4
+  $ git log --pretty=oneline -grep 'sprintf'
+%font "standard", fore "black"
+		shows all commits that add/remove a pattern
+%font "typewriter", fore "blue", size 4
+  $ git log --pretty=oneline -S'sprintf' -- onefile
+%font "standard", fore "black"
+		can be limited to a file
+
+%font "standard", fore "black"
+
+%right, size 5
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Basics : Looking at the history (5)
+
 	searching for a change
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git log \\
         --since="June 5, 2005" \\
         --grep="find this" \\
@@ -784,11 +890,17 @@ Basics : Looking at the history (4)
         some-branch -- crypto/*.c
 %font "standard", fore "black"
 
+	who did what?
+%font "typewriter", fore "blue", size 4
+  $ git log [...] | git shortlog
+%font "standard", fore "black"
+		lists commits made by each author
+
 	what can I search for?
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ man git-rev-list
 %font "standard", fore "black"
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -812,7 +924,6 @@ Commit IDs
 %font "typewriter", fore "blue", size 3
        git show HEAD
 %font "standard", fore "black"
-
 %pause
 		relative to a commit
 %font "typewriter", fore "blue", size 3
@@ -823,10 +934,10 @@ Commit IDs
 		ranges and exclusions
 %font "typewriter", fore "blue", size 3
        git log HEAD~10..HEAD
-       git log ^HEAD~10 HEAD
-       git log ^something tag branch
+       git log --max-count=100 --skip=100
+       git log tag branch --not ^something
 %font "standard", fore "black", size 5
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -837,22 +948,22 @@ Tagging
 	shorter then SHA1
 
 	tag a commit
-%font "typewriter", fore "blue", size 5
+%font "typewriter", fore "blue", size 4
   $ git tag some-name
   $ git tag -f some-name
   $ git tag another-name b4e0bebe...
 %font "standard", fore "black"
 	list existing tags
-%font "typewriter", fore "blue", size 5
+%font "typewriter", fore "blue", size 4
   $ git tag -l
   some-name
   another-name
 %font "standard", fore "black"
 	remove a tag
-%font "typewriter", fore "blue", size 5
+%font "typewriter", fore "blue", size 4
   $ git tag -d some-name
 %font "standard", fore "black"
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -877,7 +988,7 @@ Branching
      some-host/their-branch
 %font "standard", fore "black"
 
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -885,27 +996,27 @@ Branching
 Branching : creating
 
 	creating a branch
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git branch this
   $ git branch another b4e0bebe...
   $ git branch four-back HEAD~4
 %font "standard", fore "black"
 
 	show local
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git branch
 %font "typewriter", fore "grey60"
     another
   * master
 %font "standard", fore "black"
 	show remote
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git branch -r
 %font "typewriter", fore "grey60"
     origin/master
     origin/foo
 %font "standard", fore "black"
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -913,23 +1024,26 @@ Branching : creating
 Branching : switching
 
 	switch to an existing branch
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git checkout some-branch
 %pause
+%font "standard", fore "black"
+		blow away uncommitted changes:
+%font "typewriter", fore "blue"
   $ git checkout -f some-branch
 %font "standard", fore "black"
 
 %pause
 	switch to a new branch 
-%font "typewriter", fore "blue"
-  $ git branch new-branch master
+%font "typewriter", fore "blue", size 4
+  $ git branch new-branch a-commit
   $ git checkout new-branch
 %font "standard", fore "black"
        ... or ...
-%font "typewriter", fore "blue"
-  $ git checkout -b new-branch master
+%font "typewriter", fore "blue", size 4
+  $ git checkout -b new-branch a-commit
 %font "standard", fore "black"
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -951,22 +1065,62 @@ Unless you're smart, and use git.
 Branching : merging
 
 	merge another branch
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git merge some-branch
 %font "standard", fore "black"
 
 %pause
 	expecting bugs?
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git merge --no-commit some-branch
 %font "typewriter", fore "grey60"
   $ fix
-  $ test
 %font "typewriter", fore "blue"
   $ git commit -a
 %font "standard", fore "black"
 
-%right
+%pause
+	resolving conflicts
+%font "typewriter", fore "blue", size 4
+  $ git merge some-branch
+  $ git status
+%font "typewriter", fore "grey60"
+  $ fix
+%font "typewriter", fore "blue", size 4
+  $ git add resolved-file
+  $ git commit -a
+%font "standard", fore "black"
+
+%right, size 5
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Branching : cherries
+
+	have some work on a branch
+%font "typewriter", fore "grey60", size 3
+             A---B---C    <- some-work
+            /
+       D---E---F---G      <- master
+%font "standard", fore "black", size 5
+%pause
+	want to bring one commits to master
+%font "typewriter", fore "blue", size 4
+  $ git cherry-pick C
+%font "typewriter", fore "grey60", size 3
+             A---B---C    <- some-work
+            /
+       D---E---F---G---C' <- master
+%font "standard", fore "black", size 5
+
+		cherry-pick lets you edit the commit
+%font "typewriter", fore "blue", size 4
+  $ git cherry-pick --edit <commit>
+  $ git cherry-pick --no-commit <commit>
+%font "typewriter", fore "grey60", size 3
+
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -981,7 +1135,7 @@ Branching : rebase
 %font "standard", fore "black", size 5
 %pause
 	could merge
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git checkout -b new-work master
   $ git merge some-work
 %font "typewriter", fore "grey60", size 3
@@ -993,7 +1147,7 @@ Branching : rebase
 %font "standard", fore "black", size 5
 %pause
 	or rebase
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git checkout some-work
   $ git rebase master
 %font "typewriter", fore "grey60", size 3
@@ -1001,7 +1155,7 @@ Branching : rebase
                     /
        D---E---F---G             <- master
 %font "standard", fore "black", size 5
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -1016,7 +1170,7 @@ Branching : changing history with rebase
 
 	realized you made a mistake in commit 'B'
 	go back
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git checkout HEAD~3
   $ git commit --amend
 %font "typewriter", fore "grey60", size 3
@@ -1027,12 +1181,12 @@ Branching : changing history with rebase
 %pause
 
 	bring back the other commits
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git rebase HEAD master
 %font "typewriter", fore "grey60", size 3
              A--B'--C--D--E(master)
 %font "standard", fore "black", size 5
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -1070,7 +1224,7 @@ Patches
 %font "typewriter", fore "green", size 4
     +new text
 %font "standard", fore "black"
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -1101,7 +1255,7 @@ Patches : Generating
 %font "typewriter", fore "blue", size 4
     $ git send-email --to bart@jukie.net patches
 %font "standard", fore "black"
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -1109,7 +1263,7 @@ Patches : Generating
 Patches : Accepting
 
 	apply patch
-%font "typewriter", fore "blue",size 5
+%font "typewriter", fore "blue",size 4
   $ git apply changes-from-bob.patch
   $ git add new-files...
   $ git rm old-files...
@@ -1120,11 +1274,12 @@ Patches : Accepting
 
 %pause
 	apply and commit a git patch
-%font "typewriter", fore "blue",size 5
+%font "typewriter", fore "blue",size 4
   $ git am -3 -s -k 00001-first-patch.txt
+  $ git am -3 -s -k patches.mbox
 
 %font "standard", fore "black"
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -1152,7 +1307,7 @@ Decentralized : Cloning
     $ git clone --reference existing-full-clone \\
           git://git-server/git-repo quick-test
 %font "standard", fore "black"
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -1168,7 +1323,7 @@ Decentralized : Fetch / Pull
 %font "typewriter", fore "blue"
   $ git pull origin
 %font "standard", fore "black"
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -1179,7 +1334,7 @@ Decentralized : Push
 %font "typewriter", fore "blue"
   $ git push publish
 %font "standard", fore "black"
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -1195,7 +1350,7 @@ Decentralized : Daemon
 		see:  
 %cont, font "typewriter", fore "blue"
 man git-daemon
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -1222,7 +1377,7 @@ Decentralized : Remotes
   bob/one
   bob/two
 %font "standard", fore "black"
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -1245,7 +1400,7 @@ Tools : Finding regressions
 		finds commit to test next
 		tell it 'good' or 'bad'
 		repeat
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -1270,30 +1425,28 @@ Tools : Working with other SCMs
 
 	tailor
 		Swiss Army knife
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
 Tools : Housekeeping 
 
-	forgetting changes
-%font "typewriter", fore "blue"
-    $ git clean -d -x
-    $ git reset --hard HEAD
-%font "standard", fore "black"
-
 	repository cleanup
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue",size 4
     $ git prune -d
     $ git fsck
 %font "standard", fore "black"
+		or ...
+%font "typewriter", fore "blue",size 4
+    $ git gc
+%font "standard", fore "black"
 
 	lost commits
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue",size 4
     $ git lost-found
 %font "standard", fore "black"
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -1312,7 +1465,7 @@ Tools : Visualization
     $ qgit
     $ gitview
 %font "standard", fore "black"
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -1329,7 +1482,7 @@ Tools : Build farms
   $ cd build-dir
   $ make release
 %font "standard", fore "black"
-%right
+%right, size 5
 >
 
 
@@ -1347,7 +1500,7 @@ Tools : misc
 		guilt
 
 	gitweb
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
@@ -1364,7 +1517,7 @@ References
 		http://lwn.net/Articles/222086/
 
 
-%right
+%right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
