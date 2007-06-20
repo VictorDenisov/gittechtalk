@@ -562,7 +562,7 @@ Basics : Configuration
 
 	global configuration is in ~/.gitconfig
 %font "typewriter", fore "blue",size 4
-    $ git config --global --list
+  $ git config --global --list
 %font "typewriter", fore "grey20"
     user.name=Bart Trojanowski
     user.email=bart@jukie.net
@@ -574,7 +574,7 @@ Basics : Configuration
 
 	repository configuration is in repo/.git/config
 %font "typewriter", fore "blue",size 4
-    $ git config --list
+  $ git config --list
 %font "typewriter", fore "grey20"
     section.variable=value
     ...
@@ -582,8 +582,8 @@ Basics : Configuration
 
 	changing settings
 %font "typewriter", fore "blue",size 4
-    $ git config --global user.name "Bart Trojanowski"
-    $ git config --global user.email bart@jukie.net
+  $ git config --global user.name "Bart Trojanowski"
+  $ git config --global user.email bart@jukie.net
 %font "standard", fore "black"
 %right, size 5
 >
@@ -630,12 +630,12 @@ Basics : Creating commits
 %font "standard", fore "black"
 	add everything, recursive
 %font "typewriter", fore "blue", size 4
-    $ git add .
+  $ git add .
 %font "standard", fore "black"
 
 	commit just one file, interactive
 %font "typewriter", fore "blue", size 4
-    $ git commit file.1
+  $ git commit file.1
 %font "standard", fore "black"
 %right, size 5
 >
@@ -1195,7 +1195,7 @@ Patches
 
 	standard diff
 %font "typewriter", fore "grey20", size 4
-    $ diff -u a b
+  $ diff -u a b
 %font "typewriter", fore "purple", size 4
     --- a   2007-03-04 22:40:11.473402253 -0500
     +++ b   2007-03-04 22:40:25.365464311 -0500
@@ -1210,7 +1210,7 @@ Patches
 %font "standard", fore "black"
 	git diff
 %font "typewriter", fore "blue", size 4
-    $ git diff HEAD~1
+  $ git diff HEAD~1
 %font "typewriter", fore "darkblue", size 4
     diff --git a/file b/file
     index acc4bcb..eee417f 100644
@@ -1233,27 +1233,27 @@ Patches : Generating
 
 	just diffs
 %font "typewriter", fore "blue", size 4
-    $ git diff -1         > last.patch
-    $ git diff tag~1..tag > before-tag.patch
-    $ git diff ^good      > since-good.patch
+  $ git diff -1         > last.patch
+  $ git diff tag~1..tag > before-tag.patch
+  $ git diff ^good      > since-good.patch
 %font "standard", fore "black"
 
 %pause
 	git patches
 		file per commit
 %font "typewriter", fore "blue", size 4
-    $ git format-patch -2
+  $ git format-patch -2
 %font "typewriter", fore "grey20"
     00001-this-is-my-first-patch.txt
     00002-this-is-my-most-recent-patch.txt
 %font "standard", fore "black"
 		an mbox file
 %font "typewriter", fore "blue", size 4
-    $ git format-patch a..b --stdout -k > patches
+  $ git format-patch a..b --stdout -k > patches
 %font "standard", fore "black"
 		send email
 %font "typewriter", fore "blue", size 4
-    $ git send-email --to bart@jukie.net patches
+  $ git send-email --to bart@jukie.net patches
 %font "standard", fore "black"
 %right, size 5
 >
@@ -1288,23 +1288,23 @@ Decentralized : Cloning
 
 	cloning local repository
 %font "typewriter", fore "blue",size 4
-    $ git clone /var/git/our-repo.git my-work
-    $ git clone ~bob/export.git working-with-bob
-    $ git clone -l -s my-work my-work-2
+  $ git clone /var/git/our-repo.git my-work
+  $ git clone ~bob/export.git working-with-bob
+  $ git clone -l -s my-work my-work-2
 %font "standard", fore "black"
 
 %pause
 	cloning remote repository
 %font "typewriter", fore "blue",size 4
-    $ git clone ssh-server:~bart/something my-work
-    $ git clone http://web-server/git-repo my-work
-    $ git clone git://git-server/git-repo my-work
+  $ git clone ssh-server:~bart/something my-work
+  $ git clone http://web-server/git-repo my-work
+  $ git clone git://git-server/git-repo my-work
 %font "standard", fore "black"
 
 %pause
 	with reference
 %font "typewriter", fore "blue",size 4
-    $ git clone --reference existing-full-clone \\
+  $ git clone --reference existing-full-clone \\
           git://git-server/git-repo quick-test
 %font "standard", fore "black"
 %right, size 5
@@ -1315,14 +1315,73 @@ Decentralized : Cloning
 Decentralized : Fetch / Pull
 
 	get updates from server
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git fetch origin
   $ git merge origin/master
 %font "standard", fore "black"
   ... or ...
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git pull origin
 %font "standard", fore "black"
+
+		'origin' is the default remote
+%font "typewriter", fore "blue", size 4
+  $ git pull
+%font "standard", fore "black"
+
+		NOTE: the merge only happens to tracking branches
+
+%right, size 5
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Decentralized : Tracking branches
+
+	when it matters
+%font "typewriter", fore "blue", size 4
+  $ git checkout some-branch
+  $ git pull remote
+%font "standard", fore "black", size 3
+      if 'some-branch' tracks a remote branch, then 
+      git-pull implicitly calls git-merge
+
+	creating tracking branches
+%font "typewriter", fore "blue", size 4
+  $ git checkout --track new-branch remote/branch
+%font "standard", fore "black", size 4
+  ... or ...
+%font "typewriter", fore "blue", size 4
+  $ git branch --track new-branch remote/branch
+%font "standard", fore "black"
+
+%right, size 5
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Decentralized : Tracking branches (2)
+
+	adding them manually
+%font "typewriter", fore "blue", size 4
+  $ git config branch.mywork.remote myremote
+  $ git config branch.mywork.merge refs/heads/master
+%font "standard", fore "black", size 3
+      when current branch is 'mywork', a git-pull from 'myremote' will
+      merge the remote 'master' branch into 'mywork'
+%font "typewriter", fore "blue", size 4
+  $ git checkout mywork
+  $ git pull myremote
+%font "standard", fore "black"
+
+	setting the default
+%font "typewriter", fore "blue", size 4
+  $ git config --global branch.autosetupmerge true
+%font "standard", fore "black", size 3
+      any new branch off a remote will automatically track it
+      default is off
+%font "standard", fore "black"
+
 %right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1330,10 +1389,21 @@ Decentralized : Fetch / Pull
 
 Decentralized : Push
 
-	publish updates to server
-%font "typewriter", fore "blue"
-  $ git push publish
+	publish updates to 'origin'
+%font "typewriter", fore "blue", size 4
+  $ git push
 %font "standard", fore "black"
+
+	push to some other destination
+%font "typewriter", fore "blue", size 4
+  $ git push some-remote
+%font "standard", fore "black"
+
+	push to an untracked location
+%font "typewriter", fore "blue", size 4
+  $ git push some-remote local-branch:remote-branch
+%font "standard", fore "black"
+
 %right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1341,8 +1411,15 @@ Decentralized : Push
 
 Decentralized : Daemon
 
-	run server
-%font "typewriter", fore "blue"
+	git supports
+		/local
+		ssh://
+		rsync://
+		http://
+		git://
+
+	run git:// server on 9418
+%font "typewriter", fore "blue", size 4
   $ git daemon /src/software.git
 %font "standard", fore "black"
 
@@ -1350,6 +1427,8 @@ Decentralized : Daemon
 		see:  
 %cont, font "typewriter", fore "blue"
 man git-daemon
+%font "standard", fore "black"
+
 %right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1358,25 +1437,26 @@ man git-daemon
 Decentralized : Remotes
 
 	list remotes
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git remote
 %font "typewriter", fore "grey20"
   origin
 %font "standard", fore "black"
 
 	new remotes
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git remote add bob git://server/bob.git/
 %font "standard", fore "black"
 
 	update tracked branches
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git remote update
   $ git branch -r
 %font "typewriter", fore "grey20"
   bob/one
   bob/two
 %font "standard", fore "black"
+
 %right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1392,14 +1472,15 @@ Tools : Finding regressions
 	binary search
 %pause
 %font "typewriter", fore "blue",size 4
-    $ git bisect start
-    $ git bisect bad
-    $ git bisect good my-last-release
+  $ git bisect start
+  $ git bisect bad
+  $ git bisect good my-last-release
+%font "standard", fore "black"
+		finds commit to test next
+		test and tell it 'good' or 'bad'
+		repeat
 %font "standard", fore "black"
 
-		finds commit to test next
-		tell it 'good' or 'bad'
-		repeat
 %right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1407,15 +1488,10 @@ Tools : Finding regressions
 
 Tools : Working with other SCMs
 
-%font "typewriter", fore "blue",size 4
-    git-svn
-    git-svnimport
-
-    git-cvsimport
-    git-cvsserver        
 %font "standard", fore "black"
-
-	can also import
+	can interoperate with
+		SVN
+		CVS
 		arch
 		darcs
 		p4
@@ -1425,6 +1501,29 @@ Tools : Working with other SCMs
 
 	tailor
 		Swiss Army knife
+		anything <---> anything
+%right, size 5
+>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
+
+Tools : Working with SVN
+
+%font "typewriter", fore "blue", size 4
+  $ git-svn clone svn+ssh://host/project/trunk project.git
+%font "typewriter", fore "grey20"
+  $ cd project.git
+    ... work work work ...
+%font "typewriter", fore "blue"
+  $ git commit
+%font "typewriter", fore "grey20"
+    ...
+%font "typewriter", fore "blue"
+  $ git-svn fetch
+  $ git-svn rebase
+  $ git-svn dcommit
+%font "standard", fore "black"
+
 %right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1434,17 +1533,17 @@ Tools : Housekeeping
 
 	repository cleanup
 %font "typewriter", fore "blue",size 4
-    $ git prune -d
-    $ git fsck
-%font "standard", fore "black"
-		or ...
-%font "typewriter", fore "blue",size 4
-    $ git gc
+  $ git prune -d
+  $ git fsck
+%font "standard", fore "black", size 4
+  ... or ...
+%font "typewriter", fore "blue", size 4
+  $ git gc
 %font "standard", fore "black"
 
 	lost commits
 %font "typewriter", fore "blue",size 4
-    $ git lost-found
+  $ git lost-found
 %font "standard", fore "black"
 %right, size 5
 >
@@ -1454,16 +1553,21 @@ Tools : Housekeeping
 Tools : Visualization
 
 	commit tools
-%font "typewriter", fore "blue"
-    $ git-gui
-    $ gct
+%font "typewriter", fore "blue",size 4
+  $ git gui
+  $ gct
+%font "standard", fore "black"
+
+	mergeing
+%font "typewriter", fore "blue",size 4
+  $ git mergetool
 %font "standard", fore "black"
 
 	revision tools
-%font "typewriter", fore "blue"
-    $ gitk
-    $ qgit
-    $ gitview
+%font "typewriter", fore "blue",size 4
+  $ gitk
+  $ qgit
+  $ gitview
 %font "standard", fore "black"
 %right, size 5
 >
@@ -1473,7 +1577,7 @@ Tools : Visualization
 Tools : Build farms
 
 	create a snapshot of a revision
-%font "typewriter", fore "blue"
+%font "typewriter", fore "blue", size 4
   $ git archive --format=tar \\
         --remote=git://server/repo.git \\
         --prefix=build-dir \\
@@ -1482,10 +1586,41 @@ Tools : Build farms
   $ cd build-dir
   $ make release
 %font "standard", fore "black"
+
 %right, size 5
 >
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%page
 
+Tools : gitweb
 
+	use bare repositories
+%font "typewriter", fore "grey20", size 4
+  $ ssh www
+  $ mkdir /home/git/project.git
+  $ cd /home/git/project.git
+%font "typewriter", fore "blue",size 4
+  $ git --bare init
+%font "standard", fore "black"
+
+	setup an additional remote to push to
+%font "typewriter", fore "grey20", size 3
+  $ cd my-work.git
+%font "typewriter", fore "blue",size 3
+  $ git remote add gitweb server:/www/git/project.git
+  $ git config remote.www.push master:refs/heads/master
+  $ git config branch.master.remote www
+  $ git config branch.master.merge refs/heads/master
+  $ git push server
+%font "standard", fore "black"
+
+	you cannot clone from gitweb URLs
+%font "typewriter", fore "grey20", size 4
+  $ edit project.git/description
+    ... add the git:// url to it
+%font "standard", fore "black"
+%right, size 5
+>
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
@@ -1493,13 +1628,12 @@ Tools : misc
 
 	cogito
 
-	git bash completion
+	bash and zsh completion
 
 	quilt like functionality
 		STGIT
 		guilt
 
-	gitweb
 %right, size 5
 >
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1513,8 +1647,12 @@ References
 	Download
 		http://www.kernel.org/pub/software/scm/git/
 
-	GIT 1.5.0 release notes
-		http://lwn.net/Articles/222086/
+	GIT release notes
+		1.5.0 - http://lwn.net/Articles/222086/
+		1.5.1 - http://lwn.net/Articles/229669/
+		1.5.2 - http://lwn.net/Articles/235109/
+
+
 
 
 %right, size 5
@@ -1522,5 +1660,10 @@ References
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %page
 
-QUESTIONS
+Questions
+
+
+
+%size 40, center, fore "blue"
+? 
 
