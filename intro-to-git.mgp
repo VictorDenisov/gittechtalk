@@ -1607,7 +1607,7 @@ Tools : gitweb
 %font "typewriter", fore "grey20", size 3
   $ cd my-work.git
 %font "typewriter", fore "blue",size 3
-  $ git remote add gitweb server:/www/git/project.git
+  $ git remote add www server:/www/git/project.git
   $ git config remote.www.push master:refs/heads/master
   $ git config branch.master.remote www
   $ git config branch.master.merge refs/heads/master
