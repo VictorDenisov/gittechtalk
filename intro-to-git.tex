@@ -35,30 +35,214 @@
 
 \setcounter{tocdepth}{1}
 
+
+\newcommand{\mysection}[2]{
+  \hypertarget{#2}{}
+  \section{#1}
+  \label{#2}
+}
+\newcommand{\mysubsection}[2]{
+  \hypertarget{#2}{}
+  \subsection{#1}
+  \label{#2}
+}
+
+
 \begin{document}
 % =====================================================================
-% ---------------------------------------------------------------------
 \label{header}\hypertarget{header}{}
 \frame{\maketitle}
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Optional Title for My Slide}
-Here is one slide.
+        \frametitle{Table of contents}
+        \par\noindent
+        \tableofcontents
+\end{frame}
 
+% =====================================================================
+% =====================================================================
+\mysection{Concepts}{_concepts}
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Concepts}
 \begin{itemize}
-        \item something
-                \pause
-        \item else
-                \pause
-        \item again
+        \item Source Control Management
+                \begin{itemize}
+                        \item track changes to files
+                        \item repository / database of changes
+                        \item working directory / current state
+                \end{itemize}
+
+        \pause{}
+        \item Centralized SCM
+                \begin{itemize}
+                        \item server: single database
+                        \item client: working directory \&{} state
+                \end{itemize}
+
+        \pause{}
+        \item Decentralized SCM
+                \begin{itemize}
+                        \item anyone can be a server
+                        \item repository coupled with working directory
+                        \item complete history
+                        \item disconnected operation
+                \end{itemize}
 \end{itemize}
+
+\end{frame}
+
+% =====================================================================
+\mysubsection{SCM components}{_scm_components}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{SCM components}
+\begin{columns}[t]
+        \begin{column}{.5\textwidth}
+                Working tree
+                \begin{itemize}
+                        \item directories
+                        \item files
+                \end{itemize}
+
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \vspace{.3\textheight}
+                \includegraphics[width=\linewidth]{working-tree.eps}
+        \end{column}
+\end{columns}
 
 \end{frame}
 
 % ---------------------------------------------------------------------
 \begin{frame}
-Here is another slide.
+\frametitle{SCM components}
+\begin{columns}[t]
+        \begin{column}{.5\textwidth}
+                Repository contents
+                \begin{itemize}
+                        \item blobs
+                \end{itemize}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \vspace{.3\textheight}
+                \includegraphics[width=\linewidth]{repo-obj.eps}
+        \end{column}
+\end{columns}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{SCM components}
+\begin{columns}[t]
+        \begin{column}{.5\textwidth}
+                Repository contents
+                \begin{itemize}
+                        \item blobs
+                        \item commits
+                \end{itemize}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \vspace{.3\textheight}
+                \includegraphics[width=\linewidth]{repo-commit.eps}
+        \end{column}
+\end{columns}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{SCM components}
+\begin{columns}[t]
+        \begin{column}{.5\textwidth}
+                Repository contents
+                \begin{itemize}
+                        \item blobs
+                        \item commits
+                        \item ancestry
+                \end{itemize}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \vspace{.3\textheight}
+                \includegraphics[width=\linewidth]{repo-ancestry.eps}
+        \end{column}
+\end{columns}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{SCM components}
+\begin{columns}[t]
+        \begin{column}{.5\textwidth}
+                Repository contents
+                \begin{itemize}
+                        \item blobs
+                        \item commits
+                        \item ancestry
+                        \item tags
+                \end{itemize}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \vspace{.3\textheight}
+                \includegraphics[width=\linewidth]{repo-tags.eps}
+        \end{column}
+\end{columns}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{SCM components}
+\begin{columns}[t]
+        \begin{column}{.5\textwidth}
+                Repository contents
+                \begin{itemize}
+                        \item blobs
+                        \item commits
+                        \item ancestry
+                        \item tags
+                        \item branches
+                \end{itemize}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \vspace{.3\textheight}
+                \includegraphics[width=\linewidth]{repo-branches.eps}
+        \end{column}
+\end{columns}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{SCM components}
+\begin{columns}[t]
+        \begin{column}{.5\textwidth}
+                Index
+                \begin{itemize}
+                        \item ``staging area''
+                        \item what is to be committed
+                \end{itemize}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \vspace{.3\textheight}
+                \includegraphics[width=\linewidth]{repo-index.eps}
+        \end{column}
+\end{columns}
+
+\end{frame}
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+\begin{frame}
+        END
 \end{frame}
 
 % =====================================================================
