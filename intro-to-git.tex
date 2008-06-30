@@ -315,8 +315,103 @@ Reference
 \begin{frame}
 \frametitle{Centralized SCM}
 \includegraphics[width=\linewidth]{centralized.eps}
+\begin{itemize}
+        \item operations require \textcolor{red}{server}
+                \begin{itemize}
+                        \item single point of failure
+                        \item bottleneck
+                \end{itemize}
+\end{itemize}
 \end{frame}
 
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{more SCM operations}
+Decentralized
+\begin{itemize}
+        \item clone
+        \item pull, fetch
+        \item push
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Decentralized SCM}
+\includegraphics[width=\linewidth]{decentralized.eps}
+\begin{itemize}
+        \item anyone can be a server
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\mysubsection{Decentralization}{_decentralization}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Decentralization}
+\includegraphics[width=\linewidth]{cloning-1-upstream.eps}
+\begin{itemize}
+        \item public repository
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Decentralization}
+\includegraphics[width=\linewidth]{cloning-2-local.eps}
+\begin{itemize}
+        \item make a local clone
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Decentralization}
+\includegraphics[width=\linewidth]{cloning-3-topic.eps}
+\begin{itemize}
+        \item create topic ``branches''
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Decentralization}
+\includegraphics[width=\linewidth]{cloning-4-push.eps}
+\begin{itemize}
+        \item push changes between any repositories
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Decentralization}
+\includegraphics[width=\linewidth]{cloning-5-publish.eps}
+\begin{itemize}
+        \item publish changes to public server
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Decentralization}
+\includegraphics[width=\linewidth]{cloning-6-trusted.eps}
+\begin{itemize}
+        \item share changes with trusted peers
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Is Decentralization any good?}
+
+\begin{itemize}
+        \item non-intrusive micro-commits
+        \item detached operation
+        \item no single point of failure
+        \item backups are trivial
+\end{itemize}
+\end{frame}
 
 
 % ---------------------------------------------------------------------
