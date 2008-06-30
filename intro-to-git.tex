@@ -33,7 +33,7 @@
 \institute{Jukie Networks Inc.}
 \date{July 9th, 2008}
 
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
 
 
 \newcommand{\mysection}[2]{
@@ -81,7 +81,7 @@
 #3{apply}            & #4{fetch-pack}        & #4{merge-tree}     & #4{send-pack}          \\
 #4{archimport}       & #4{filter-branch}     & #1{mergetool}      & #4{sh-setup}           \\
 #3{archive}          & #4{fmt-merge-msg}     & #4{mktag}          & #1{shell}              \\
-#3{bisect}           & #4{for-each-ref}      & #4{mktree}         & #3{shortlog}           \\
+#2{bisect}           & #4{for-each-ref}      & #4{mktree}         & #3{shortlog}           \\
 #2{blame}            & #3{format-patch}      & #2{mv}             & #2{show}               \\
 #2{branch}           & #4{fsck}              & #4{name-rev}       & #3{show-branch}        \\
 #3{bundle}           & #4{fsck-objects}      & #4{pack-objects}   & #4{show-index}         \\
@@ -157,8 +157,7 @@
 \end{frame}
 
 % =====================================================================
-\mysubsection{SCM components}{_scm_components}
-
+\mysubsection{SCM components}{concepts:components}
 % ---------------------------------------------------------------------
 \begin{frame}
 \frametitle{SCM components}
@@ -342,7 +341,7 @@
 \end{frame}
 
 % =====================================================================
-\mysubsection{SCM operations}{_scm_operations}
+\mysubsection{SCM operations}{concepts:operations}
 
 % ---------------------------------------------------------------------
 \begin{frame}
@@ -408,7 +407,7 @@ Decentralized
 \end{frame}
 
 % =====================================================================
-\mysubsection{Decentralization}{_decentralization}
+\mysubsection{Decentralization}{concepts:decentralization}
 
 % ---------------------------------------------------------------------
 \begin{frame}
@@ -530,6 +529,8 @@ Decentralized
 % =====================================================================
 % =====================================================================
 \mysection{Using GIT}{_using_git}
+% =====================================================================
+\mysubsection{Commands}{using:commands}
 % ---------------------------------------------------------------------
 \begin{frame}
 \frametitle{Git commands}
@@ -572,46 +573,18 @@ Decentralized
 \end{frame}
 
 % ---------------------------------------------------------------------
-\begin{frame}[fragile]
-\frametitle{Git commands}
-{\tiny
-\CMD{\$ git help}
-\begin{verbatim}
-usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [-p|--paginate|--no-pager]
-           [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE] [--help]
-           COMMAND [ARGS]
-
-The most commonly used git commands are:
-   add        Add file contents to the index
-   bisect     Find the change that introduced a bug by binary search
-   branch     List, create, or delete branches
-   checkout   Checkout and switch to a branch
-   clone      Clone a repository into a new directory
-   commit     Record changes to the repository
-   diff       Show changes between commits, commit and working tree, etc
-   fetch      Download objects and refs from another repository
-   grep       Print lines matching a pattern
-   init       Create an empty git repository or reinitialize an existing one
-   log        Show commit logs
-   merge      Join two or more development histories together
-   mv         Move or rename a file, a directory, or a symlink
-   pull       Fetch from and merge with another repository or a local branch
-   push       Update remote refs along with associated objects
-   rebase     Forward-port local commits to the updated upstream head
-   reset      Reset current HEAD to the specified state
-   rm         Remove files from the working tree and from the index
-   show       Show various types of objects
-   status     Show the working tree status
-   tag        Create, list, delete or verify a tag object signed with GPG
-\end{verbatim}
-}
-\end{frame}
-
-% ---------------------------------------------------------------------
 \begin{frame}
 \frametitle{Help}
 
-\texttt{git <command> -h}
+\CMD{git help}
+\begin{itemize}
+        \item list of common commands
+\end{itemize}
+
+\pause{}
+\vspace{.1\textheight}
+
+\CMD{git <command> -h}
 \begin{itemize}
         \item brief help output
 \end{itemize}
@@ -619,16 +592,110 @@ The most commonly used git commands are:
 \pause{}
 \vspace{.1\textheight}
 
-\texttt{man git-<command>}
-\texttt{git help <command>}
-\texttt{git <command> --help}
+\CMD{man git-<command>} \\
+\CMD{git help <command>} \\
+\CMD{git <command> {-}-help} \\
 \begin{itemize}
         \item manual page
 \end{itemize}
 
 \end{frame}
 
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Configuration}
 
+\CMD{git config {-}-global user.name "Bart Trojanowski"} \\
+\CMD{git config {-}-global user.email bart@jukie.net}
+
+\pause{}
+\vspace{.1\textheight}
+
+\CMD{git config {-}-global color.pager true} \\
+\CMD{git config {-}-global color.ui auto}
+
+\end{frame}
+
+% =====================================================================
+\mysubsection{Basics}{using:basics}
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Bootstrapping}
+
+\cmd{\$ mkdir project} \\
+\cmd{\$ cd project} \\
+\CMD{\$ git init}
+
+\pause{}
+\vspace{.1\textheight}
+
+\ldots
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Status}
+
+\CMD{\$ git status}
+
+\pause{}
+\vspace{.1\textheight}
+
+\ldots
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Staging}
+
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                \begin{itemize}
+                        \item additions \\
+                                \CMD{\$ git add file} \\
+                                \CMD{\$ git add .}
+
+                                \pause{}
+                                \vspace{.1\textheight}
+
+                        \item removal \\
+                                \CMD{\$ git rm file}
+
+                                \pause{}
+                                \vspace{.1\textheight}
+
+                        \item renames \\
+                                \CMD{\$ git mv old new}
+                \end{itemize}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+
+                %\vspace{.2\textheight}
+                \includegraphics[width=\linewidth]{using-add.eps}
+
+        \end{column}
+\end{columns}
+
+
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Committing}
+
+\cmd{\$ vim} \\
+\CMD{\$ git add .} \\
+\CMD{\$ git commit -m``message''}
+
+\pause{}
+\vspace{.1\textheight}
+
+\ldots
+
+\end{frame}
 
 
 
