@@ -1,34 +1,38 @@
+NAME = intro-to-git
+TEX  = ${NAME}.tex
+TOC  = ${NAME}.toc
+DVI  = ${NAME}.dvi
+PS   = ${NAME}.ps
+PDF  = ${NAME}.pdf
 
-MGP=intro-to-git.mgp
-PS=$(MGP:.mgp=.ps)
-PDF=$(PS:.ps=.pdf)
 SVG=$(wildcard *.svg)
 EPS=$(SVG:.svg=.eps)
 
 
 .PHONY: run eps ps pdf clean
-full: ${MGP} eps
-	mgp ${MGP}
-
-win: ${MGP} eps
-	#mgp -x vflib -g 1000x700 ${MGP}
-	mgp -g 1000x700 ${MGP}
+default: pdf
 
 eps: ${EPS}
 
+ps: ${DVI}
+${DVI}: ${TEX} ${EPS}
+	-rm -f .${TOC}.sum
+	md5sum ${TOC} > .${TOC}.sum || touch .${TOC}.sum
+	latex $<
+	md5sum -c .${TOC}.sum || latex $<
+
 ps: ${PS}
+${PS}: ${DVI}
+	dvips $<
 
 pdf: ${PDF}
-
-${PS}: ${MGP} ${EPS}
-	mgp2ps ${MGP} > ${PS}
-
 ${PDF}: ${PS}
-	ps2pdf ${PS}
+	ps2pdf $<
 
 ${EPS}: %.eps: %.svg
 	inkscape -z -E $@ $<
 
 clean:
-	-rm -f ${PS} ${PDF} ${ESP}
-	-rm -f *~
+	-rm -f *~ *.log
+	-rm -f ${DVI} ${TOC} ${PS} ${PDF} ${EPS}
+	-rm -f $(foreach x,log nav out snm toc dvi aux,${NAME}.${x})

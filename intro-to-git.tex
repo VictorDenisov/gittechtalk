@@ -1,0 +1,65 @@
+\documentclass[english]{beamer}
+\usepackage{makeidx}
+\usepackage{color}
+\usepackage{graphicx}
+\usetheme{Goettingen}
+\setbeamercovered{transparent}
+
+\usenavigationsymbolstemplate{}
+\AtBeginSection[]{
+  \frame<beamer>{
+    \frametitle{Next...}
+    \tableofcontents[currentsection]
+   }
+}
+
+\definecolor{ListingBorderColor}{gray}{0.55}
+\definecolor{ListingBackgroundColor}{gray}{0.95}
+
+\usepackage{babel}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{enumerate}
+\usepackage{longtable}
+\usepackage[T1]{fontenc}
+\usepackage{ucs}
+\usepackage[latin1]{inputenc}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{listings}
+
+\title{Git the basics}
+\author{Bart Trojanowski, \href{mailto:bart@jukie.net}{bart@jukie.net}}
+\institute{Jukie Networks Inc.}
+\date{July 9th, 2008}
+
+\setcounter{tocdepth}{1}
+
+\begin{document}
+% =====================================================================
+% ---------------------------------------------------------------------
+\label{header}\hypertarget{header}{}
+\frame{\maketitle}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Optional Title for My Slide}
+Here is one slide.
+
+\begin{itemize}
+        \item something
+                \pause
+        \item else
+                \pause
+        \item again
+\end{itemize}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+Here is another slide.
+\end{frame}
+
+% =====================================================================
+\end{document}
