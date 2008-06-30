@@ -827,7 +827,7 @@
      inkscape:window-width="958"
      inkscape:window-height="1151"
      inkscape:window-x="0"
-     inkscape:window-y="12"
+     inkscape:window-y="0"
      showgrid="true"
      showguides="false"
      inkscape:guide-bbox="false"
@@ -1309,7 +1309,7 @@
            y="56.111176"
            x="188.82281"
            id="tspan3796"
-           sodipodi:role="line">diff</tspan></text>
+           sodipodi:role="line">diff </tspan></text>
       <path
          id="path3798"
          d="M 220,67.112183 L 169,67.112183 L 169,67.112183 L 169,67.112183"
