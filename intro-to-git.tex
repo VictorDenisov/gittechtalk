@@ -109,8 +109,8 @@
 
         \end{column}
         \begin{column}[T]{.5\textwidth}
-                \vspace{.3\textheight}
-                \includegraphics[width=\linewidth]{working-tree.eps}
+                \vspace{.2\textheight}
+                \includegraphics[width=\linewidth]{repo-working-tree.eps}
         \end{column}
 \end{columns}
 
@@ -127,8 +127,8 @@
                 \end{itemize}
         \end{column}
         \begin{column}[T]{.5\textwidth}
-                \vspace{.3\textheight}
-                \includegraphics[width=\linewidth]{repo-obj.eps}
+                \vspace{.2\textheight}
+                \includegraphics[width=\linewidth]{repo-blob.eps}
         \end{column}
 \end{columns}
 
@@ -142,11 +142,31 @@
                 Repository contents
                 \begin{itemize}
                         \item blobs
+                        \item trees
+                \end{itemize}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \vspace{.2\textheight}
+                \includegraphics[width=\linewidth]{repo-tree.eps}
+        \end{column}
+\end{columns}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{SCM components}
+\begin{columns}[t]
+        \begin{column}{.5\textwidth}
+                Repository contents
+                \begin{itemize}
+                        \item blobs
+                        \item trees
                         \item commits
                 \end{itemize}
         \end{column}
         \begin{column}[T]{.5\textwidth}
-                \vspace{.3\textheight}
+                \vspace{.2\textheight}
                 \includegraphics[width=\linewidth]{repo-commit.eps}
         \end{column}
 \end{columns}
@@ -161,12 +181,13 @@
                 Repository contents
                 \begin{itemize}
                         \item blobs
+                        \item trees
                         \item commits
                         \item ancestry
                 \end{itemize}
         \end{column}
         \begin{column}[T]{.5\textwidth}
-                \vspace{.3\textheight}
+                \vspace{.2\textheight}
                 \includegraphics[width=\linewidth]{repo-ancestry.eps}
         \end{column}
 \end{columns}
@@ -181,13 +202,14 @@
                 Repository contents
                 \begin{itemize}
                         \item blobs
+                        \item trees
                         \item commits
                         \item ancestry
                         \item tags
                 \end{itemize}
         \end{column}
         \begin{column}[T]{.5\textwidth}
-                \vspace{.3\textheight}
+                \vspace{.2\textheight}
                 \includegraphics[width=\linewidth]{repo-tags.eps}
         \end{column}
 \end{columns}
@@ -202,6 +224,7 @@
                 Repository contents
                 \begin{itemize}
                         \item blobs
+                        \item trees
                         \item commits
                         \item ancestry
                         \item tags
@@ -209,8 +232,28 @@
                 \end{itemize}
         \end{column}
         \begin{column}[T]{.5\textwidth}
-                \vspace{.3\textheight}
+                \vspace{.2\textheight}
                 \includegraphics[width=\linewidth]{repo-branches.eps}
+        \end{column}
+\end{columns}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{SCM components}
+\begin{columns}[t]
+        \begin{column}{.5\textwidth}
+                HEAD
+                \begin{itemize}
+                        \item current checkout
+                        \item points to branch
+                        \item sometimes detached
+                \end{itemize}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \vspace{.2\textheight}
+                \includegraphics[width=\linewidth]{repo-head.eps}
         \end{column}
 \end{columns}
 
@@ -228,7 +271,7 @@
                 \end{itemize}
         \end{column}
         \begin{column}[T]{.5\textwidth}
-                \vspace{.3\textheight}
+                \vspace{.2\textheight}
                 \includegraphics[width=\linewidth]{repo-index.eps}
         \end{column}
 \end{columns}

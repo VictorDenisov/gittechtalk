@@ -14,7 +14,7 @@
    sodipodi:version="0.32"
    inkscape:version="0.46"
    sodipodi:docbase="/home/jukie/bart/work/oclug/intro-to-git"
-   sodipodi:docname="repo-index.svg"
+   sodipodi:docname="repo-head.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
      id="defs1319">
@@ -125,7 +125,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="4"
-     inkscape:cx="290.58442"
+     inkscape:cx="260.58442"
      inkscape:cy="1013.984"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -134,8 +134,8 @@
      inkscape:window-x="0"
      inkscape:window-y="12"
      showgrid="true"
-     showguides="false"
-     inkscape:guide-bbox="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
      inkscape:guide-points="true"
      inkscape:grid-points="true" />
   <metadata
@@ -160,7 +160,7 @@
        width="150"
        height="175"
        x="200"
-       y="7.362183"
+       y="0"
        rx="0.97501403"
        ry="0.97501308"
        inkscape:label="#rect4767"
@@ -604,5 +604,34 @@
        sodipodi:nodetypes="cc"
        inkscape:connection-end="#g3847"
        inkscape:connection-start="#g4787" />
+    <g
+       style="opacity:1"
+       id="g2468"
+       transform="matrix(1.562508,0,0,1.578809,-246.9052,-94.042816)">
+      <path
+         id="path2470"
+         d="M 325,62.362183 L 325,65.362183 L 327,67.362183 L 338,67.362183 L 340,65.362183 L 340,62.362183 L 325,62.362183 z"
+         style="fill:#ff7070;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.161;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2472"
+         y="68.43618"
+         x="314.83835"
+         style="font-size:1.84539533px;font-style:normal;font-weight:normal;line-height:125%;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"
+         transform="scale(1.0443549,0.9575289)"><tspan
+           style="font-size:2.4605267px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans"
+           y="68.43618"
+           x="314.83835"
+           id="tspan2474"
+           sodipodi:role="line">HEAD</tspan></text>
+    </g>
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#710000;stroke-width:0.86385071;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline"
+       d="M 272.62871,19.238432 L 272.62871,12.436299"
+       id="path2476"
+       inkscape:connector-type="polyline"
+       inkscape:connection-end="#g2468"
+       inkscape:connection-start="#g4779" />
   </g>
 </svg>
