@@ -158,11 +158,11 @@
        style="fill:#eff3ff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="bg"
        width="200"
-       height="300"
+       height="320"
        x="0"
        y="0"
-       rx="0.97501403"
-       ry="0.97501308"
+       rx="1"
+       ry="1"
        inkscape:label="#rect4767"
        sodipodi:insensitive="true" />
     <rect
