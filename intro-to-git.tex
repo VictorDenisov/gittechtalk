@@ -65,11 +65,15 @@
 \newcommand{\gui}[1]{
   \texttt{\textcolor{code-blue}{#1}}
 }
-\newcommand{\faint}[1]{
+\newcommand{\fnt}[1]{
   \texttt{\textcolor{code-gray}{#1}}
 }
 \newcommand{\hide}[1]{
   \texttt{\textcolor{code-white}{#1}}
+}
+
+\newcommand{\faint}[1]{
+  \textcolor{code-gray}{#1}
 }
 
 \newcommand{\GitCmdTable}[4]{
@@ -185,7 +189,7 @@
         \begin{column}[T]{.5\textwidth}
                 Repository contents
                 \begin{itemize}
-                        \item blobs
+                        \item files
                 \end{itemize}
         \end{column}
         \begin{column}[T]{.5\textwidth}
@@ -203,27 +207,7 @@
         \begin{column}[T]{.5\textwidth}
                 Repository contents
                 \begin{itemize}
-                        \item blobs
-                        \item trees
-                \end{itemize}
-        \end{column}
-        \begin{column}[T]{.5\textwidth}
-                \vspace{.2\textheight}
-                \includegraphics[width=\linewidth]{repo-tree.eps}
-        \end{column}
-\end{columns}
-
-\end{frame}
-
-% ---------------------------------------------------------------------
-\begin{frame}
-\frametitle{SCM components}
-\begin{columns}[t]
-        \begin{column}[T]{.5\textwidth}
-                Repository contents
-                \begin{itemize}
-                        \item blobs
-                        \item trees
+                        \item files
                         \item commits
                 \end{itemize}
         \end{column}
@@ -242,8 +226,7 @@
         \begin{column}[T]{.5\textwidth}
                 Repository contents
                 \begin{itemize}
-                        \item blobs
-                        \item trees
+                        \item files
                         \item commits
                         \item ancestry
                 \end{itemize}
@@ -263,8 +246,7 @@
         \begin{column}[T]{.5\textwidth}
                 Repository contents
                 \begin{itemize}
-                        \item blobs
-                        \item trees
+                        \item files
                         \item commits
                         \item ancestry
                         \item tags
@@ -285,8 +267,7 @@
         \begin{column}[T]{.5\textwidth}
                 Repository contents
                 \begin{itemize}
-                        \item blobs
-                        \item trees
+                        \item files
                         \item commits
                         \item ancestry
                         \item tags
@@ -310,12 +291,31 @@
                 \begin{itemize}
                         \item current checkout
                         \item points to branch
-                        \item sometimes detached
                 \end{itemize}
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \vspace{.2\textheight}
                 \includegraphics[width=\linewidth]{repo-head.eps}
+        \end{column}
+\end{columns}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{SCM components}
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                HEAD
+                \begin{itemize}
+                        \item current checkout
+                        \item points to branch
+                        \item sometimes detached
+                \end{itemize}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \vspace{.2\textheight}
+                \includegraphics[width=\linewidth]{repo-detached-head.eps}
         \end{column}
 \end{columns}
 
@@ -569,7 +569,7 @@ Decentralized
 % ---------------------------------------------------------------------
 \begin{frame}[fragile]
 \frametitle{And the plumbing\ldots}
-\GitCmdTable{\gui}{\CMD}{\cmd}{\faint}
+\GitCmdTable{\gui}{\CMD}{\cmd}{\fnt}
 \end{frame}
 
 % ---------------------------------------------------------------------
@@ -635,9 +635,72 @@ Decentralized
 \end{frame}
 
 % ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{The repository}
+
+{\tiny
+\begin{tabular}{ll}
+        \verb!  .git                  !  & \\
+        \verb!  |-- HEAD              !  & current checkout ref \\
+        \verb!  |-- config            !  & repo private config \\
+        \verb!  |-- description       !  & repo description \\
+        \verb!  |-- hooks             !  & \\
+        \verb!  |   `-- ...           !  & hooking scripts \\
+        \verb!  |-- index             !  & changes to commit \\
+        \verb!  |-- info              !  & \\
+        \verb!  |   |-- exclude       !  & repo private \\
+        \verb!  |   `-- refs          !  & refs? \\
+        \verb!  |-- logs              !  & \\
+        \verb!  |   `-- ...           !  & ``reflog'' data \\
+        \verb!  |-- objects           !  & \\
+        \verb!  |   |-- XX            !  & \\
+        \verb!  |   |   `-- ...       !  & loose objects \\
+        \verb!  |   |-- info          !  & \\
+        \verb!  |   |   `-- packs     !  & info about packs \\
+        \verb!  |   `-- pack          !  & \\
+        \verb!  |       `-- ...       !  & packs and indexes \\
+        \verb!  `-- refs              !  & \\
+        \verb!      |-- heads         !  & \\
+        \verb!      |   `-- master    !  & master branch \\
+        \verb!      `-- tags          !  & \\
+        \verb!          `-- ...       !  & tags \\
+\end{tabular}
+}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Objects}
+4 types
+\begin{itemize}
+        \item blobs
+        \item trees
+        \item commits
+        \item tag
+\end{itemize}
+\end{frame}
+
+
+% =====================================================================
+\mysubsection{Commit}{using:commit}
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Committing}
+
+\CMD{\$ git commit \fnt{-a} -m``some comment''} \\
+\begin{itemize}
+        \item will create a commit of \faint{all or} only staged items
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------
 \begin{frame}
 \frametitle{Staging}
 \begin{itemize}
+        \item What to commit?
+
+                \vspace{.1\textheight}
+
         \item additions \\
                 \CMD{\$ git add file} \\
                 \CMD{\$ git add .}
@@ -695,7 +758,7 @@ Decentralized
 
                 \CMD{\$ git commit -m``test''} \\
                 {\tiny
-                \faint{Created initial commit 6f01040: test \\
+                \fnt{Created initial commit 6f01040: test \\
                        1 files changed, 1 insertions(+), \\ 0 deletions(-) \\
                        create mode 100644 test}
                 }
@@ -754,7 +817,7 @@ Decentralized
 
                 \CMD{\$ git commit -m``foo''} \\
                 {\tiny
-                \faint{Created commit 52a0ff4: foo \\
+                \fnt{Created commit 52a0ff4: foo \\
                        1 files changed, 1 insertions(+), \\ 0 deletions(-) \\
                        create mode 100644 sub/foo}
                 }
