@@ -244,11 +244,26 @@
 \frametitle{SCM components}
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
-                Repository contents
+                dicyclic graph
+
+                \vspace{.1\textheight}
+                ``DAG''
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \vspace{.2\textheight}
+                \includegraphics[width=\linewidth]{repo-dag.eps}
+        \end{column}
+\end{columns}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{SCM components}
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                References
                 \begin{itemize}
-                        \item files
-                        \item commits
-                        \item ancestry
                         \item tags
                 \end{itemize}
         \end{column}
@@ -265,11 +280,8 @@
 \frametitle{SCM components}
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
-                Repository contents
+                References
                 \begin{itemize}
-                        \item files
-                        \item commits
-                        \item ancestry
                         \item tags
                         \item branches
                 \end{itemize}
@@ -353,12 +365,14 @@ Bootstrap
         \item switch branch
 \end{itemize}
 
+\pause{}
 Modify
 \begin{itemize}
         \item add, delete, rename
         \item commit
 \end{itemize}
 
+\pause{}
 Information
 \begin{itemize}
         \item status
@@ -366,6 +380,7 @@ Information
         \item log
 \end{itemize}
 
+\pause{}
 Reference
 \begin{itemize}
         \item tag
@@ -605,14 +620,16 @@ Decentralized
 \begin{frame}
 \frametitle{Configuration}
 
-\CMD{git config {-}-global user.name "Bart Trojanowski"} \\
-\CMD{git config {-}-global user.email bart@jukie.net}
+\CMD{~/.gitconfig}
+
+\CMD{\$ git config {-}-global user.name "Your Name"} \\
+\CMD{\$ git config {-}-global user.email you@comain.tld}
 
 \pause{}
 \vspace{.1\textheight}
 
-\CMD{git config {-}-global color.pager true} \\
-\CMD{git config {-}-global color.ui auto}
+\CMD{\$ git config {-}-global color.pager true} \\
+\CMD{\$ git config {-}-global color.ui auto}
 
 \end{frame}
 
