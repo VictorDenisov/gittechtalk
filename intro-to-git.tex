@@ -658,7 +658,7 @@ Decentralized
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Staging}
+\frametitle{First commit}
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
                 \cmd{\$ echo test > test}
@@ -673,7 +673,7 @@ Decentralized
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Staging}
+\frametitle{Stage}
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
                 \cmd{\$ echo test > test} \\
@@ -689,7 +689,7 @@ Decentralized
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Committing}
+\frametitle{Commit}
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
                 \cmd{\$ echo test > test} \\
@@ -707,6 +707,67 @@ Decentralized
         \begin{column}[T]{.5\textwidth}
 
                 \includegraphics[width=\linewidth]{using-commit-1.eps}
+
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Stage another}
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                \cmd{\$ echo test > test} \\
+                \CMD{\$ git add test}
+
+                \vspace{.1\textheight}
+
+                \CMD{\$ git commit -m``test''} \\
+
+                \vspace{.1\textheight}
+
+                \cmd{\$ mkdir sub} \\
+                \cmd{\$ echo foo > sub/foo} \\
+                \CMD{\$ git add subdir/another}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+
+                \includegraphics[width=\linewidth]{using-add-3.eps}
+
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Stage another}
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                \cmd{\$ echo test > test} \\
+                \CMD{\$ git add test}
+
+                \vspace{.1\textheight}
+
+                \CMD{\$ git commit -m``test''} \\
+
+                \vspace{.1\textheight}
+
+                \cmd{\$ mkdir sub} \\
+                \cmd{\$ echo foo > sub/foo} \\
+                \CMD{\$ git add sub/foo}
+
+                \vspace{.1\textheight}
+
+                \CMD{\$ git commit -m``foo''} \\
+                {\tiny
+                \faint{Created commit 52a0ff4: foo \\
+                       1 files changed, 1 insertions(+), \\ 0 deletions(-) \\
+                       create mode 100644 sub/foo}
+                }
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+
+                \includegraphics[width=\linewidth]{using-commit-2.eps}
 
         \end{column}
 \end{columns}
