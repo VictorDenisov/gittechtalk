@@ -622,15 +622,94 @@ Decentralized
 \begin{frame}
 \frametitle{Bootstrapping}
 
-\cmd{\$ mkdir project} \\
-\cmd{\$ cd project} \\
-\CMD{\$ git init}
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                \cmd{\$ mkdir project} \\
+                \cmd{\$ cd project} \\
+                \CMD{\$ git init}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{using-init.eps}
+        \end{column}
+\end{columns}
+\end{frame}
 
-\pause{}
-\vspace{.1\textheight}
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Staging}
+\begin{itemize}
+        \item additions \\
+                \CMD{\$ git add file} \\
+                \CMD{\$ git add .}
 
-\ldots
+                \pause{}
+                \vspace{.1\textheight}
 
+        \item removal \\
+                \CMD{\$ git rm file}
+
+                \pause{}
+                \vspace{.1\textheight}
+
+        \item renames \\
+                \CMD{\$ git mv old new}
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Staging}
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                \cmd{\$ echo test > test}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+
+                \includegraphics[width=\linewidth]{using-add-1.eps}
+
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Staging}
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                \cmd{\$ echo test > test} \\
+                \CMD{\$ git add test}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+
+                \includegraphics[width=\linewidth]{using-add-2.eps}
+
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Committing}
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                \cmd{\$ echo test > test} \\
+                \CMD{\$ git add test}
+
+                \vspace{.1\textheight}
+
+                \CMD{\$ git commit -m``test''} \\
+                {\tiny
+                \faint{Created initial commit 6f01040: test \\
+                       1 files changed, 1 insertions(+), \\ 0 deletions(-) \\
+                       create mode 100644 test}
+                }
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+
+                \includegraphics[width=\linewidth]{using-commit-1.eps}
+
+        \end{column}
+\end{columns}
 \end{frame}
 
 % ---------------------------------------------------------------------
@@ -645,60 +724,6 @@ Decentralized
 \ldots
 
 \end{frame}
-
-% ---------------------------------------------------------------------
-\begin{frame}
-\frametitle{Staging}
-
-\begin{columns}[t]
-        \begin{column}[T]{.5\textwidth}
-                \begin{itemize}
-                        \item additions \\
-                                \CMD{\$ git add file} \\
-                                \CMD{\$ git add .}
-
-                                \pause{}
-                                \vspace{.1\textheight}
-
-                        \item removal \\
-                                \CMD{\$ git rm file}
-
-                                \pause{}
-                                \vspace{.1\textheight}
-
-                        \item renames \\
-                                \CMD{\$ git mv old new}
-                \end{itemize}
-        \end{column}
-        \begin{column}[T]{.5\textwidth}
-
-                %\vspace{.2\textheight}
-                \includegraphics[width=\linewidth]{using-add.eps}
-
-        \end{column}
-\end{columns}
-
-
-
-\end{frame}
-
-% ---------------------------------------------------------------------
-\begin{frame}
-\frametitle{Committing}
-
-\cmd{\$ vim} \\
-\CMD{\$ git add .} \\
-\CMD{\$ git commit -m``message''}
-
-\pause{}
-\vspace{.1\textheight}
-
-\ldots
-
-\end{frame}
-
-
-
 
 
 
