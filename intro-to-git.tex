@@ -543,6 +543,169 @@ Decentralized
 
 % =====================================================================
 % =====================================================================
+\mysection{Repository}{_repository}
+% =====================================================================
+\mysubsection{Structure}{repo:structure}
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{The repository}
+{\tiny
+\begin{tabular}{ll}
+        \verb!  .git               !  & \\
+        \verb!  |-- HEAD           !  & current checkout ref \\
+        \verb!  |-- config         !  & repo private config \\
+        \verb!  |-- description    !  & repo description \\
+        \verb!  |-- hooks          !  & \\
+        \verb!  |   `-- ...        !  & hooking scripts \\
+        \verb!  |-- index          !  & changes to commit \\
+        \verb!  |-- info           !  & \\
+        \verb!  |   |-- exclude    !  & repo private \\
+        \verb!  |   `-- refs       !  & refs? \\
+        \verb!  |-- logs           !  & \\
+        \verb!  |   `-- ...        !  & ``reflog'' data \\
+        \verb!  |-- objects        !  & \\
+        \verb!  |   |-- XX         !  & \\
+        \verb!  |   |   `-- ...    !  & loose objects \\
+        \verb!  |   |-- info       !  & \\
+        \verb!  |   |   `-- packs  !  & info about packs \\
+        \verb!  |   `-- pack       !  & \\
+        \verb!  |       `-- ...    !  & packs and indexes \\
+        \verb!  `-- refs           !  & \\
+        \verb!      |-- heads      !  & \\
+        \verb!      |   `-- master !  & master branch \\
+        \verb!      `-- tags       !  & \\
+        \verb!          `-- ...    !  & tags \\
+\end{tabular}
+}
+\end{frame}
+
+% =====================================================================
+\mysubsection{Objects}{using:objects}
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Objects}
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                4 types
+                \begin{itemize}
+                        \item blobs
+                \end{itemize}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{obj-01-blob.eps}
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Objects}
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                4 types
+                \begin{itemize}
+                        \item blobs
+                        \item trees
+                \end{itemize}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{obj-02-tree-1.eps}
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Objects}
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                4 types
+                \begin{itemize}
+                        \item blobs
+                        \item trees
+                \end{itemize}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{obj-02-tree-2.eps}
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Objects}
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                4 types
+                \begin{itemize}
+                        \item blobs
+                        \item trees
+                \end{itemize}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{obj-02-tree-3.eps}
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Objects}
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                4 types
+                \begin{itemize}
+                        \item blobs
+                        \item trees
+                        \item commits
+                \end{itemize}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{obj-03-commit-1.eps}
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Objects}
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                4 types
+                \begin{itemize}
+                        \item blobs
+                        \item trees
+                        \item commits
+                \end{itemize}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{obj-03-commit-2.eps}
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Objects}
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                4 types
+                \begin{itemize}
+                        \item blobs
+                        \item trees
+                        \item commits
+                        \item tag
+                \end{itemize}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \vspace{\textheight}
+        \end{column}
+\end{columns}
+\end{frame}
+
+
+% =====================================================================
+% =====================================================================
 \mysection{Using GIT}{_using_git}
 % =====================================================================
 \mysubsection{Commands}{using:commands}
@@ -652,52 +815,6 @@ Decentralized
                 \includegraphics[width=\linewidth]{using-01-init.eps}
         \end{column}
 \end{columns}
-\end{frame}
-
-% ---------------------------------------------------------------------
-\begin{frame}[fragile]
-\frametitle{The repository}
-
-{\tiny
-\begin{tabular}{ll}
-        \verb!  .git                  !  & \\
-        \verb!  |-- HEAD              !  & current checkout ref \\
-        \verb!  |-- config            !  & repo private config \\
-        \verb!  |-- description       !  & repo description \\
-        \verb!  |-- hooks             !  & \\
-        \verb!  |   `-- ...           !  & hooking scripts \\
-        \verb!  |-- index             !  & changes to commit \\
-        \verb!  |-- info              !  & \\
-        \verb!  |   |-- exclude       !  & repo private \\
-        \verb!  |   `-- refs          !  & refs? \\
-        \verb!  |-- logs              !  & \\
-        \verb!  |   `-- ...           !  & ``reflog'' data \\
-        \verb!  |-- objects           !  & \\
-        \verb!  |   |-- XX            !  & \\
-        \verb!  |   |   `-- ...       !  & loose objects \\
-        \verb!  |   |-- info          !  & \\
-        \verb!  |   |   `-- packs     !  & info about packs \\
-        \verb!  |   `-- pack          !  & \\
-        \verb!  |       `-- ...       !  & packs and indexes \\
-        \verb!  `-- refs              !  & \\
-        \verb!      |-- heads         !  & \\
-        \verb!      |   `-- master    !  & master branch \\
-        \verb!      `-- tags          !  & \\
-        \verb!          `-- ...       !  & tags \\
-\end{tabular}
-}
-\end{frame}
-
-% ---------------------------------------------------------------------
-\begin{frame}
-\frametitle{Objects}
-4 types
-\begin{itemize}
-        \item blobs
-        \item trees
-        \item commits
-        \item tag
-\end{itemize}
 \end{frame}
 
 
