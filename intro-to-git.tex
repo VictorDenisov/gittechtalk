@@ -909,44 +909,28 @@ Decentralized
 \end{frame}
 
 % =====================================================================
-\mysubsection{Basics}{using:basics}
+\mysubsection{Commit}{using:commit}
 % ---------------------------------------------------------------------
 \begin{frame}
 \frametitle{Bootstrapping}
 
-\begin{columns}[t]
-        \begin{column}[T]{.5\textwidth}
-                \cmd{\$ mkdir project} \\
-                \cmd{\$ cd project} \\
-                \CMD{\$ git init}
-        \end{column}
-        \begin{column}[T]{.5\textwidth}
-                \includegraphics[width=\linewidth]{using-01-init.eps}
-        \end{column}
-\end{columns}
-\end{frame}
-
-
-% =====================================================================
-\mysubsection{Commit}{using:commit}
-% ---------------------------------------------------------------------
-\begin{frame}
-\frametitle{Committing}
-
-\CMD{\$ git commit \fnt{-a} -m``some comment''} \\
+\CMD{\$ git init} \\
 \begin{itemize}
-        \item will create a commit of \faint{all or} only staged items
+        \item ran in project workspace
+        \item creates \CMD{.git} directory
 \end{itemize}
 \end{frame}
 
 % ---------------------------------------------------------------------
 \begin{frame}
 \frametitle{Staging}
+
+What to commit?
+
+\pause{}
+\vspace{.1\textheight}
+
 \begin{itemize}
-        \item What to commit?
-
-                \vspace{.1\textheight}
-
         \item additions \\
                 \CMD{\$ git add file} \\
                 \CMD{\$ git add .}
@@ -963,6 +947,32 @@ Decentralized
         \item renames \\
                 \CMD{\$ git mv old new}
 \end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Committing}
+
+\CMD{\$ git commit \fnt{-a} -m``some comment''} \\
+\begin{itemize}
+        \item will create a commit of \faint{all or} only staged items
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Bootstrapping}
+
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                \cmd{\$ mkdir project} \\
+                \cmd{\$ cd project} \\
+                \CMD{\$ git init}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{using-01-init.eps}
+        \end{column}
+\end{columns}
 \end{frame}
 
 % ---------------------------------------------------------------------
