@@ -1086,22 +1086,48 @@ What to commit?
 \end{columns}
 \end{frame}
 
+% =====================================================================
+\mysubsection{Inspection}{using:inspection}
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Status}
+\frametitle{Repository status}
 
 \CMD{\$ git status}
+
+\vspace{.1\textheight}
+shows\ldots
+\begin{itemize}
+        \item staged
+        \item unstaged
+        \item untracked
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Diffs}
+
+\CMD{\$ git diff}
+\begin{itemize}
+        \item changes between index and working files
+\end{itemize}
 
 \pause{}
 \vspace{.1\textheight}
 
-\ldots
+\CMD{\$ git diff {-}-staged}
+\begin{itemize}
+        \item changes between HEAD and index
+\end{itemize}
 
+\pause{}
+\vspace{.1\textheight}
+
+\CMD{\$ git diff HEAD}
+\begin{itemize}
+        \item changes between HEAD and working files
+\end{itemize}
 \end{frame}
-
-
-
-
 
 % ---------------------------------------------------------------------
 \begin{frame}
