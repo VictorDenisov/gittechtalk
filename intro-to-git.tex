@@ -27,6 +27,7 @@
 \usepackage{textcomp}
 \usepackage{alltt}
 \usepackage{listings}
+\usepackage{fancyvrb}
 
 \title{Git the basics}
 \author{Bart Trojanowski, \href{mailto:bart@jukie.net}{bart@jukie.net}}
@@ -53,27 +54,27 @@
 \definecolor{code-blue}{rgb}{0,0,0.5}
 \definecolor{code-gray}{rgb}{0.7,0.7,0.7}
 \definecolor{code-white}{rgb}{1,1,1}
-\newcommand{\ttt}[1]{
-  \texttt{\textcolor{code-black}{#1}}
+\newcommand{\ttt}[1]{%
+\texttt{\textcolor{code-black}{#1}}%
 }
-\newcommand{\CMD}[1]{
-  \texttt{\textcolor{code-green}{#1}}
+\newcommand{\CMD}[1]{%
+\texttt{\textcolor{code-green}{#1}}%
 }
-\newcommand{\cmd}[1]{
-  \texttt{\textcolor{code-orange}{#1}}
+\newcommand{\cmd}[1]{%
+\texttt{\textcolor{code-orange}{#1}}%
 }
-\newcommand{\gui}[1]{
-  \texttt{\textcolor{code-blue}{#1}}
+\newcommand{\gui}[1]{%
+\texttt{\textcolor{code-blue}{#1}}%
 }
-\newcommand{\fnt}[1]{
-  \texttt{\textcolor{code-gray}{#1}}
+\newcommand{\fnt}[1]{%
+\texttt{\textcolor{code-gray}{#1}}%
 }
-\newcommand{\hide}[1]{
-  \texttt{\textcolor{code-white}{#1}}
+\newcommand{\hide}[1]{%
+\texttt{\textcolor{code-white}{#1}}%
 }
 
-\newcommand{\faint}[1]{
-  \textcolor{code-gray}{#1}
+\newcommand{\faint}[1]{%
+\textcolor{code-gray}{#1}%
 }
 
 \newcommand{\GitCmdTable}[4]{
@@ -1127,7 +1128,125 @@ shows\ldots
 \begin{itemize}
         \item changes between HEAD and working files
 \end{itemize}
+
+\pause{}
+\vspace{.1\textheight}
+
+\CMD{\$ git diff \$commit \$commit}
+\begin{itemize}
+        \item changes between two commits
+\end{itemize}
+
 \end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Object references}
+
+specific commit ID\ldots
+\vspace{\baselineskip}
+
+{\small
+\begin{tabular}{ll}
+        full hash      & \ttt{6bb1270ffb60cbfef87266d2d4b4abe4218d9c68} \\
+        short hash     & \ttt{6bb127} \\
+        & \\
+        tag            & \textcolor{blue}{v1.5.6.1} \\
+        local branch   & \textcolor{green}{master} \\
+        remote branch  & \textcolor{red}{origin/master} \\
+        & \\
+        by message     & ``:/some text'' \\
+        & \\
+        checkout       & HEAD \\
+        last fetch     & FETCH\_HEAD \\
+        previous head  & ORIG\_HEAD \\
+        \ldots & \\
+\end{tabular}
+}
+
+\vspace{.1\textheight}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Object references}
+
+a commit before HEAD
+
+\vspace{.1\textheight}
+\begin{center}
+        \faint{HEAD}\verb!^   ==   ! \faint{HEAD}\verb!~!1
+\end{center}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Object references}
+
+few commits before HEAD
+
+\vspace{.1\textheight}
+\begin{center}
+        \faint{HEAD}\verb!^^^   ==   ! \faint{HEAD}\verb!~!3
+\end{center}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Object references}
+
+few commits before master
+
+\vspace{.1\textheight}
+\begin{center}
+        \faint{master}\verb!^^^   ==   ! \faint{master}\verb!~!3
+\end{center}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Object references}
+
+what was it yesterday?
+
+\vspace{.1\textheight}
+\begin{center}
+        @\{yesterday\} \verb!   ==   ! \faint{HEAD}@\{yesterday\}
+\end{center}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Object references}
+
+how about my-other-branch on June 1st?
+
+\vspace{.1\textheight}
+\begin{center}
+        \faint{my-other-branch}@\{June.1\}
+\end{center}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Show me!}
+
+review last commit
+
+\CMD{\$ git show}
+\begin{itemize}
+        \item changes between index and working files
+\end{itemize}
+
+\end{frame}
+
+
 
 % ---------------------------------------------------------------------
 \begin{frame}

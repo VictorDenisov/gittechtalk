@@ -8,6 +8,8 @@ PDF  = ${NAME}.pdf
 SVG=$(wildcard *.svg)
 EPS=$(SVG:.svg=.eps)
 
+#LATEX = latex -interaction errorstopmode
+LATEX = latex -interaction nonstopmode
 
 .PHONY: run eps ps pdf clean distclean
 default: pdf
@@ -18,8 +20,8 @@ ps: ${DVI}
 ${DVI}: ${TEX} ${EPS}
 	-rm -f .${TOC}.sum
 	md5sum ${TOC} > .${TOC}.sum || touch .${TOC}.sum
-	latex $< || ( rc=$$? ; rm -f ${TOC} ${DVI} ; echo ==== $$rc ==== ; exit $$rc )
-	md5sum -c .${TOC}.sum || latex $<
+	${LATEX} $< || ( rc=$$? ; rm -f ${TOC} ${DVI} ; echo ==== $$rc ==== ; exit $$rc )
+	md5sum -c .${TOC}.sum || ${LATEX} $<
 
 ps: ${PS}
 ${PS}: ${DVI}
@@ -38,4 +40,4 @@ distclean: clean
 clean:
 	-rm -f *~ *.log
 	-rm -f ${DVI} ${TOC} ${PS} ${PDF}
-	-rm -f $(foreach x,log nav out snm toc dvi aux,${NAME}.${x})
+	-rm -f $(foreach x,log vrb nav out snm toc dvi aux,${NAME}.${x})
