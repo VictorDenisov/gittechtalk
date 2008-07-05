@@ -1310,11 +1310,185 @@ M       test
 \vspace{\textheight}
 \end{frame}
 
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Show me!}
+
+review any other commit\ldots
+\vspace{\baselineskip}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git show HEAD}
+\CMD{\$ git show HEAD^^^}
+\CMD{\$ git show master\Verb!~10!}
+\CMD{\$ git show master@\{May.16\}}
+\end{Verbatim}
+
+\ldots
+
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Show me!}
+
+show a file (or tree) in history\ldots
+\vspace{\baselineskip}
+
+\CMD{\$ git show HEAD:file}
+{\small
+\begin{Verbatim}[commandchars=\\\{\}]
+contents\ldots
+\end{Verbatim}
+}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Logs}
+
+See commit history\ldots
+\vspace{\baselineskip}
+
+\CMD{\$ git log}
+{\tiny
+\begin{Verbatim}[commandchars=\\\{\}]
+\textcolor{brown}{commit 3d3d2989b817af3fd4fa6d63f200113bd6c94bdb}
+Author: Bart Trojanowski <bart@jukie.net>
+Date:   Thu Jul 3 22:59:13 2008 -0400
+
+    most recent commit
+
+\textcolor{brown}{commit 83b2d051814e884a8e264127ed47552a5dcf6c1d}
+Author: Bart Trojanowski <bart@jukie.net>
+Date:   Thu Jul 3 21:44:39 2008 -0400
+
+    second most recent
+
+\textcolor{brown}{commit 1cc1b35a611c39f49842e2ca28d40886c1ae9b7c}
+Author: Bart Trojanowski <bart@jukie.net>
+Date:   Thu Jul 3 21:44:05 2008 -0400
+
+    middle commit
+
+\textcolor{brown}{commit 411515f51a78d66a27a7d56ebe9f70dbd2bff008}
+Author: Bart Trojanowski <bart@jukie.net>
+Date:   Thu Jul 3 21:43:36 2008 -0400
+
+    second oldest
+
+\textcolor{brown}{commit 52a0ff44aba8599f43a5d821c421af316cb73051}
+Author: Bart Trojanowski <bart@jukie.net>
+Date:   Mon Jun 30 21:44:55 2008 -0400
+
+    oldest commit
+
+\end{Verbatim}
+}
+\ldots
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Logs}
+
+\begin{center}
+        \CMD{git log} is awesome!
+\end{center}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Logs}
+
+limit by range\ldots
+\vspace{\baselineskip}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git log tag..branch}
+\CMD{\$ git log HEAD~10..}
+\CMD{\$ git log branch1 branch2 ^common}
+
+\CMD{\$ git log -10}
+\CMD{\$ git log -10 master@\{yesterday\}}
+
+\CMD{\$ git log {-}-since="May 1" {-}-until="June 1"}
+\end{Verbatim}
+
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Logs}
+
+limit by commit attributes\ldots
+\vspace{\baselineskip}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git log {-}-author=fred}
+\CMD{\$ git log {-}-committer=joe}
+\CMD{\$ git log {-}-grep="commit.*message.*text"}
+\end{Verbatim}
+
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Logs}
+
+search for a change\ldots
+\vspace{\baselineskip}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git log -S"some code change"}
+\CMD{\$ git log {-}-pickaxe-regex -S"some.*code.*change"}
+\end{Verbatim}
+
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Logs}
+
+limit by changes to specific path\ldots
+\vspace{\baselineskip}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git log -- some/file}
+\end{Verbatim}
+
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Faster grep}
+
+another way to search\ldots
+\vspace{\baselineskip}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git grep -e "pattern" -- some/file}
+\end{Verbatim}
+
+\vspace{\textheight}
+\end{frame}
+
 
 
 % ---------------------------------------------------------------------
 \begin{frame}
-        END
+        TODO
+
+        log
+
+
 \end{frame}
 
 % =====================================================================
