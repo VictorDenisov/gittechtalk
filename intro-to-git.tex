@@ -1205,11 +1205,11 @@ few commits before HEAD
 \begin{frame}[fragile]
 \frametitle{Object references}
 
-few commits before \textcolor{green}{master}
+few commits before master
 
 \vspace{.1\textheight}
 \begin{center}
-        \textcolor{green}{master}\verb!^^^   ==   ! \textcolor{green}{master}\verb!~!3
+        \faint{master}\verb!^^^   ==   ! \faint{master}\verb!~!3
 \end{center}
 
 \end{frame}
@@ -1481,7 +1481,6 @@ another way to search\ldots
 \vspace{\baselineskip}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-\CMD{\$ git grep -e "pattern"}
 \CMD{\$ git grep -e "pattern" -- some/file}
 \end{Verbatim}
 
@@ -1947,6 +1946,95 @@ cannot switch branches.}
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \includegraphics[width=\linewidth]{branching-15.eps}
+        \end{column}
+\end{columns}
+\end{frame}
+
+% =====================================================================
+\mysubsection{Merging}{using:merging}
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Merging}
+
+\begin{itemize}
+        \item merge multiple branches
+        \item merge commit has 2+ parents
+        \item can cause \error{conflicts}
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Merging}
+
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                one more example
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{merging-01.eps}
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Merging}
+
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{merging-02.eps}
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Merging}
+
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                {\small
+                \begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git checkout -b three one}
+\CMD{\$ git merge two}
+                \end{Verbatim}
+                }
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{merging-03.eps}
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Merging}
+
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{merging-04.eps}
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Merging}
+
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                {\small
+                \CMD{\$ git checkout three} \\
+                \CMD{\$ git merge one two} \\
+                }
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{merging-05.eps}
         \end{column}
 \end{columns}
 \end{frame}
