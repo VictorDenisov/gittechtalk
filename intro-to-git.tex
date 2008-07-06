@@ -80,6 +80,9 @@
 \newcommand{\faint}[1]{%
 \textcolor{code-gray}{#1}%
 }
+\newcommand{\green}[1]{%
+\textcolor{code-green}{#1}%
+}
 \newcommand{\error}[1]{%
 \textcolor{code-red}{#1}%
 }
@@ -455,7 +458,7 @@ Decentralized
 \frametitle{Decentralization}
 \includegraphics[width=\linewidth]{cloning-3-topic.eps}
 \begin{itemize}
-        \item create topic ``branches''
+        \item local cloning is lighweight
 \end{itemize}
 \end{frame}
 
@@ -555,12 +558,114 @@ Decentralized
 % =====================================================================
 \mysubsection{Structure}{repo:structure}
 % ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Structure}
+
+\includegraphics[width=\linewidth]{struct-00.eps}
+\vspace{\baselineskip}
+\begin{center}
+        the history
+\end{center}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Structure}
+
+\includegraphics[width=\linewidth]{struct-01.eps}
+\vspace{\baselineskip}
+\begin{center}
+        staging area
+\end{center}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Structure}
+
+\includegraphics[width=\linewidth]{struct-02.eps}
+\vspace{\baselineskip}
+\begin{center}
+        files you edit
+\end{center}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Structure}
+
+\includegraphics[width=\linewidth]{struct-03.eps}
+\vspace{\baselineskip}
+\begin{center}
+        ``staging''               
+
+        \vspace{\baselineskip}
+        \CMD{add} \\
+        \CMD{remove} \\
+        \CMD{rename}
+\end{center}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Structure}
+
+\includegraphics[width=\linewidth]{struct-04.eps}
+\vspace{\baselineskip}
+\begin{center}
+        ``committing''
+
+        \vspace{\baselineskip}
+        \CMD{commit}
+\end{center}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Structure}
+
+\includegraphics[width=\linewidth]{struct-05.eps}
+\vspace{\baselineskip}
+\begin{center}
+        ``reading tree''
+
+        \vspace{\baselineskip}
+        \CMD{checkout} \\
+        \CMD{read-tree} \\
+        \CMD{reset}
+\end{center}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Structure}
+
+\includegraphics[width=\linewidth]{struct-06.eps}
+\vspace{\baselineskip}
+\begin{center}
+        ``checking out''
+
+        \vspace{\baselineskip}
+        \CMD{checkout} \\
+        \CMD{checkout-index} \\
+        \CMD{reset}
+\end{center}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
 \begin{frame}[fragile]
 \frametitle{The repository}
 {\tiny
 \begin{tabular}{ll}
         \verb!  .git               !  & \\
-        \verb!  |-- HEAD           !  & current checkout ref \\
+        \verb!  |-- HEAD           !  & current checkout reference \\
         \verb!  |-- config         !  & repo private config \\
         \verb!  |-- description    !  & repo description \\
         \verb!  |-- hooks          !  & \\
@@ -585,6 +690,32 @@ Decentralized
         \verb!          `-- ...    !  & tags \\
 \end{tabular}
 }
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{The repository}
+
+\CMD{.git/config} \\
+\begin{itemize}
+        \item repository config
+\end{itemize}
+
+\pause{}
+\vspace{.1\textheight}
+\CMD{.git/description} \\
+\begin{itemize}
+        \item describes the repository \\
+                \faint{useful for gitweb}
+\end{itemize}
+
+\pause{}
+\vspace{.1\textheight}
+\CMD{.git/info/exclude} \\
+\begin{itemize}
+        \item patterns to ignore
+\end{itemize}
+
 \end{frame}
 
 % =====================================================================
@@ -916,6 +1047,33 @@ Decentralized
 
 \end{frame}
 
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Configuration}
+
+\CMD{\$ cat .gitconfig}
+{\small
+\begin{Verbatim}[commandchars=\\\{\}]
+[user]
+	name = "Bart Trojanowski"
+	email = "bart@jukie.net"
+        signingkey = 2289688F
+
+[core]
+        pager = less -FRSX
+        editor = vim
+
+[color]
+        ui = auto
+
+[merge]
+        tool = vimdiff
+
+\end{Verbatim}
+}
+
+\end{frame}
+
 % =====================================================================
 \mysubsection{Commit}{using:commit}
 % ---------------------------------------------------------------------
@@ -1236,6 +1394,19 @@ how about my-other-branch on June 1st?
 \vspace{.1\textheight}
 \begin{center}
         \faint{my-other-branch}@\{June.1\}
+\end{center}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Object references}
+
+master a few changes ago?
+
+\vspace{.1\textheight}
+\begin{center}
+        \faint{master}@\{3\}
 \end{center}
 
 \end{frame}
