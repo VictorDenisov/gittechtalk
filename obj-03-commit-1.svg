@@ -206,7 +206,7 @@
              sodipodi:role="line"
              x="35.02206"
              y="85.389175"
-             style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Sans;-inkscape-font-specification:Sans"
+             style="font-size:8px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Sans;-inkscape-font-specification:Sans Bold"
              id="tspan2459">&quot;commit&quot;</tspan></text>
       </g>
       <g
@@ -497,7 +497,7 @@
       </g>
     </g>
     <path
-       style="opacity:0.5;fill:none;fill-opacity:0.75000000000000000;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;marker-start:none;marker-end:url(#Arrow1Mend);stroke-opacity:1;display:inline"
+       style="opacity:0.5;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;marker-start:none;marker-end:url(#Arrow1Mend);stroke-opacity:1;display:inline"
        d="M 50.811873,247.68964 L 49.6678,262.78474"
        id="path2456"
        inkscape:connector-type="polyline"
@@ -587,15 +587,15 @@
        inkscape:connection-end="#g2452"
        inkscape:connection-start="#g2533" />
     <path
-       style="opacity:0.5;fill:none;fill-opacity:0.75000000000000000;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;marker-start:none;marker-end:url(#Arrow1Mend);stroke-opacity:1;display:inline"
-       d="M 93.879524,182.48092 L 93.077451,185.43963 L 75.60235,202.53474"
+       style="opacity:0.5;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;marker-start:none;marker-end:url(#Arrow1Mend);stroke-opacity:1;display:inline"
+       d="M 83.561881,182.48092 L 68.961159,202.53474"
        id="path2956"
        inkscape:connector-type="polyline"
        inkscape:connection-start="#g2452"
        inkscape:connection-end="#g3338" />
     <path
-       style="opacity:0.5;fill:none;fill-opacity:0.75000000000000000;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;marker-start:none;marker-end:url(#Arrow1Mend);stroke-opacity:1;display:inline"
-       d="M 106.12048,182.48092 L 106.92255,185.43963 L 124.26114,202.28474"
+       style="opacity:0.5;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;marker-start:none;marker-end:url(#Arrow1Mend);stroke-opacity:1;display:inline"
+       d="M 116.50939,182.48092 L 130.99061,202.28474"
        id="path2958"
        inkscape:connector-type="polyline"
        inkscape:connection-end="#g3324"

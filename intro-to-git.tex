@@ -721,6 +721,86 @@ Decentralized
 % =====================================================================
 \mysubsection{Objects}{using:objects}
 % ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Objects}
+\CMD{.git/objects}
+{\small
+\begin{Verbatim}[commandchars=\\\{\}]
+|-- 23
+|   `-- d4bd826aba9e29aaace9411cc175b784edc399
+|-- 76
+|   `-- 49f82d40a98b1ba59057798e47aab2a99a11d3
+|-- c4
+|   `-- aaefaa8a48ad4ad379dc1002b78f1a3e4ceabc
+|-- e7
+|   `-- 4be61128eef713459ca4e32398d689fe80864e
+|-- info
+|   `-- packs
+`-- pack
+    |-- pack-b7b026b1a0b0f193db9dea0b0d7367d25d3a68cc.idx
+    `-- pack-b7b026b1a0b0f193db9dea0b0d7367d25d3a68cc.pack
+\end{Verbatim}
+}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Objects}
+\CMD{.git/objects}
+{\small
+\begin{Verbatim}[commandchars=\\\{\}]
+\faint{|-- 23}
+\faint{|   `-- }d4bd826aba9e29aaace9411cc175b784edc399
+\faint{|-- 76}
+\faint{|   `-- }49f82d40a98b1ba59057798e47aab2a99a11d3
+\faint{|-- c4}
+\faint{|   `-- }aaefaa8a48ad4ad379dc1002b78f1a3e4ceabc
+\faint{|-- e7}
+\faint{|   `-- }4be61128eef713459ca4e32398d689fe80864e
+\faint{|-- info}
+\faint{|   `-- packs}
+\faint{`-- pack}
+\faint{    |-- pack-b7b026b1a0b0f193db9dea0b0d7367d25d3a68cc.idx}
+\faint{    `-- pack-b7b026b1a0b0f193db9dea0b0d7367d25d3a68cc.pack}
+\end{Verbatim}
+}
+\vspace{\baselineskip}
+\begin{center}
+``loose objects''
+\end{center}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Objects}
+\CMD{.git/objects}
+{\small
+\begin{Verbatim}[commandchars=\\\{\}]
+\faint{|-- 23}
+\faint{|   `-- d4bd826aba9e29aaace9411cc175b784edc399}
+\faint{|-- 76}
+\faint{|   `-- 49f82d40a98b1ba59057798e47aab2a99a11d3}
+\faint{|-- c4}
+\faint{|   `-- aaefaa8a48ad4ad379dc1002b78f1a3e4ceabc}
+\faint{|-- e7}
+\faint{|   `-- 4be61128eef713459ca4e32398d689fe80864e}
+\faint{|-- info}
+\faint{|   `-- packs}
+\faint{`-- }pack
+\faint{    |-- }pack-b7b026b1a0b0f193db9dea0b0d7367d25d3a68cc.idx
+\faint{    `-- }pack-b7b026b1a0b0f193db9dea0b0d7367d25d3a68cc.pack
+\end{Verbatim}
+}
+\vspace{\baselineskip}
+\begin{center}
+``pack file''
+\end{center}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
 \begin{frame}
 \frametitle{Objects}
 \begin{columns}[t]
@@ -795,7 +875,7 @@ Decentralized
         \begin{column}[T]{.5\textwidth}
                 4 types
                 \begin{itemize}
-                        \item blobs
+                        \item \faint{blobs}
                         \item trees
                 \end{itemize}
         \end{column}
@@ -812,7 +892,7 @@ Decentralized
         \begin{column}[T]{.5\textwidth}
                 4 types
                 \begin{itemize}
-                        \item blobs
+                        \item \faint{blobs}
                         \item trees
                 \end{itemize}
         \end{column}
@@ -829,7 +909,7 @@ Decentralized
         \begin{column}[T]{.5\textwidth}
                 4 types
                 \begin{itemize}
-                        \item blobs
+                        \item \faint{blobs}
                         \item trees
                 \end{itemize}
         \end{column}
@@ -846,8 +926,8 @@ Decentralized
         \begin{column}[T]{.5\textwidth}
                 4 types
                 \begin{itemize}
-                        \item blobs
-                        \item trees
+                        \item \faint{blobs}
+                        \item \faint{trees}
                         \item commits
                 \end{itemize}
         \end{column}
@@ -864,8 +944,8 @@ Decentralized
         \begin{column}[T]{.5\textwidth}
                 4 types
                 \begin{itemize}
-                        \item blobs
-                        \item trees
+                        \item \faint{blobs}
+                        \item \faint{trees}
                         \item commits
                 \end{itemize}
         \end{column}
@@ -882,8 +962,8 @@ Decentralized
         \begin{column}[T]{.5\textwidth}
                 4 types
                 \begin{itemize}
-                        \item blobs
-                        \item trees
+                        \item \faint{blobs}
+                        \item \faint{trees}
                         \item commits
                 \end{itemize}
         \end{column}
@@ -900,9 +980,9 @@ Decentralized
         \begin{column}[T]{.5\textwidth}
                 4 types
                 \begin{itemize}
-                        \item blobs
-                        \item trees
-                        \item commits
+                        \item \faint{blobs}
+                        \item \faint{trees}
+                        \item \faint{commits}
                         \item tags
                 \end{itemize}
         \end{column}
@@ -1037,7 +1117,7 @@ Decentralized
 \vspace{.1\textheight}
 
 \CMD{\$ git config {-}-global user.name "Your Name"} \\
-\CMD{\$ git config {-}-global user.email you@comain.tld}
+\CMD{\$ git config {-}-global user.email you@domain.tld}
 
 \pause{}
 \vspace{.1\textheight}
@@ -1055,8 +1135,8 @@ Decentralized
 {\small
 \begin{Verbatim}[commandchars=\\\{\}]
 [user]
-	name = "Bart Trojanowski"
-	email = "bart@jukie.net"
+        name = "Bart Trojanowski"
+        email = "bart@jukie.net"
         signingkey = 2289688F
 
 [core]
