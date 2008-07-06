@@ -37,21 +37,22 @@
 \setcounter{tocdepth}{2}
 
 
-\newcommand{\mysection}[2]{
-  \hypertarget{#2}{}
-  \section{#1}
-  \label{#2}
+\newcommand{\mysection}[2]{%
+  \hypertarget{#2}{}%
+  \section{#1}%
+  \label{#2}%
 }
-\newcommand{\mysubsection}[2]{
-  \hypertarget{#2}{}
-  \subsection{#1}
-  \label{#2}
+\newcommand{\mysubsection}[2]{%
+  \hypertarget{#2}{}%
+  \subsection{#1}%
+  \label{#2}%
 }
 
 \definecolor{code-black}{rgb}{0,0,0}
 \definecolor{code-green}{rgb}{0,0.3,0}
 \definecolor{code-orange}{rgb}{0.4,0.3,0}
 \definecolor{code-blue}{rgb}{0,0,0.5}
+\definecolor{code-red}{rgb}{0.7,0,0}
 \definecolor{code-gray}{rgb}{0.7,0.7,0.7}
 \definecolor{code-white}{rgb}{1,1,1}
 \newcommand{\ttt}[1]{%
@@ -66,6 +67,9 @@
 \newcommand{\gui}[1]{%
 \texttt{\textcolor{code-blue}{#1}}%
 }
+\newcommand{\err}[1]{%
+\texttt{\textcolor{code-red}{#1}}%
+}
 \newcommand{\fnt}[1]{%
 \texttt{\textcolor{code-gray}{#1}}%
 }
@@ -75,6 +79,9 @@
 
 \newcommand{\faint}[1]{%
 \textcolor{code-gray}{#1}%
+}
+\newcommand{\error}[1]{%
+\textcolor{code-red}{#1}%
 }
 
 \newcommand{\GitCmdTable}[4]{
@@ -1482,7 +1489,130 @@ another way to search\ldots
 
 % =====================================================================
 \mysubsection{Branching}{using:branching}
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{References}
+things that point to commits
 
+\pause{}
+\vspace{\baselineskip}
+lightweight
+
+\pause{}
+\vspace{\baselineskip}
+mutable
+
+\pause{}
+\vspace{\baselineskip}
+disposable
+
+\pause{}
+\vspace{\baselineskip}
+3 basic types
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{References}
+local branches
+\begin{itemize}
+        \item \CMD{\$ git branch -l} \\
+                {\small
+                \begin{Verbatim}[commandchars=\\\{\}]
+  branch1
+  branch2
+* \CMD{master}
+                \end{Verbatim}
+                }
+        \item \cmd{.git/refs/heads/*}
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{References}
+tags
+\begin{itemize}
+        \item \CMD{\$ git tag -l} \\
+                {\small
+                \begin{Verbatim}[commandchars=\\\{\}]
+tag1
+tag2
+                \end{Verbatim}
+                }
+        \item \cmd{.git/refs/tags/*}
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{References}
+remote branches
+\begin{itemize}
+        \item \CMD{\$ git branch -r} \\
+                {\small
+                \begin{Verbatim}[commandchars=\\\{\}]
+  \err{fred/master}
+  \err{joe/master}
+  \err{joe/another-branch}
+                \end{Verbatim}
+                }
+        \item \cmd{.git/refs/heads/*}
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Creating branches}
+
+\CMD{\$ git branch name \fnt{commit}}
+\begin{itemize}
+        \item new branch ``name'' on HEAD \faint{or specified} commit
+\end{itemize}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Switching branches}
+
+\CMD{\$ git checkout \fnt{-f} name}
+\begin{itemize}
+        \item checkout files from ``name'' branch
+        \item \faint{optionally} force overwriting changed files
+\end{itemize}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Create and switch}
+
+\CMD{\$ git checkout -b name \fnt{commit}}
+\begin{itemize}
+        \item checkout files from ``name'' branch
+\end{itemize}
+
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Switching with changes}
+
+\CMD{\$ git checkout name} \\
+\err{error: You have local changes to 'filename'; \\
+cannot switch branches.}
+
+\pause{}
+\vspace{\baselineskip}
+\CMD{\$ git checkout -m name}
+\begin{itemize}
+        \item merge outstanding diff onto branch ``name''
+        \item can result in \error{conflict}
+\end{itemize}
+
+\end{frame}
 
 % ---------------------------------------------------------------------
 \begin{frame}
