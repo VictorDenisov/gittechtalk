@@ -1616,11 +1616,11 @@ cannot switch branches.}
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Branches}
+\frametitle{Working on branches}
 
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
-                \cmd{\$ command} \\
+                start at some tree
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \includegraphics[width=\linewidth]{branching-01.eps}
@@ -1630,11 +1630,13 @@ cannot switch branches.}
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Branches}
+\frametitle{Working on branches}
 
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
-                \cmd{\$ command} \\
+                {\small
+                \CMD{\$ git checkout -b bug-fix} \\
+                }
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \includegraphics[width=\linewidth]{branching-02.eps}
@@ -1644,11 +1646,13 @@ cannot switch branches.}
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Branches}
+\frametitle{Working on branches}
 
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
-                \cmd{\$ command} \\
+                {\small
+                \CMD{\$ git commit -a -m``B''} \\
+                }
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \includegraphics[width=\linewidth]{branching-03.eps}
@@ -1658,11 +1662,13 @@ cannot switch branches.}
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Branches}
+\frametitle{Working on branches}
 
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
-                \cmd{\$ command} \\
+                {\small
+                \CMD{\$ git commit -a -m``C''} \\
+                }
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \includegraphics[width=\linewidth]{branching-04.eps}
@@ -1672,11 +1678,33 @@ cannot switch branches.}
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Branches}
+\frametitle{Working on branches}
 
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
-                \cmd{\$ command} \\
+                you have a {\em wicked} idea
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{branching-04.eps}
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working on branches}
+
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                you have a {\em wicked} idea
+
+                \vspace{\baselineskip}
+                {\small
+                \begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git checkout  -b wicked master}
+                \end{Verbatim}
+                }
+
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \includegraphics[width=\linewidth]{branching-05.eps}
@@ -1686,11 +1714,13 @@ cannot switch branches.}
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Branches}
+\frametitle{Working on branches}
 
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
-                \cmd{\$ command} \\
+                {\small
+                \CMD{\$ git commit -a -m``D''} \\
+                }
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \includegraphics[width=\linewidth]{branching-06.eps}
@@ -1700,11 +1730,13 @@ cannot switch branches.}
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Branches}
+\frametitle{Working on branches}
 
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
-                \cmd{\$ command} \\
+                {\small
+                \CMD{\$ git commit -a -m``E''} \\
+                }
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \includegraphics[width=\linewidth]{branching-07.eps}
@@ -1714,11 +1746,46 @@ cannot switch branches.}
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Branches}
+\frametitle{Working on branches}
 
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
-                \cmd{\$ command} \\
+                you're getting somewhere
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{branching-07.eps}
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working on branches}
+
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                you're getting somewhere
+
+                \vspace{\baselineskip}
+                {\small
+                \begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git tag -a -m``stuff'' good}
+                \end{Verbatim}
+                }
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{branching-08.eps}
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working on branches}
+
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                manager asks about the bug
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \includegraphics[width=\linewidth]{branching-08.eps}
@@ -1728,11 +1795,16 @@ cannot switch branches.}
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Branches}
+\frametitle{Working on branches}
 
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
-                \cmd{\$ command} \\
+                manager asks about the bug
+
+                \vspace{\baselineskip}
+                {\small
+                \CMD{\$ git checkout bug-fix} \\
+                }
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \includegraphics[width=\linewidth]{branching-09.eps}
@@ -1742,11 +1814,13 @@ cannot switch branches.}
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Branches}
+\frametitle{Working on branches}
 
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
-                \cmd{\$ command} \\
+                {\small
+                \CMD{\$ git commit -a -m``F''} \\
+                }
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \includegraphics[width=\linewidth]{branching-10.eps}
@@ -1756,11 +1830,30 @@ cannot switch branches.}
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Branches}
+\frametitle{Working on branches}
 
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
-                \cmd{\$ command} \\
+                your mind is elsewhere\ldots
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{branching-10.eps}
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Working on branches}
+
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                your mind is elsewhere\ldots
+
+                \vspace{\baselineskip}
+                {\small
+                \CMD{\$ git checkout wicked} \\
+                }
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \includegraphics[width=\linewidth]{branching-11.eps}
@@ -1770,11 +1863,16 @@ cannot switch branches.}
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Branches}
+\frametitle{Working on branches}
 
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
-                \cmd{\$ command} \\
+                \ldots so you finish off the {\em wicked} feature
+
+                \vspace{\baselineskip}
+                {\small
+                \CMD{\$ git commit -a -m``G''} \\
+                }
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \includegraphics[width=\linewidth]{branching-12.eps}
@@ -1784,11 +1882,35 @@ cannot switch branches.}
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Branches}
+\frametitle{Working on branches}
 
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
-                \cmd{\$ command} \\
+                feature's done
+
+                \pause{}
+                \vspace{\baselineskip}
+                bug is fixed
+
+                \pause{}
+                \vspace{\baselineskip}
+                \ldots time to merge
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{branching-12.eps}
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Working on branches}
+
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                {\small
+                \CMD{\$ git checkout master} \\
+                }
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \includegraphics[width=\linewidth]{branching-13.eps}
@@ -1798,11 +1920,13 @@ cannot switch branches.}
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Branches}
+\frametitle{Working on branches}
 
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
-                \cmd{\$ command} \\
+                {\small
+                \CMD{\$ git reset {-}-hard bug-fix} \\
+                }
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \includegraphics[width=\linewidth]{branching-14.eps}
@@ -1812,11 +1936,13 @@ cannot switch branches.}
 
 % ---------------------------------------------------------------------
 \begin{frame}
-\frametitle{Branches}
+\frametitle{Working on branches}
 
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
-                \cmd{\$ command} \\
+                {\small
+                \CMD{\$ git merge wicked} \\
+                }
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \includegraphics[width=\linewidth]{branching-15.eps}
@@ -1828,10 +1954,6 @@ cannot switch branches.}
 % ---------------------------------------------------------------------
 \begin{frame}
         TODO
-
-branch
-checkout
-reset
 
 merge
 rebase
