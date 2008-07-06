@@ -1205,11 +1205,11 @@ few commits before HEAD
 \begin{frame}[fragile]
 \frametitle{Object references}
 
-few commits before master
+few commits before \textcolor{green}{master}
 
 \vspace{.1\textheight}
 \begin{center}
-        \faint{master}\verb!^^^   ==   ! \faint{master}\verb!~!3
+        \textcolor{green}{master}\verb!^^^   ==   ! \textcolor{green}{master}\verb!~!3
 \end{center}
 
 \end{frame}
@@ -1481,6 +1481,7 @@ another way to search\ldots
 \vspace{\baselineskip}
 
 \begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git grep -e "pattern"}
 \CMD{\$ git grep -e "pattern" -- some/file}
 \end{Verbatim}
 
