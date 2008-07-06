@@ -1998,7 +1998,7 @@ cannot switch branches.}
         \begin{column}[T]{.5\textwidth}
                 {\small
                 \begin{Verbatim}[commandchars=\\\{\}]
-\CMD{\$ git checkout -b three one}
+\CMD{\$ git checkout -b three two}
                 \end{Verbatim}
                 }
         \end{column}
@@ -2016,8 +2016,8 @@ cannot switch branches.}
         \begin{column}[T]{.5\textwidth}
                 {\small
                 \begin{Verbatim}[commandchars=\\\{\}]
-\cmd{\$ git checkout -b three one}
-\CMD{\$ git merge two}
+\cmd{\$ git checkout -b three two}
+\CMD{\$ git merge one}
                 \end{Verbatim}
                 }
         \end{column}
@@ -2066,6 +2066,27 @@ cannot switch branches.}
                 \cmd{\$ git checkout three} \\
                 \CMD{\$ git merge one two} \\
                 }
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+                \includegraphics[width=\linewidth]{merging-07.eps}
+        \end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Merging}
+
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+                {\small
+                \cmd{\$ git checkout three} \\
+                \CMD{\$ git merge one two} \\
+                }
+                \vspace{.2\textheight}
+                \begin{center}
+                        ``octopus''
+                \end{center}
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \includegraphics[width=\linewidth]{merging-07.eps}
