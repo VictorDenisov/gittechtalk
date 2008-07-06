@@ -14,7 +14,7 @@
    sodipodi:version="0.32"
    inkscape:version="0.46"
    sodipodi:docbase="/home/jukie/bart/work/oclug/intro-to-git"
-   sodipodi:docname="merging-04.svg"
+   sodipodi:docname="merging-05.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
      id="defs1319">
@@ -130,9 +130,9 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:window-width="958"
-     inkscape:window-height="1091"
+     inkscape:window-height="1139"
      inkscape:window-x="0"
-     inkscape:window-y="60"
+     inkscape:window-y="24"
      showgrid="true"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -368,6 +368,13 @@
     </g>
     <path
        style="opacity:1;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:0.86400002;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline"
+       d="M 103.82745,207.25892 L 171.17255,117.46545"
+       id="path3352"
+       inkscape:connector-type="polyline"
+       inkscape:connection-end="#g3328"
+       inkscape:connection-start="#g3336" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:0.86400002;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline"
        d="M 107.14457,82.258916 L 127.85543,67.465449"
        id="path3320"
        inkscape:connector-type="polyline"
@@ -411,6 +418,43 @@
        inkscape:connector-type="polyline"
        inkscape:connection-end="#g2453"
        inkscape:connection-start="#g2490" />
+    <g
+       style="opacity:1"
+       id="g3336"
+       transform="translate(64.837687,129.95543)"
+       inkscape:connector-avoid="true">
+      <path
+         sodipodi:nodetypes="ccccc"
+         id="path3338"
+         d="M 45.162313,77.406757 L 45.162313,87.406757 L 25.162313,87.406757 L 25.162313,77.406757 L 45.162313,77.406757 z"
+         style="opacity:1;fill:#ffa200;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.20653245;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3340"
+         y="85.389175"
+         x="35.02206"
+         style="font-size:22px;font-style:normal;font-weight:normal;line-height:125%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           id="tspan3342"
+           style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;font-family:Sans;-inkscape-font-specification:Sans"
+           y="85.389175"
+           x="35.02206"
+           sodipodi:role="line">H</tspan></text>
+    </g>
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:0.86400002;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline"
+       d="M 100,207.25892 L 100,137.46545"
+       id="path3354"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#g3336"
+       inkscape:connection-end="#g3344" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:0.86400002;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline"
+       d="M 96.17255,207.25892 L 28.82745,117.46545"
+       id="path3326"
+       inkscape:connector-type="polyline"
+       inkscape:connection-start="#g3336"
+       inkscape:connection-end="#g2490" />
     <path
        style="opacity:1;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:0.86400002;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline"
        d="M 170.91739,107.25892 L 139.08261,67.465449"
@@ -459,7 +503,7 @@
     <g
        style="opacity:1"
        id="g2475"
-       transform="translate(94.896735,59.976007)"
+       transform="translate(119.89674,139.97601)"
        inkscape:connector-avoid="true">
       <path
          id="path2477"
@@ -482,9 +526,10 @@
     </g>
     <path
        style="opacity:1;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#710000;stroke-width:0.86385071;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline"
-       d="M 110.10327,127.35313 L 129.99999,117.48862"
+       d="M 110.10327,208.68827 L 140.9023,197.48862"
        id="path2483"
        inkscape:connector-type="polyline"
-       inkscape:connection-start="#g3344" />
+       inkscape:connection-end="#g2475"
+       inkscape:connection-start="#g3336" />
   </g>
 </svg>
