@@ -1776,7 +1776,7 @@ local branches
 * \CMD{master}
                 \end{Verbatim}
                 }
-        \item \cmd{.git/refs/heads/*}
+        \item \cmd{.git/refs/heads/}<branch>
 \end{itemize}
 \end{frame}
 
@@ -1790,9 +1790,10 @@ tags
                 \begin{Verbatim}[commandchars=\\\{\}]
 tag1
 tag2
+tag3
                 \end{Verbatim}
                 }
-        \item \cmd{.git/refs/tags/*}
+        \item \cmd{.git/refs/tags/}<tag>
 \end{itemize}
 \end{frame}
 
@@ -1809,7 +1810,7 @@ remote branches
   \err{joe/another-branch}
                 \end{Verbatim}
                 }
-        \item \cmd{.git/refs/heads/*}
+        \item \cmd{.git/refs/remotes/}<remote>\cmd{/}<branch>
 \end{itemize}
 \end{frame}
 
@@ -2020,7 +2021,7 @@ cannot switch branches.}
                 \vspace{\baselineskip}
                 {\small
                 \begin{Verbatim}[commandchars=\\\{\}]
-\CMD{\$ git tag -a -m``stuff'' good}
+\CMD{\$ git tag -a -m``got somewhere'' good}
                 \end{Verbatim}
                 }
         \end{column}
