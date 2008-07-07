@@ -125,14 +125,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8284271"
-     inkscape:cx="41.810913"
-     inkscape:cy="899.49753"
+     inkscape:cx="114.25095"
+     inkscape:cy="883.48314"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:window-width="958"
-     inkscape:window-height="1067"
+     inkscape:window-height="1127"
      inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-y="36"
      showgrid="true"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -187,7 +187,7 @@
        ry="1" />
     <g
        id="g4924"
-       transform="translate(64.837687,-45.044574)"
+       transform="translate(64.837687,129.95543)"
        inkscape:connector-avoid="true">
       <path
          sodipodi:nodetypes="ccccc"
@@ -210,12 +210,12 @@
     <g
        style="opacity:1"
        id="g2453"
-       transform="translate(64.896735,-40.023993)"
+       transform="translate(64.896735,129.97601)"
        inkscape:connector-avoid="true">
       <path
          id="path2455"
          d="M 15.103265,47.386176 L 15.103265,52.386176 L 20.103265,57.386176 L 50.103265,57.386176 L 55.103265,52.386176 L 55.103265,47.386176 L 15.103265,47.386176 z"
-         style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25287261999999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25287262;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          sodipodi:nodetypes="ccccccc" />
       <text
          sodipodi:linespacing="125%"
@@ -233,7 +233,7 @@
     </g>
     <path
        style="opacity:1;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#710000;stroke-width:0.86385071;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline"
-       d="M 100,32.258917 L 100,17.488619"
+       d="M 100,207.25892 L 100,187.48862"
        id="path2469"
        inkscape:connector-type="polyline"
        inkscape:connection-end="#g2453"

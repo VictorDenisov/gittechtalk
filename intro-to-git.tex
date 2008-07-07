@@ -2208,10 +2208,12 @@ cannot switch branches.}
 \begin{frame}
 \frametitle{Merging}
 
+\CMD{\$ git merge <branch> \ldots} \\
 \begin{itemize}
         \item merge multiple branches
-        \item merge commit has 2+ parents
-        \item can cause \error{conflicts}
+        \item creates commit with 2+ parents
+        \item can cause \error{conflicts} \\
+                \faint{ie: require user intervention}
 \end{itemize}
 \end{frame}
 
@@ -2235,6 +2237,7 @@ cannot switch branches.}
 
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
+                two topic branches
         \end{column}
         \begin{column}[T]{.5\textwidth}
                 \includegraphics[width=\linewidth]{merging-02.eps}
