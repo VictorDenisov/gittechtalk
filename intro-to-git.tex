@@ -77,11 +77,17 @@
 \texttt{\textcolor{code-white}{#1}}%
 }
 
+\newcommand{\black}[1]{%
+\textcolor{code-black}{#1}%
+}
 \newcommand{\faint}[1]{%
 \textcolor{code-gray}{#1}%
 }
 \newcommand{\green}[1]{%
 \textcolor{code-green}{#1}%
+}
+\newcommand{\blue}[1]{%
+\textcolor{code-blue}{#1}%
 }
 \newcommand{\red}[1]{%
 \textcolor{code-red}{#1}%
@@ -2549,136 +2555,227 @@ cannot switch branches.}
 \begin{frame}
 \frametitle{Working with remotes}
 
-\includegraphics[width=\linewidth]{remote-01.eps}
+\includegraphics[width=\linewidth]{remote-00.eps}
+
 \begin{center}
-        \CMD{\$ git clone git://repo.or.cz/git.git}
+\CMD{git://repo.or.cz/git.git}
 \end{center}
 \vspace{\textheight}
 \end{frame}
 
 % ---------------------------------------------------------------------
-\begin{frame}
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-00.eps}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git clone git://repo.or.cz/git.git}
+\end{Verbatim}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-01.eps}
+
+{\tiny
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git clone git://repo.or.cz/git.git}
+\blue{Initialize git/.git}
+\blue{Initialized empty Git repository in /tmp/git/.git/}
+\faint{remote: Counting objects: 77575, done.}
+\faint{remote: Compressing objects: 100% (26407/26407), done.}
+\faint{remote: Total 77575 (delta 55750), reused 71007 (delta 49775)}
+\faint{Receiving objects: 100% (77575/77575), 22.87 MiB | 798 KiB/s, done.}
+\faint{Resolving deltas: 100% (55750/55750), done.}
+\faint{Checking out files: 100% (1396/1396), done.}
+\end{Verbatim}
+}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-01.eps}
+
+{\tiny
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git clone git://repo.or.cz/\red{git}.git}
+\black{Initialize \red{git}/.git}
+\black{Initialized empty Git repository in /tmp/\red{git}/.git/}
+\faint{remote: Counting objects: 77575, done.}
+\faint{remote: Compressing objects: 100% (26407/26407), done.}
+\faint{remote: Total 77575 (delta 55750), reused 71007 (delta 49775)}
+\faint{Receiving objects: 100% (77575/77575), 22.87 MiB | 798 KiB/s, done.}
+\faint{Resolving deltas: 100% (55750/55750), done.}
+\faint{Checking out files: 100% (1396/1396), done.}
+\end{Verbatim}
+}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-01.eps}
+
+{\tiny
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git clone git://repo.or.cz/git.git} \red{build-tree}
+\black{Initialize \red{build-tree}/.git}
+\black{Initialized empty Git repository in /tmp/\red{build-tree}/.git/}
+\faint{remote: Counting objects: 77575, done.}
+\faint{remote: Compressing objects: 100% (26407/26407), done.}
+\faint{remote: Total 77575 (delta 55750), reused 71007 (delta 49775)}
+\faint{Receiving objects: 100% (77575/77575), 22.87 MiB | 798 KiB/s, done.}
+\faint{Resolving deltas: 100% (55750/55750), done.}
+\faint{Checking out files: 100% (1396/1396), done.}
+\end{Verbatim}
+}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
 \frametitle{Working with remotes}
 
 \includegraphics[width=\linewidth]{remote-02.eps}
-\begin{center}
-        \CMD{\$ git clone git://repo.or.cz/git.git}
-\end{center}
+
+{\tiny
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git clone git://repo.or.cz/git.git}
+\faint{Initialize git/.git}
+\faint{Initialized empty Git repository in /tmp/git/.git/}
+\red{remote: Counting objects: 77575, done.}
+\red{remote: Compressing objects: 100% (26407/26407), done.}
+\red{remote: Total 77575 (delta 55750), reused 71007 (delta 49775)}
+\faint{Receiving objects: 100% (77575/77575), 22.87 MiB | 798 KiB/s, done.}
+\faint{Resolving deltas: 100% (55750/55750), done.}
+\faint{Checking out files: 100% (1396/1396), done.}
+\end{Verbatim}
+}
 \vspace{\textheight}
 \end{frame}
 
 % ---------------------------------------------------------------------
-\begin{frame}
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-02.eps}
+
+{\tiny
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git clone git://repo.or.cz/git.git}
+\faint{Initialize git/.git}
+\faint{Initialized empty Git repository in /tmp/git/.git/}
+\faint{remote: Counting objects: 77575, done.}
+\faint{remote: Compressing objects: 100% (26407/26407), done.}
+\faint{remote: Total 77575 (delta 55750), reused 71007 (delta 49775)}
+\red{Receiving objects: 100% (77575/77575), 22.87 MiB | 798 KiB/s, done.}
+\red{Resolving deltas: 100% (55750/55750), done.}
+\faint{Checking out files: 100% (1396/1396), done.}
+\end{Verbatim}
+}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
 \frametitle{Working with remotes}
 
 \includegraphics[width=\linewidth]{remote-03.eps}
-\begin{center}
-        \CMD{\$ git clone git://repo.or.cz/git.git}
-\end{center}
+
+{\tiny
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git clone git://repo.or.cz/git.git}
+\faint{Initialize git/.git}
+\faint{Initialized empty Git repository in /tmp/git/.git/}
+\faint{remote: Counting objects: 77575, done.}
+\faint{remote: Compressing objects: 100% (26407/26407), done.}
+\faint{remote: Total 77575 (delta 55750), reused 71007 (delta 49775)}
+\faint{Receiving objects: 100% (77575/77575), 22.87 MiB | 798 KiB/s, done.}
+\faint{Resolving deltas: 100% (55750/55750), done.}
+\faint{Checking out files: 100% (1396/1396), done.}
+\end{Verbatim}
+}
 \vspace{\textheight}
 \end{frame}
 
 % ---------------------------------------------------------------------
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Working with remotes}
 
 \includegraphics[width=\linewidth]{remote-04.eps}
-\begin{center}
-        \CMD{\$ git clone git://repo.or.cz/git.git}
-\end{center}
+
+{\tiny
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git clone git://repo.or.cz/git.git}
+\faint{Initialize git/.git}
+\faint{Initialized empty Git repository in /tmp/git/.git/}
+\faint{remote: Counting objects: 77575, done.}
+\faint{remote: Compressing objects: 100% (26407/26407), done.}
+\faint{remote: Total 77575 (delta 55750), reused 71007 (delta 49775)}
+\faint{Receiving objects: 100% (77575/77575), 22.87 MiB | 798 KiB/s, done.}
+\faint{Resolving deltas: 100% (55750/55750), done.}
+\faint{Checking out files: 100% (1396/1396), done.}
+\end{Verbatim}
+}
 \vspace{\textheight}
 \end{frame}
 
 % ---------------------------------------------------------------------
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Working with remotes}
 
 \includegraphics[width=\linewidth]{remote-05.eps}
-\begin{center}
-        \CMD{\$ git clone git://repo.or.cz/git.git}
-\end{center}
-\vspace{\textheight}
-\end{frame}
 
-
-% ---------------------------------------------------------------------
-\begin{frame}[fragile]
-\frametitle{Cloning}
-
-\cmd{\$ cd /tmp}
+{\tiny
+\begin{Verbatim}[commandchars=\\\{\}]
 \CMD{\$ git clone git://repo.or.cz/git.git}
-{\tiny
-\begin{Verbatim}[commandchars=\\\{\}]
-Initialize git/.git
-Initialized empty Git repository in /tmp/git/.git/
-remote: Counting objects: 77575, done.
-remote: Compressing objects: 100% (26407/26407), done.
-remote: Total 77575 (delta 55750), reused 71007 (delta 49775)
-Receiving objects: 100% (77575/77575), 22.87 MiB | 798 KiB/s, done.
-Resolving deltas: 100% (55750/55750), done.
-Checking out files: 100% (1396/1396), done.
-git clone git://repo.or.cz/git.git  5.31s user 1.32s system 11% cpu 57.855 total
+\faint{Initialize git/.git}
+\faint{Initialized empty Git repository in /tmp/git/.git/}
+\faint{remote: Counting objects: 77575, done.}
+\faint{remote: Compressing objects: 100% (26407/26407), done.}
+\faint{remote: Total 77575 (delta 55750), reused 71007 (delta 49775)}
+\faint{Receiving objects: 100% (77575/77575), 22.87 MiB | 798 KiB/s, done.}
+\faint{Resolving deltas: 100% (55750/55750), done.}
+\faint{Checking out files: 100% (1396/1396), done.}
 \end{Verbatim}
 }
 \vspace{\textheight}
 \end{frame}
 
-% ---------------------------------------------------------------------
-\begin{frame}[fragile]
-\frametitle{Cloning}
-
-\cmd{\$ cd /tmp}
-\CMD{\$ git clone git://repo.or.cz/\red{git}.git}
-{\tiny
-\begin{Verbatim}[commandchars=\\\{\}]
-Initialize \red{git}/.git
-Initialized empty Git repository in /tmp/\red{git}/.git/
-remote: Counting objects: 77575, done.
-remote: Compressing objects: 100% (26407/26407), done.
-remote: Total 77575 (delta 55750), reused 71007 (delta 49775)
-Receiving objects: 100% (77575/77575), 22.87 MiB | 798 KiB/s, done.
-Resolving deltas: 100% (55750/55750), done.
-Checking out files: 100% (1396/1396), done.
-git clone git://repo.or.cz/git.git  5.31s user 1.32s system 11% cpu 57.855 total
-\end{Verbatim}
-}
-\vspace{\textheight}
-\end{frame}
-
-% ---------------------------------------------------------------------
-\begin{frame}[fragile]
-\frametitle{Cloning}
-
-\cmd{\$ cd /tmp}
-\CMD{\$ git clone git://repo.or.cz/git.git} \red{git-build-tree}
-{\tiny
-\begin{Verbatim}[commandchars=\\\{\}]
-Initialize \red{git-build-tree}/.git
-Initialized empty Git repository in /tmp/\red{git-build-tree}/.git/
-remote: Counting objects: 77575, done.
-remote: Compressing objects: 100% (26407/26407), done.
-remote: Total 77575 (delta 55750), reused 71007 (delta 49775)
-Receiving objects: 100% (77575/77575), 22.87 MiB | 798 KiB/s, done.
-Resolving deltas: 100% (55750/55750), done.
-Checking out files: 100% (1396/1396), done.
-git clone git://repo.or.cz/git.git  5.31s user 1.32s system 11% cpu 57.855 total
-\end{Verbatim}
-}
-\vspace{\textheight}
-\end{frame}
 
 
 
 
 
 % ---------------------------------------------------------------------
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Working with remotes}
 
 \includegraphics[width=\linewidth]{remote-99.eps}
-\begin{center}
-        git remote add bart git://tachyon.jukie.net/into-to-git.git/
-\end{center}
+
+{\tiny
+\begin{Verbatim}[commandchars=\\\{\}]
+\$ git clone git://repo.or.cz/git.git
+\faint{Initialize git/.git}
+\faint{Initialized empty Git repository in /tmp/git/.git/}
+\faint{remote: Counting objects: 77575, done.}
+\faint{remote: Compressing objects: 100% (26407/26407), done.}
+\faint{remote: Total 77575 (delta 55750), reused 71007 (delta 49775)}
+\faint{Receiving objects: 100% (77575/77575), 22.87 MiB | 798 KiB/s, done.}
+\faint{Resolving deltas: 100% (55750/55750), done.}
+\faint{Checking out files: 100% (1396/1396), done.}
+\faint{git clone git://repo.or.cz/git.git  5.31s user 1.32s system 11% cpu 57.855 total}
+\end{Verbatim}
+}
 \vspace{\textheight}
 \end{frame}
 
