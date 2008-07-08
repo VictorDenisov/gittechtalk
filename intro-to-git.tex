@@ -2757,6 +2757,30 @@ cannot switch branches.}
 
 \includegraphics[width=\linewidth]{remote-06.eps}
 
+\begin{columns}[t]
+        \begin{column}[T]{.5\textwidth}
+\pause{}
+{\tiny
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git branch -a}
+* \green{master}
+  \red{origin/master}
+\end{Verbatim}
+}
+
+        \end{column}
+        \begin{column}[T]{.5\textwidth}
+\pause{}
+{\tiny
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git tag -l}
+v0.1.0
+v0.2.0
+\end{Verbatim}
+}
+        \end{column}
+\end{columns}
+
 \vspace{\textheight}
 \end{frame}
 
@@ -2774,6 +2798,23 @@ cannot switch branches.}
 \frametitle{Working with remotes}
 
 \includegraphics[width=\linewidth]{remote-08.eps}
+
+git fetch
+
+\vspace{\textheight}
+\end{frame}
+
+
+
+
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-08.eps}
+
+\ldots
 
 \vspace{\textheight}
 \end{frame}
