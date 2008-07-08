@@ -14,7 +14,7 @@
    sodipodi:version="0.32"
    inkscape:version="0.46"
    sodipodi:docbase="/home/jukie/bart/work/oclug/intro-to-git"
-   sodipodi:docname="remote-01.svg"
+   sodipodi:docname="remote-00.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
   <defs
      id="defs1319">
@@ -124,13 +124,13 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6568544"
-     inkscape:cx="158.87382"
-     inkscape:cy="977.90472"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="9.1423975"
+     inkscape:cy="1012.6095"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:window-width="1918"
-     inkscape:window-height="1091"
+     inkscape:window-height="1103"
      inkscape:window-x="0"
      inkscape:window-y="12"
      showgrid="true"
@@ -435,25 +435,5 @@
          id="tspan3332"
          x="95.25"
          y="143.61221" /></text>
-    <rect
-       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000080;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect3927"
-       width="105"
-       height="145"
-       x="145"
-       y="27.362183"
-       rx="9.485281"
-       ry="10.192389" />
-    <text
-       xml:space="preserve"
-       style="font-size:22px;font-style:normal;font-weight:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-       x="197.48926"
-       y="22.362183"
-       id="text4078"
-       sodipodi:linespacing="100%"><tspan
-         sodipodi:role="line"
-         id="tspan4080"
-         x="197.48926"
-         y="22.362183">local</tspan></text>
   </g>
 </svg>
