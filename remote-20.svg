@@ -130,9 +130,9 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:window-width="1918"
-     inkscape:window-height="1151"
+     inkscape:window-height="1139"
      inkscape:window-x="0"
-     inkscape:window-y="12"
+     inkscape:window-y="24"
      showgrid="true"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -537,10 +537,5 @@
          id="tspan15491"
          x="317.26959"
          y="22.334833">foo.com</tspan></text>
-    <path
-       style="opacity:1;fill:#800000;fill-opacity:1;fill-rule:evenodd;stroke:#800000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 110,62.362183 L 110,52.362183 L 280,52.362196 L 280,47.362209 L 290,57.362196 L 279.99999,67.362193 L 280,62.362193 L 110,62.362183 z"
-       id="path4092"
-       sodipodi:nodetypes="cccccccc" />
   </g>
 </svg>

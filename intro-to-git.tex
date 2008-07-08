@@ -3045,6 +3045,10 @@ To ssh+git://repo.or.cz/project.git
 
 \includegraphics[width=\linewidth]{remote-20.eps}
 
+\begin{center}
+\ldots meanwhile, elsewhere on the internet \ldots
+\end{center}
+
 \vspace{\textheight}
 \end{frame}
 
@@ -3053,6 +3057,10 @@ To ssh+git://repo.or.cz/project.git
 \frametitle{Working with remotes}
 
 \includegraphics[width=\linewidth]{remote-21.eps}
+
+\begin{center}
+Fred \green{clones} the project.
+\end{center}
 
 \vspace{\textheight}
 \end{frame}
@@ -3063,6 +3071,10 @@ To ssh+git://repo.or.cz/project.git
 
 \includegraphics[width=\linewidth]{remote-22.eps}
 
+\begin{center}
+Fred \green{clones} the project.
+\end{center}
+
 \vspace{\textheight}
 \end{frame}
 
@@ -3072,6 +3084,44 @@ To ssh+git://repo.or.cz/project.git
 
 \includegraphics[width=\linewidth]{remote-23.eps}
 
+\begin{center}
+\ldots and makes some changes.
+\end{center}
+
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-23.eps}
+
+\begin{center}
+Fred cannot push.
+\end{center}
+
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-23.eps}
+
+{\tiny
+\begin{Verbatim}[commandchars=\\\{\}]
+                        From: fred@foo.com
+                        Subject: I fixed a bug
+
+                        Please pull from
+
+                            http://foo.com/project.git/
+
+                        -Fred
+\end{Verbatim}
+}
 \vspace{\textheight}
 \end{frame}
 
@@ -3081,6 +3131,38 @@ To ssh+git://repo.or.cz/project.git
 
 \includegraphics[width=\linewidth]{remote-24.eps}
 
+{\tiny
+\begin{Verbatim}[commandchars=\\\{\}]
+                        From: fred@foo.com
+                        Subject: I fixed a bug
+
+                        Please pull from
+
+                            \green{http://foo.com/project.git/}
+
+                        -Fred
+\end{Verbatim}
+}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-24.eps}
+
+\CMD{\$ git remote add fred http://foo.com/project.git/}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-24.eps}
+
+\CMD{\$ git remote add \red{fred} http://foo.com/project.git/}
 \vspace{\textheight}
 \end{frame}
 
@@ -3089,6 +3171,57 @@ To ssh+git://repo.or.cz/project.git
 \frametitle{Working with remotes}
 
 \includegraphics[width=\linewidth]{remote-25.eps}
+
+\CMD{\$ git remote add \red{fred} http://foo.com/project.git/}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-25.eps}
+
+\CMD{\$ git fetch \red{fred}}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-26.eps}
+
+\CMD{\$ git fetch \red{fred}}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-27.eps}
+
+\CMD{\$ git fetch \red{fred}}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-28.eps}
+
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-28.eps}
+
+\CMD{\$ git log master..fred/master}
 
 \vspace{\textheight}
 \end{frame}
