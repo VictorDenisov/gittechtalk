@@ -3219,66 +3219,157 @@ Fred cannot push.
 \begin{frame}[fragile]
 \frametitle{Working with remotes}
 
-\includegraphics[width=\linewidth]{remote-28.eps}
+\includegraphics[width=\linewidth]{remote-29.eps}
 
-\CMD{\$ git log master..fred/master}
-
-\vspace{\textheight}
-\end{frame}
-
-
-
-
-
-
-
-
-
-
-% ---------------------------------------------------------------------
-\begin{frame}[fragile]
-\frametitle{Working with remotes}
-
-\includegraphics[width=\linewidth]{remote-99.eps}
-
-\ldots
-
-\vspace{\textheight}
-\end{frame}
-
-
-
-
-
-
-% ---------------------------------------------------------------------
-\begin{frame}[fragile]
-\frametitle{Working with remotes}
-
-\includegraphics[width=\linewidth]{remote-99.eps}
-
-{\tiny
 \begin{Verbatim}[commandchars=\\\{\}]
-        . . .
+\CMD{\$ git log fred/master}
 \end{Verbatim}
-}
+
 \vspace{\textheight}
 \end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-29.eps}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\fnt{\$ git log fred/master}
+\CMD{\$ git log fred/master ^master}
+\end{Verbatim}
+
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-29.eps}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git checkout -b fred-fix \red{fred/master}}
+\end{Verbatim}
+
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-30.eps}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git checkout -b fred-fix \red{fred/master}}
+\end{Verbatim}
+
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-31.eps}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git checkout master}
+\end{Verbatim}
+
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-32.eps}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\fnt{\$ git checkout master}
+\CMD{\$ git merge fred-fix}
+\end{Verbatim}
+
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-33.eps}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\fnt{\$ git checkout master}
+\fnt{\$ git merge fred-fix}
+\CMD{\$ git branch -d fred-fix}
+\end{Verbatim}
+
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-34.eps}
+
+\begin{center}
+\CMD{\$ git push}
+\end{center}
+
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-35.eps}
+
+\begin{center}
+\CMD{\$ git push}
+\end{center}
+
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-36.eps}
+
+\begin{center}
+\CMD{\$ git push}
+\end{center}
+
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-37.eps}
+
+\vspace{\textheight}
+\end{frame}
+
+
+
+
+
+
+
 
 
 
 % ---------------------------------------------------------------------
 \begin{frame}
         TODO
-
-clone
-fetch
-pull
-push
-remote
-
-gc
-stash
 
 gitk
 git gui
