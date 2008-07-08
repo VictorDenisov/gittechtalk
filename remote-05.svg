@@ -126,13 +126,13 @@
      inkscape:pageshadow="2"
      inkscape:zoom="5.6568544"
      inkscape:cx="144.48005"
-     inkscape:cy="894.29779"
+     inkscape:cy="822.39059"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:window-width="1918"
-     inkscape:window-height="1139"
+     inkscape:window-height="1103"
      inkscape:window-x="0"
-     inkscape:window-y="36"
+     inkscape:window-y="60"
      showgrid="true"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -421,7 +421,7 @@
          sodipodi:role="line"
          id="tspan4076"
          x="76.828613"
-         y="22.362183">server</tspan></text>
+         y="22.362183">&quot;origin&quot;</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-weight:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
@@ -682,7 +682,7 @@
        style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#000080;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 4;stroke-dashoffset:0;stroke-opacity:1"
        id="rect5065"
        width="105"
-       height="245"
+       height="205"
        x="145"
        y="27.362183"
        rx="9.485281"
@@ -692,52 +692,44 @@
        d="M 105,62.362183 L 104.99999,52.362196 L 160,52.362196 L 160,47.362209 L 170,57.362196 L 159.99999,67.362193 L 160,62.362193 L 105,62.362183 z"
        id="path4092"
        sodipodi:nodetypes="cccccccc" />
-    <path
-       style="opacity:1;fill:#008000;fill-opacity:1;fill-rule:evenodd;stroke:#008000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 192.50001,162.36219 L 202.50001,162.36219 L 202.5,172.36219 L 207.49999,172.36219 L 197.5,182.36219 L 187.5,172.36218 L 192.5,172.36219 L 192.50001,162.36219 z"
-       id="path4863"
-       sodipodi:nodetypes="cccccccc" />
     <text
        xml:space="preserve"
        style="font-size:8px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Sans;-inkscape-font-specification:Sans"
        x="165"
-       y="192.36218"
+       y="187.36218"
        id="text4174"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan4206"
          x="165"
-         y="192.36218"
+         y="187.36218"
          style="fill:#404040;fill-opacity:1">/tmp/git/</tspan><tspan
          sodipodi:role="line"
          id="tspan4208"
          x="165"
-         y="200.36218">|-- <tspan
+         y="195.36218">|-- <tspan
    style="fill:#004000;fill-opacity:1"
    id="tspan5200">.git/</tspan></tspan><tspan
          sodipodi:role="line"
-         x="165"
-         y="208.36218"
-         id="tspan5198">|-- bar</tspan><tspan
-         sodipodi:role="line"
          id="tspan4210"
          x="165"
-         y="216.36218">|-- baz</tspan><tspan
-         sodipodi:role="line"
-         id="tspan4212"
-         x="165"
-         y="224.36218">`-- sub/</tspan><tspan
+         y="203.36218">|-- bar</tspan><tspan
          sodipodi:role="line"
          id="tspan4214"
          x="165"
-         y="232.36218">     |-- fiz</tspan><tspan
+         y="211.36218">`-- sub/</tspan><tspan
          sodipodi:role="line"
          id="tspan4216"
          x="165"
-         y="240.36218">     `-- foo</tspan><tspan
+         y="219.36218">     `-- foo</tspan><tspan
          sodipodi:role="line"
          id="tspan4218"
          x="165"
-         y="248.36218" /></text>
+         y="227.36218" /></text>
+    <path
+       style="opacity:1;fill:#008000;fill-opacity:1;fill-rule:evenodd;stroke:#008000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 192.50001,162.36219 L 202.50001,162.36219 L 202.5,172.36219 L 207.49999,172.36219 L 197.5,182.36219 L 187.5,172.36218 L 192.5,172.36219 L 192.50001,162.36219 z"
+       id="path4863"
+       sodipodi:nodetypes="cccccccc" />
   </g>
 </svg>
