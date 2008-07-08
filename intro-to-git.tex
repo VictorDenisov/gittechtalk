@@ -2570,7 +2570,7 @@ cannot switch branches.}
 \includegraphics[width=\linewidth]{remote-00.eps}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-\CMD{\$ git clone git://repo.or.cz/project.git}
+\CMD{\$ git clone ssh+git://repo.or.cz/project.git}
 \end{Verbatim}
 \vspace{\textheight}
 \end{frame}
@@ -2583,7 +2583,7 @@ cannot switch branches.}
 
 {\tiny
 \begin{Verbatim}[commandchars=\\\{\}]
-\CMD{\$ git clone git://repo.or.cz/project.git}
+\CMD{\$ git clone ssh+git://repo.or.cz/project.git}
 \blue{Initialize project/.git}
 \blue{Initialized empty Git repository in /tmp/project/.git/}
 \faint{remote: Counting objects: 77575, done.}
@@ -2605,7 +2605,7 @@ cannot switch branches.}
 
 {\tiny
 \begin{Verbatim}[commandchars=\\\{\}]
-\CMD{\$ git clone git://repo.or.cz/\red{project}.git}
+\CMD{\$ git clone ssh+git://repo.or.cz/\red{project}.git}
 \black{Initialize \red{project}/.git}
 \black{Initialized empty Git repository in /tmp/\red{project}/.git/}
 \faint{remote: Counting objects: 77575, done.}
@@ -2627,7 +2627,7 @@ cannot switch branches.}
 
 {\tiny
 \begin{Verbatim}[commandchars=\\\{\}]
-\CMD{\$ git clone git://repo.or.cz/project.git} \red{build-tree}
+\CMD{\$ git clone ssh+git://repo.or.cz/project.git} \red{build-tree}
 \black{Initialize \red{build-tree}/.git}
 \black{Initialized empty Git repository in /tmp/\red{build-tree}/.git/}
 \faint{remote: Counting objects: 77575, done.}
@@ -2649,7 +2649,7 @@ cannot switch branches.}
 
 {\tiny
 \begin{Verbatim}[commandchars=\\\{\}]
-\CMD{\$ git clone git://repo.or.cz/project.git}
+\CMD{\$ git clone ssh+git://repo.or.cz/project.git}
 \faint{Initialize project/.git}
 \faint{Initialized empty Git repository in /tmp/project/.git/}
 \red{remote: Counting objects: 77575, done.}
@@ -2671,7 +2671,7 @@ cannot switch branches.}
 
 {\tiny
 \begin{Verbatim}[commandchars=\\\{\}]
-\CMD{\$ git clone git://repo.or.cz/project.git}
+\CMD{\$ git clone ssh+git://repo.or.cz/project.git}
 \faint{Initialize project/.git}
 \faint{Initialized empty Git repository in /tmp/project/.git/}
 \faint{remote: Counting objects: 77575, done.}
@@ -2693,7 +2693,7 @@ cannot switch branches.}
 
 {\tiny
 \begin{Verbatim}[commandchars=\\\{\}]
-\CMD{\$ git clone git://repo.or.cz/project.git}
+\CMD{\$ git clone ssh+git://repo.or.cz/project.git}
 \faint{Initialize project/.git}
 \faint{Initialized empty Git repository in /tmp/project/.git/}
 \faint{remote: Counting objects: 77575, done.}
@@ -2715,7 +2715,7 @@ cannot switch branches.}
 
 {\tiny
 \begin{Verbatim}[commandchars=\\\{\}]
-\CMD{\$ git clone git://repo.or.cz/project.git}
+\CMD{\$ git clone ssh+git://repo.or.cz/project.git}
 \faint{Initialize project/.git}
 \faint{Initialized empty Git repository in /tmp/project/.git/}
 \faint{remote: Counting objects: 77575, done.}
@@ -2737,7 +2737,7 @@ cannot switch branches.}
 
 {\tiny
 \begin{Verbatim}[commandchars=\\\{\}]
-\CMD{\$ git clone git://repo.or.cz/project.git}
+\CMD{\$ git clone ssh+git://repo.or.cz/project.git}
 \faint{Initialize project/.git}
 \faint{Initialized empty Git repository in /tmp/project/.git/}
 \faint{remote: Counting objects: 77575, done.}
@@ -2997,14 +2997,13 @@ Created commit b618aed: I
 {\tiny
 \begin{Verbatim}[commandchars=\\\{\}]
 \CMD{\$ git push}
-Counting objects: 58, done.
-Compressing objects: 100% (50/50), done.
-Writing objects: 100% (50/50), 10.45 KiB, done.
-Total 50 (delta 44), reused 0 (delta 0)
-refs/heads/master: f02acef11774f80f41883bbe2598dc5a8aabd62a ->
-9ddc135d3de842e3da9bd8e18b3efc9a0727e5f6
-To ssh+git://tachyon.jukie.net//home/git/into-to-git.git/
-   f02acef..9ddc135  master -> master
+Counting objects: 9, done.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 810 bytes, done.
+Total 5 (delta 4), reused 0 (delta 0)
+refs/heads/master: 9ddc135 -> 15b67c0
+To ssh+git://repo.or.cz/project.git
+   9ddc135..15b67c0  master -> master
 \end{Verbatim}
 }
 \vspace{\textheight}
@@ -3019,7 +3018,13 @@ To ssh+git://tachyon.jukie.net//home/git/into-to-git.git/
 {\tiny
 \begin{Verbatim}[commandchars=\\\{\}]
 \CMD{\$ git push}
-. . .
+Counting objects: 9, done.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 810 bytes, done.
+Total 5 (delta 4), reused 0 (delta 0)
+refs/heads/master: 9ddc135 -> 15b67c0
+To ssh+git://repo.or.cz/project.git
+   9ddc135..15b67c0  master -> master
 \end{Verbatim}
 }
 \vspace{\textheight}
@@ -3071,16 +3076,6 @@ To ssh+git://tachyon.jukie.net//home/git/into-to-git.git/
 
 {\tiny
 \begin{Verbatim}[commandchars=\\\{\}]
-\$ git clone git://repo.or.cz/git.git
-\faint{Initialize git/.git}
-\faint{Initialized empty Git repository in /tmp/git/.git/}
-\faint{remote: Counting objects: 77575, done.}
-\faint{remote: Compressing objects: 100% (26407/26407), done.}
-\faint{remote: Total 77575 (delta 55750), reused 71007 (delta 49775)}
-\faint{Receiving objects: 100% (77575/77575), 22.87 MiB | 798 KiB/s, done.}
-\faint{Resolving deltas: 100% (55750/55750), done.}
-\faint{Checking out files: 100% (1396/1396), done.}
-\faint{git clone git://repo.or.cz/git.git  5.31s user 1.32s system 11% cpu 57.855 total}
 \end{Verbatim}
 }
 \vspace{\textheight}
