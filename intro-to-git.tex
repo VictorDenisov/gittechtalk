@@ -3408,11 +3408,124 @@ Fred cannot push.
 
 \end{frame}
 
+% =====================================================================
+\mysubsection{Loose ends}{using:loose}
+% ---------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+        Remember \em{loose objects} ?
+\end{center}
+\end{frame}
 
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Loose objects}
+\CMD{.git/objects}
+{\small
+\begin{Verbatim}[commandchars=\\\{\}]
+\faint{|-- 23}
+\faint{|   `-- }d4bd826aba9e29aaace9411cc175b784edc399
+\faint{|-- 76}
+\faint{|   `-- }49f82d40a98b1ba59057798e47aab2a99a11d3
+\faint{|-- c4}
+\faint{|   `-- }aaefaa8a48ad4ad379dc1002b78f1a3e4ceabc
+\faint{|-- e7}
+\faint{|   `-- }4be61128eef713459ca4e32398d689fe80864e
+\faint{|-- info}
+\faint{|   `-- packs}
+\faint{`-- pack}
+\faint{    |-- pack-b7b026b1a0b0f193db9dea0b0d7367d25d3a68cc.idx}
+\faint{    `-- pack-b7b026b1a0b0f193db9dea0b0d7367d25d3a68cc.pack}
+\end{Verbatim}
+}
+\vspace{\textheight}
+\end{frame}
 
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Loose objects}
 
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ git gc}
+Counting objects: 636, done.
+Compressing objects: 100% (635/635), done.
+Writing objects: 100% (636/636), done.
+Total 636 (delta 486), reused 0 (delta 0)
+Removing duplicate objects: 100% (256/256), done.
+\end{Verbatim}
 
+\pause{}
+\vspace{\baselineskip}
+\begin{itemize}
+        \item GC happens automatically \\
+                when you get to 6700 objects \\
+                \faint{(configurable)}
+\end{itemize}
+\end{frame}
 
+% ---------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+        Stash
+\end{center}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Stashing}
+\begin{itemize}
+        \item you're hacking
+                \pause{}
+                \vspace{\baselineskip}
+        \item got debug code you don't want to commit
+                \pause{}
+                \vspace{\baselineskip}
+        \item need to work on something else
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Stashing}
+\begin{itemize}
+        \item \CMD{git stash ``description''}
+                \pause{}
+                \vspace{\baselineskip}
+        \item do that other thing
+                \pause{}
+                \vspace{\baselineskip}
+        \item \CMD{git stash apply}
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\mysubsection{-}{using:end}
+% ---------------------------------------------------------------------
+\begin{frame}
+\frametitle{Further reading}
+\begin{center}
+        \blue{git.or.cz}
+
+        \pause{}
+        \blue{git.or.cz/gitwiki}
+        \vspace{\baselineskip}
+
+        \pause{} \blue{GitCases.com} \\ \faint{(Scott Chacon)}
+\end{center} \end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+        Thank you.
+\end{center}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\begin{center}
+        {\Large Q $\&$ A}
+\end{center}
+\end{frame}
 
 
 
@@ -3421,9 +3534,6 @@ Fred cannot push.
 % ---------------------------------------------------------------------
 \begin{frame}
         TODO
-
-gitk
-git gui
 
 mention Scott Chacon and gitcasts.com
 
