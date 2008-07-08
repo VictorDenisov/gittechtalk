@@ -614,7 +614,7 @@
     <g
        style="opacity:1"
        id="g5045"
-       transform="matrix(2.0003989,0,0,2,-480.16897,-77.389533)">
+       transform="matrix(2.0003989,0,0,2,-480.16899,-62.389533)">
       <path
          id="path5047"
          d="M 322.52016,62.375858 L 322.52016,64.875858 L 325.01966,67.375858 L 340.01667,67.375858 L 342.51618,64.875858 L 342.51618,62.375858 L 322.52016,62.375858 z"
@@ -908,7 +908,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="opacity:1;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#710000;stroke-width:0.86385071;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline"
-       d="M 184.80133,77.237373 L 184.95879,57.523167"
+       d="M 184.84226,77.237373 L 184.91756,72.523167"
        id="path5053"
        inkscape:connector-type="polyline"
        sodipodi:nodetypes="cc"
