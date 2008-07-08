@@ -2868,6 +2868,65 @@ v0.2.0
 \vspace{\textheight}
 \end{frame}
 
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-10.eps}
+
+\begin{center}
+        \ldots no disk changes?
+\end{center}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-10.eps}
+
+\begin{center}
+        \CMD{git fetch} only updates \emph{DAG}
+\end{center}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-11.eps}
+
+\begin{center}
+        \CMD{git merge origin/master}
+
+        \pause{}
+        \emph{fast-forwards} \green{master} to match \red{origin/master}
+
+        \pause{}
+        and updates the working tree
+\end{center}
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-12.eps}
+
+\begin{center}
+        \CMD{git fetch} + \CMD{git merge}
+
+        \pause{}
+        =
+
+        \CMD{git pull}
+\end{center}
+\vspace{\textheight}
+\end{frame}
+
 
 
 
@@ -2876,7 +2935,7 @@ v0.2.0
 \begin{frame}[fragile]
 \frametitle{Working with remotes}
 
-\includegraphics[width=\linewidth]{remote-08.eps}
+\includegraphics[width=\linewidth]{remote-99.eps}
 
 \ldots
 
