@@ -140,8 +140,7 @@
 
 % ---------------------------------------------------------------------
 \begin{frame}
-        \frametitle{Table of contents}
-        \par\noindent
+        \vspace{\baselineskip}
         \tableofcontents
 \end{frame}
 
@@ -1204,6 +1203,17 @@ What to commit?
 
 % ---------------------------------------------------------------------
 \begin{frame}
+\frametitle{Staging}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\CMD{\$ cat .gitignore}
+*.o
+*~
+\end{Verbatim}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}
 \frametitle{Committing}
 
 \CMD{\$ git commit \fnt{-a} -m``some comment''} \\
@@ -1292,9 +1302,9 @@ What to commit?
 
                 \vspace{.1\textheight}
 
-                \cmd{\$ mkdir sub} \\
-                \cmd{\$ echo foo > sub/foo} \\
-                \CMD{\$ git add sub/foo}
+                \cmd{\$ mkdir dir} \\
+                \cmd{\$ echo foo > dir/foo} \\
+                \CMD{\$ git add dir/foo}
         \end{column}
         \begin{column}[T]{.5\textwidth}
 
@@ -1318,9 +1328,9 @@ What to commit?
 
                 \vspace{.1\textheight}
 
-                \cmd{\$ mkdir sub} \\
-                \cmd{\$ echo foo > sub/foo} \\
-                \CMD{\$ git add sub/foo}
+                \cmd{\$ mkdir dir} \\
+                \cmd{\$ echo foo > dir/foo} \\
+                \CMD{\$ git add dir/foo}
 
                 \vspace{.1\textheight}
 
@@ -1328,7 +1338,7 @@ What to commit?
                 {\tiny
                 \fnt{Created commit 52a0ff4: foo \\
                        1 files changed, 1 insertions(+), \\ 0 deletions(-) \\
-                       create mode 100644 sub/foo}
+                       create mode 100644 dir/foo}
                 }
         \end{column}
         \begin{column}[T]{.5\textwidth}
@@ -1740,6 +1750,10 @@ another way to search\ldots
 
 \begin{Verbatim}[commandchars=\\\{\}]
 \CMD{\$ git grep -e "pattern" -- some/file}
+
+\pause{}
+\vspace{\baselineskip}
+\CMD{\$ git grep -e "pattern" branch -- some/file}
 \end{Verbatim}
 
 \vspace{\textheight}
@@ -2530,6 +2544,14 @@ cannot switch branches.}
 \frametitle{Git URLs}
 
 \begin{itemize}
+        \item local repo \\
+                \begin{Verbatim}[commandchars=\\\{\}]
+\CMD{/home/git/project.git/}
+\CMD{file:///home/git/project.git/}
+                \end{Verbatim}
+                \vspace{\baselineskip}
+                \pause{}
+
         \item http protocol \\
                 \begin{Verbatim}[commandchars=\\\{\}]
 \CMD{http://repo.or.cz/r/git.git}
@@ -2549,6 +2571,7 @@ cannot switch branches.}
 \CMD{ssh://bart@jukie.net/~git/project.git/}
 \CMD{bart@jukie.net/~git/project.git/}
                 \end{Verbatim}
+
 \end{itemize}
 \end{frame}
 
@@ -2760,7 +2783,6 @@ cannot switch branches.}
 
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
-\pause{}
 {\tiny
 \begin{Verbatim}[commandchars=\\\{\}]
 \CMD{\$ git branch -a}
@@ -3223,7 +3245,7 @@ Fred cannot push.
 \includegraphics[width=\linewidth]{remote-29.eps}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-\CMD{\$ git log fred/master}
+\CMD{\$ git log \red{fred/master}}
 \end{Verbatim}
 
 \vspace{\textheight}
@@ -3237,7 +3259,22 @@ Fred cannot push.
 
 \begin{Verbatim}[commandchars=\\\{\}]
 \fnt{\$ git log fred/master}
-\CMD{\$ git log fred/master ^master}
+\CMD{\$ git log \red{fred/master} ^master}
+\end{Verbatim}
+
+\vspace{\textheight}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Working with remotes}
+
+\includegraphics[width=\linewidth]{remote-29.eps}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\fnt{\$ git log fred/master}
+\fnt{\$ git log fred/master ^master}
+\CMD{\$ git log -p \red{fred/master} ^master}
 \end{Verbatim}
 
 \vspace{\textheight}
@@ -3510,14 +3547,14 @@ Removing duplicate objects: 100% (256/256), done.
         \blue{git.or.cz/gitwiki}
         \vspace{\baselineskip}
 
-        \pause{} \blue{GitCases.com} \\ \faint{(Scott Chacon)}
+        \pause{} \blue{GitCasts.com} \\ \faint{(Scott Chacon)}
 \end{center} \end{frame}
 
 % ---------------------------------------------------------------------
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Further reading}
 \begin{center}
-        \blue{http://www.jukie.net/~bart/blog/}
+        \blue{http://www.jukie.net/\Verb!~!bart/blog/}
         \vspace{\baselineskip}
 
         \pause{}
