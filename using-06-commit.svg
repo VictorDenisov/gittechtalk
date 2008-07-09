@@ -130,9 +130,9 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:window-width="958"
-     inkscape:window-height="887"
+     inkscape:window-height="1103"
      inkscape:window-x="0"
-     inkscape:window-y="276"
+     inkscape:window-y="60"
      showgrid="true"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -383,7 +383,7 @@
     </g>
     <path
        style="opacity:1;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:0.86400002;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline"
-       d="M 29.910018,97.234929 L 29.883449,87.489436"
+       d="M 29.910018,97.234929 L 29.884531,87.88617"
        id="path2446"
        inkscape:connector-type="polyline"
        inkscape:connection-end="#g4924"
@@ -453,7 +453,7 @@
     </g>
     <path
        style="opacity:1;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000071;stroke-width:0.86385071;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline"
-       d="M 116.90068,97.441463 L 128.08179,90.489436 L 160.19631,57.393577"
+       d="M 117.52887,97.441463 L 128.47852,90.88617 L 160.37747,57.393577"
        id="path2450"
        inkscape:connector-type="polyline"
        inkscape:connection-start="#g2441"
@@ -537,14 +537,14 @@
     </g>
     <path
        style="opacity:1;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:0.86400002;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline"
-       d="M 100.38642,97.441463 L 100.16398,87.489436"
+       d="M 100.38642,97.441463 L 100.17285,87.88617"
        id="path2487"
        inkscape:connector-type="polyline"
        inkscape:connection-end="#g2477"
        inkscape:connection-start="#g2441" />
     <path
        style="opacity:1;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#710000;stroke-width:0.86385071;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline"
-       d="M 99.991795,67.234929 L 100.04457,57.368864"
+       d="M 99.993917,66.838195 L 100.04457,57.368864"
        id="path4891"
        inkscape:connector-type="polyline"
        inkscape:connection-end="#g4933"
@@ -558,7 +558,7 @@
        inkscape:connection-start="#g4933" />
     <path
        style="opacity:1;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#710000;stroke-width:0.86385071;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline"
-       d="M 55,77.362183 L 74.793467,77.362183"
+       d="M 55.396734,77.362183 L 74.396733,77.362183"
        id="path2489"
        inkscape:connector-type="polyline"
        inkscape:connection-end="#g2477"
@@ -575,5 +575,41 @@
          y="267.36218"
          style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Nimbus Mono L;-inkscape-font-specification:Nimbus Mono L"
          id="tspan3788">dir/foo</tspan></text>
+    <text
+       xml:space="preserve"
+       style="opacity:1;font-size:22px;font-style:normal;font-weight:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="20"
+       y="157.36218"
+       id="text2827"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan2829"
+         x="20"
+         y="157.36218"
+         style="font-size:10px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L Italic">&quot;test&quot;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="opacity:1;font-size:22px;font-style:normal;font-weight:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="130"
+       y="142.36218"
+       id="text2835"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan2837"
+         x="130"
+         y="142.36218"
+         style="font-size:10px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L Italic">&quot;dir&quot;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="opacity:1;font-size:22px;font-style:normal;font-weight:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="130"
+       y="172.36218"
+       id="text2839"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan2841"
+         x="130"
+         y="172.36218"
+         style="font-size:10px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L Italic">&quot;foo&quot;</tspan></text>
   </g>
 </svg>

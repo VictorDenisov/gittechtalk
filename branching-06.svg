@@ -130,9 +130,9 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:window-width="958"
-     inkscape:window-height="1031"
+     inkscape:window-height="971"
      inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-y="72"
      showgrid="true"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -192,7 +192,7 @@
       <path
          id="path4877"
          d="M 15.103265,47.386176 L 15.103265,52.386176 L 20.103265,57.386176 L 50.103265,57.386176 L 55.103265,52.386176 L 55.103265,47.386176 L 15.103265,47.386176 z"
-         style="opacity:1;fill:#ff7070;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25287261999999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="opacity:1;fill:#e0ffe0;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.29599997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;color:#000000;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-dashoffset:0;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          sodipodi:nodetypes="ccccccc" />
       <text
          sodipodi:linespacing="125%"
@@ -322,7 +322,7 @@
       <path
          id="path2455"
          d="M 15.103265,47.386176 L 15.103265,52.386176 L 20.103265,57.386176 L 50.103265,57.386176 L 55.103265,52.386176 L 55.103265,47.386176 L 15.103265,47.386176 z"
-         style="opacity:1;fill:#ff7070;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25287262;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="opacity:1;fill:#e0ffe0;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.29599997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;color:#000000;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-dashoffset:0;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
          sodipodi:nodetypes="ccccccc" />
       <text
          sodipodi:linespacing="125%"
@@ -346,7 +346,7 @@
       <path
          id="path2463"
          d="M 15.103265,47.386176 L 15.103265,52.386176 L 20.103265,57.386176 L 50.103265,57.386176 L 55.103265,52.386176 L 55.103265,47.386176 L 15.103265,47.386176 z"
-         style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25287262;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="opacity:1;fill:#70ff70;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.25287262;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          sodipodi:nodetypes="ccccccc" />
       <text
          sodipodi:linespacing="125%"
@@ -371,7 +371,7 @@
        inkscape:connection-start="#g2482" />
     <path
        style="opacity:1;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#710000;stroke-width:0.86385071;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline"
-       d="M 130.10327,152.32179 L 150.14997,152.24164"
+       d="M 130.5,152.3202 L 150.14997,152.24164"
        id="path2471"
        inkscape:connector-type="polyline"
        inkscape:connection-end="#g2461"
@@ -408,7 +408,7 @@
     </g>
     <path
        style="opacity:1;fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:0.86400002;stroke-linecap:butt;stroke-linejoin:miter;marker-start:url(#Arrow1Sstart);marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;display:inline"
-       d="M 101.69817,207.36218 L 118.30183,157.46545"
+       d="M 101.69817,207.36218 L 118.16982,157.86218"
        id="path3354"
        inkscape:connector-type="polyline"
        inkscape:connection-start="#g3336"

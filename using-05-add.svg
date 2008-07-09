@@ -183,9 +183,9 @@
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:window-width="958"
-     inkscape:window-height="887"
+     inkscape:window-height="1103"
      inkscape:window-x="0"
-     inkscape:window-y="264"
+     inkscape:window-y="48"
      showgrid="true"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -603,5 +603,41 @@
            d="M 62.968976,565.97911 L 209.45913,591.61587 L 651.50965,591.61587 L 651.50965,507.86655 L 209.45913,507.86655 L 209.45913,448.71709 L 62.968976,565.97911 z" />
       </g>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-weight:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="20"
+       y="157.36218"
+       id="text2827"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan2829"
+         x="20"
+         y="157.36218"
+         style="font-size:10px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L Italic">&quot;test&quot;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-weight:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="130"
+       y="142.36218"
+       id="text2835"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan2837"
+         x="130"
+         y="142.36218"
+         style="font-size:10px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L Italic">&quot;dir&quot;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-weight:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="130"
+       y="172.36218"
+       id="text2839"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan2841"
+         x="130"
+         y="172.36218"
+         style="font-size:10px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L Italic">&quot;foo&quot;</tspan></text>
   </g>
 </svg>
