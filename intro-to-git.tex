@@ -2198,6 +2198,16 @@ cannot switch branches.}
 \begin{columns}[t]
         \begin{column}[T]{.5\textwidth}
                 {\small
+                \CMD{\$ git checkout master} \\
+
+                \CMD{\$ git merge bug-fix} \\
+
+                \pause{}
+                \vspace{\baselineskip}
+                \faint{or}
+                \vspace{\baselineskip}
+
+                \CMD{\$ git checkout master} \\
                 \CMD{\$ git reset {-}-hard bug-fix} \\
                 }
         \end{column}
@@ -2215,6 +2225,13 @@ cannot switch branches.}
         \begin{column}[T]{.5\textwidth}
                 {\small
                 \CMD{\$ git merge wicked} \\
+
+                \pause{}
+                \vspace{\baselineskip}
+
+                \faint{\ldots in case of conflict run} \\
+
+                \CMD{\$ git mergetool} \\
                 }
         \end{column}
         \begin{column}[T]{.5\textwidth}
@@ -3540,7 +3557,7 @@ Removing duplicate objects: 100% (256/256), done.
 \begin{frame}
 \frametitle{Further reading}
 \begin{center}
-        \blue{git.or.cz}
+        \blue{git-scm.org}
 
         \pause{}
         \blue{git.or.cz/gitwiki}
@@ -3549,6 +3566,10 @@ Removing duplicate objects: 100% (256/256), done.
         \pause{}
         \blue{GitCasts.com} \\
         \faint{(Scott Chacon)}
+        \vspace{\baselineskip}
+
+        \pause{}
+        \blue{GitHub.com} \\
 \end{center}
 \end{frame}
 
@@ -3560,7 +3581,7 @@ Removing duplicate objects: 100% (256/256), done.
         \vspace{\baselineskip}
 
         \pause{}
-        \green{git://tachyon.jukie.net/intro-to-git.git/}
+        \green{git://git.jukie.net/intro-to-git.git/}
 \end{center}
 \end{frame}
 
